@@ -89,10 +89,7 @@ export const siteConfig: SiteConfig = {
 			title: "Welcome!", // 主页横幅主标题
 
 			subtitle: [
-				"A Showcase Demo Site",
-				"Carousel Highlight: Innovation",
-				"Carousel Focus: User Experience",
-				"Carousel Spot: Core Advantages",
+				"",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -186,7 +183,7 @@ export const navBarConfig: NavBarConfig = {
 			children: [
 				{
 					name: "GitHub",
-					url: "https://github.com/matsuzaka-yuki/Mizuki",
+					url: "https://github.com/BL-sy",
 					external: true,
 					icon: "fa6-brands:github",
 				},
