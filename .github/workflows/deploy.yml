@@ -1,21 +1,17 @@
 name: Deploy to GitHub Pages
 
 on:
-  # 每次推送到 main 分支时触发
   push:
     branches: [ main ]
-  # 允许手动触发部署
   workflow_dispatch:
 
-# 设置必要的权限
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 设置环境变量
 env:
-  BUILD_PATH: "." # 如果你的 Astro 项目不在根目录，修改这里
+  BUILD_PATH: "."
 
 jobs:
   build:
@@ -28,13 +24,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: 'pnpm'  # 重要：设置为 pnpm 缓存
           
+      - name: 安装 pnpm
+        run: npm install -g pnpm@latest  # 全局安装 pnpm
+        
       - name: 安装依赖
-        run: npm ci
+        run: pnpm install --frozen-lockfile  # 相当于 npm ci
         
       - name: 构建项目
-        run: npm run build
+        run: pnpm run build  # 使用 pnpm 执行构建
         
       - name: 设置 Pages
         uses: actions/configure-pages@v4
@@ -42,16 +41,14 @@ jobs:
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/
+          path: dist/  # Astro 默认输出目录
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      
     steps:
       - name: 部署到 GitHub Pages
         id: deployment
