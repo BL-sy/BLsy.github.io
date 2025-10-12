@@ -85,7 +85,11 @@ export const siteConfig: SiteConfig = {
 			title: "Welcome!", // 主页横幅主标题
 
 			subtitle: [
-				"",
+				"tomorrow is another day",
+				"life was a box of chocolates",
+				"we both knew we'd never see each other again",
+				"I am already grown up, I just get older",
+				"Is life always this hard, or is it just when you are a kid?"
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
