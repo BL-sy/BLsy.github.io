@@ -33,11 +33,11 @@ export const siteConfig: SiteConfig = {
 
 	
 	bangumi: {
-		userId: "sai", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
+		userId: "blsy", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 	},
 
 	anime: {
-		mode: "local", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
+		mode: "bangumi", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
 	},
 
 	banner: {
