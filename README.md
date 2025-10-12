@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌸 Mizuki  
 ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue) 
@@ -299,3 +300,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ⭐ If you find this project helpful, please consider giving it a star!
+=======
+# BL-sy.github.io
+>>>>>>> cefcf02a0e4689c1247a2bf8adb6ed08cadd1cc3
