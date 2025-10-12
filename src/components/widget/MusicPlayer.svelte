@@ -86,7 +86,7 @@ const localPlaylist = [
 		id: 3,
 		title: "風と行く道",
 		artist: "大原ゆい子",
-		cover: "assets/music/cover/風と行く道.png",
+		cover: "assets/music/cover/随风而行的路.png",
 		url: "assets/music/url/風と行く道.mp3",
 		duration: 300,
 	},
