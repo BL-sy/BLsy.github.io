@@ -10,9 +10,9 @@ draft: false
 
 This blog template is built with [Astro](https://astro.build/). For the things that are not mentioned in this guide, you may find the answers in the [Astro Docs](https://docs.astro.build/).
 
-b站教程地址：https://www.bilibili.com/video/BV1wtLazEEmC?spm_id_from=333.788.videopod.sections&vd_source=eb85f257702408f4a9f49c4f9d9696c0
-
-国内同好学习：https://blog.csdn.net/qq_34060370/category_12203331.html
+[Hazel github](https://github.com/TheCherno/Hazel)
+[b站教程地址](https://www.bilibili.com/video/BV1wtLazEEmC?spm_id_from=333.788.videopod.sections&vd_source=eb85f257702408f4a9f49c4f9d9696c0)
+[参考](https://blog.csdn.net/qq_34060370/category_12203331.html)
 
 
 # 一.什么是游戏引擎
@@ -23,55 +23,44 @@ b站教程地址：https://www.bilibili.com/video/BV1wtLazEEmC?spm_id_from=333.7
 
 交互应用，可视化，平台
 
-**读取文件(资产，游戏引擎作为输入的文件)、转换他们、然后把他们放到屏幕上，并且也增加了交互能力。**
+读取文件(资产，游戏引擎作为输入的文件)、转换他们、然后把他们放到屏幕上，并且也增加了交互能力。
 
-一个游戏引擎需要什么？
+**一个游戏引擎需要什么？**
+| Attribute                 | Description                             |
+|---------------------------|-----------------------------------------|
+| `entry point`             | 入口                                    |
+| `application layer`       | 应用层                                  |
+| `window layer`            | 系统窗口层(input,event)                 |
+| `renderer`                | 渲染器                                  |
+| `Render API abstract`     | 渲染API抽象                             |
+| `Debugging support`       | Debug支持                               |
+| `Scripting languag`       | 脚本语言                                |
+| `Memory System`           | 内存系统                                |
+| `Entity-Component System` | 实体组件系统                            |
+| `Physics`                 | 物理                                    |
+| `File I/O`                | 文件I0(VFS)                             |
+| `Build System`            | 构建系统                                |
 
-entry point **入口**
-
-application layer**应用层**
-
-window layer(input,event)**系统窗口层**
-
-renderer **渲染**
-
-Render API abstract**渲染API抽象**
-
-Debugging support**Debug支持**
-
-Scripting language**脚本语言**
-
-Memory System**内存系统**
-
-Entity-Component System**实体组件系统**
-
-Physics**物理**
-
-File I/O**文件I0(VFS)**
-
-Build System**构建系统**
 
 ## （二）项目设置
 
-github仓库 
-
 属性设置，将引擎设为动态库，新建一个游戏项目
 
-![QQ20250708-190916](D:\Typora文档\编程\GameEngine\assets\QQ20250708-190916.png)
+![001](./assets/001.png)
 
 将引擎链接到游戏
 
-![QQ20250708-190958](D:\Typora文档\编程\GameEngine\assets\QQ20250708-190958.png)
+![002](./assets/002.png)
 
 说明
 
 此引用将会链接Hazel.lib文件。
 
-问题
+问题:
 明明设置为dll为什么会有lib文件。
-解释
-在动态库情况有，有lib和dll两个文件，lib是包含被DLL导出的函数的==名称和位置==，DLL包含实际的函数和数据。
-exe程序通过编译期间链接lib文件，存放了DLL中所要调用的函数的内存地址
+解释:
+在动态库情况，有lib和dll两个文件，lib包含被DLL导出的函数的*名称和位置*，DLL包含实际的函数和数据。
+exe程序在编译期间链接lib文件，访问存放了DLL中所要调用的函数的内存地址
 打开项目属性-链接器可以看到链接命令
 
 ![屏幕截图 2025-07-11 154846](D:\Typora文档\编程\GameEngine\assets\屏幕截图 2025-07-11 154846.png)
@@ -118,19 +107,7 @@ exe程序通过编译期间链接lib文件，存放了DLL中所要调用的函�
 
 
 
-| Attribute     | Description                                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `title`       | The title of the post.                                                                                                                                                                                      |
-| `published`   | The date the post was published.                                                                                                                                                                            |
-| `pinned`      | Whether this post is pinned to the top of the post list.                                                                                                                                                   |
-| `description` | A short description of the post. Displayed on index page.                                                                                                                                                   |
-| `image`       | The cover image path of the post.<br/>1. Start with `http://` or `https://`: Use web image<br/>2. Start with `/`: For image in `public` dir<br/>3. With none of the prefixes: Relative to the markdown file |
-| `tags`        | The tags of the post.                                                                                                                                                                                       |
-| `category`    | The category of the post.                                                                                                                                                                                   |
-| `licenseName` | The license name for the post content.                                                                                                                                                                      |
-| `author`      | The author of the post.                                                                                                                                                                                     |
-| `sourceLink`  | The source link or reference for the post content.                                                                                                                                                          |
-| `draft`       | If this post is still a draft, which won't be displayed.                                                                                                                                                    |
+                                                                                                                                                |
 
 
 Your post files should be placed in `src/content/posts/` directory. You can also create sub-directories to better organize your posts and assets.
