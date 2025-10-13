@@ -21,7 +21,10 @@ const postsCollection = defineCollection({
 		encrypted: z.boolean().optional().default(false),
 		password: z.string().optional().default(""),
 
-		
+		/* 合集字段 */
+		isCollection: z.boolean().optional().default(false),
+		// 用于子文章，指向复合集的slug
+		parentCollection: z.string().optional(),
 
 		/* For internal use */
 		prevTitle: z.string().default(""),

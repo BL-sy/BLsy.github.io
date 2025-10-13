@@ -5,6 +5,7 @@ description: "基于cherno Hazel引擎教学"
 tags: ["学习", "游戏", "引擎"]
 category: 学习
 draft: false
+isCollection: true
 ---
 
 
