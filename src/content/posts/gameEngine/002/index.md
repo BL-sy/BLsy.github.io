@@ -329,7 +329,7 @@ int main(int argc,char** argv)
     	缓冲事件：键盘a一直按下第一个立刻输出，顿了一下才一直输出。
     */
     // 事件类别-一个类一个标识
-    	enum class EventType
+    enum class EventType
   	{
   		None = 0,
   		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
@@ -348,15 +348,15 @@ int main(int argc,char** argv)
   		EventCategoryMouseButton	= BIT(4)
   	};
   
-  #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
+    #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
   								virtual EventType GetEventType() const override { return GetStaticType(); }\
   								virtual const char* GetName() const override { return #type; }
   
-  #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
+    #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
   
   	class HAZEL_API Event
   	{
-  		friend class EventDispatcher;
+        friend class EventDispatcher;
   	public:
   		virtual EventType GetEventType() const = 0;
   		virtual const char* GetName() const = 0;
@@ -513,7 +513,7 @@ class EventDispatcher
 
 # 五.预编译头
 
-- 此节目的
+- **此节目的**
 
   由于项目中的[头文件](https://so.csdn.net/so/search?q=头文件&spm=1001.2101.3001.7020)或者cpp文件都包含着c++的头文件，有些**重复**，可以将它们包含的c++头文件放在一个头文件内，这样不仅使代码**简洁**，而且[预编译](https://so.csdn.net/so/search?q=预编译&spm=1001.2101.3001.7020)头可以**加快编译速度**。
 
@@ -562,18 +562,15 @@ class EventDispatcher
   	-- 预编译头 
   	pchheader "hzpch.h"
   	pchsource "Hazel/src/hzpch.cpp"
-  AI写代码lua运行12345678910
   ```
 
-- 在每个cpp文件的顶部引入hzpch.h文件,不然报错
-
-  ![img](https://i-blog.csdnimg.cn/blog_migrate/7d1dd21f86fadffd132d3b2b8393e2f6.png)
+- 在每个cpp文件的顶部引入hzpch.h文件,不然会报错
 
 - 重新生成后，premake预编译头设置的对应效果
 
-  ![img](https://i-blog.csdnimg.cn/blog_migrate/7e37aa6da39432f8b5894d8a26a370f7.png)
+  ![009](../assets/009.png)
 
-  ![请添加图片描述](https://i-blog.csdnimg.cn/blog_migrate/26954f524a3df4466536a9cabdebe259.png)
+  ![010](../assets/010.png)
 
 
 # Tips
