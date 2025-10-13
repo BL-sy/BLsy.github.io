@@ -291,8 +291,8 @@ export const commentConfig: CommentConfig = {
 
 // 公告
 export const announcementConfig: AnnouncementConfig = {
-	title: "Announcement", // 公告标题
-	content: "Welcome to my blog!", // 公告内容
+	title: "公告", // 公告标题
+	content: "欢迎来到我的博客!", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接

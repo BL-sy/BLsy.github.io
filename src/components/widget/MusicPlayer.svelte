@@ -17,100 +17,108 @@ let mode = musicPlayerConfig.mode ?? "local";
 let meting_api =
 	musicPlayerConfig.meting_api ??
 	"https://www.bilibili.uno/api?server=:server&type=:type&id=:id&auth=:auth&r=:r";
-// Meting API 的 ID，从配置中获取或使用默认值
-let meting_id = musicPlayerConfig.id ?? "14164869977";
-// Meting API 的服务器，从配置中获取或使用默认值,有的meting的api源支持更多平台,一般来说,netease=网易云音乐, tencent=QQ音乐, kugou=酷狗音乐, xiami=虾米音乐, baidu=百度音乐
-let meting_server = musicPlayerConfig.server ?? "netease";
-// Meting API 的类型，从配置中获取或使用默认值
-let meting_type = musicPlayerConfig.type ?? "playlist";
-// 播放状态，默认为 false (未播放)
-let isPlaying = false;
-// 播放器是否展开，默认为 false
-let isExpanded = false;
-// 播放器是否隐藏，默认为 false
-let isHidden = false;
-// 是否显示播放列表，默认为 false
-let showPlaylist = false;
-// 当前播放时间，默认为 0
-let currentTime = 0;
-// 歌曲总时长，默认为 0
-let duration = 0;
-// 音量，默认为 0.7
-let volume = 0.7;
-// 是否静音，默认为 false
-let isMuted = false;
-// 是否正在加载，默认为 false
-let isLoading = false;
-// 是否随机播放，默认为 false
-let isShuffled = false;
-// 循环模式，0: 不循环, 1: 单曲循环, 2: 列表循环，默认为 0
-let isRepeating = 0;
-// 错误信息，默认为空字符串
-let errorMessage = "";
-// 是否显示错误信息，默认为 false
-let showError = false;
+	// Meting API 的 ID，从配置中获取或使用默认值
+	let meting_id = musicPlayerConfig.id ?? "14164869977";
+	// Meting API 的服务器，从配置中获取或使用默认值,有的meting的api源支持更多平台,一般来说,netease=网易云音乐, tencent=QQ音乐, kugou=酷狗音乐, xiami=虾米音乐, baidu=百度音乐
+	let meting_server = musicPlayerConfig.server ?? "netease";
+	// Meting API 的类型，从配置中获取或使用默认值
+	let meting_type = musicPlayerConfig.type ?? "playlist";
+	// 播放状态，默认为 false (未播放)
+	let isPlaying = false;
+	// 播放器是否展开，默认为 false
+	let isExpanded = false;
+	// 播放器是否隐藏，默认为 false
+	let isHidden = false;
+	// 是否显示播放列表，默认为 false
+	let showPlaylist = false;
+	// 当前播放时间，默认为 0
+	let currentTime = 0;
+	// 歌曲总时长，默认为 0
+	let duration = 0;
+	// 音量，默认为 0.7
+	let volume = 0.7;
+	// 是否静音，默认为 false
+	let isMuted = false;
+	// 是否正在加载，默认为 false
+	let isLoading = false;
+	// 是否随机播放，默认为 false
+	let isShuffled = false;
+	// 循环模式，0: 不循环, 1: 单曲循环, 2: 列表循环，默认为 0
+	let isRepeating = 0;
+	// 错误信息，默认为空字符串
+	let errorMessage = "";
+	// 是否显示错误信息，默认为 false
+	let showError = false;
 
-// 当前歌曲信息
-let currentSong = {
+	// 当前歌曲信息
+	let currentSong = {
 	title: "示例歌曲",
 	artist: "示例艺术家",
 	cover: "/favicon/favicon-light-192.png",
 	url: "",
 	duration: 0,
-};
+	};
 
-let playlist = [];
-let currentIndex = 0;
-let audio: HTMLAudioElement;
-let progressBar: HTMLElement;
-let volumeBar: HTMLElement;
+	let playlist = [];
+	let currentIndex = 0;
+	let audio: HTMLAudioElement;
+	let progressBar: HTMLElement;
+	let volumeBar: HTMLElement;
 
-const localPlaylist = [
+	const localPlaylist = [
 	{
-		id: 1,
-		title: "OneLastKiss",
-		artist: "宇多田ヒカル",
-		cover: "assets/music/cover/OneLastKiss.jpg",
-		url: "assets/music/url/OneLastKiss.mp3",
-		duration: 252,
+	id: 1,
+	title: "OneLastKiss",
+	artist: "宇多田ヒカル",
+	cover: "assets/music/cover/OneLastKiss.jpg",
+	url: "assets/music/url/OneLastKiss.mp3",
+	duration: 252,
 	},
 	{
-		id: 2,
-		title: "One more time. One more chance",
-		artist: "山崎まさよし",
-		cover: "assets/music/cover/One more time. One more chance.png",
-		url: "assets/music/url/One more time. One more chance.mp3",
-		duration: 325,
+	id: 2,
+	title: "One more time. One more chance",
+	artist: "山崎まさよし",
+	cover: "assets/music/cover/One more time. One more chance.png",
+	url: "assets/music/url/One more time. One more chance.mp3",
+	duration: 325,
 	},
 	{
-		id: 3,
-		title: "風と行く道",
-		artist: "大原ゆい子",
-		cover: "assets/music/cover/随风而行的路.png",
-		url: "assets/music/url/風と行く道.mp3",
-		duration: 300,
+	id: 3,
+	title: "風と行く道",
+	artist: "大原ゆい子",
+	cover: "assets/music/cover/随风而行的路.png",
+	url: "assets/music/url/風と行く道.mp3",
+	duration: 300,
 	},
-];
+	{
+	id: 4,
+	title: "フィナーレ。",
+	artist: "eill",
+	cover: "assets/music/cover/zhongqu.jpg",
+	url: "assets/music/url/フィナーレ。.mp3",
+	duration: 242,
+	},
+	];
 
-async function fetchMetingPlaylist() {
+	async function fetchMetingPlaylist() {
 	if (!meting_api || !meting_id) return;
 	isLoading = true;
 	const apiUrl = meting_api
-		.replace(":server", meting_server)
-		.replace(":type", meting_type)
-		.replace(":id", meting_id)
-		.replace(":auth", "")
-		.replace(":r", Date.now().toString());
+	.replace(":server", meting_server)
+	.replace(":type", meting_type)
+	.replace(":id", meting_id)
+	.replace(":auth", "")
+	.replace(":r", Date.now().toString());
 	try {
-		const res = await fetch(apiUrl);
-		if (!res.ok) throw new Error("meting api error");
-		const list = await res.json();
-		playlist = list.map((song) => {
-			let title = song.name ?? song.title ?? "未知歌曲";
-			let artist = song.artist ?? song.author ?? "未知艺术家";
-			let dur = song.duration ?? 0;
-			if (dur > 10000) dur = Math.floor(dur / 1000);
-			if (!Number.isFinite(dur) || dur <= 0) dur = 0;
+	const res = await fetch(apiUrl);
+	if (!res.ok) throw new Error("meting api error");
+	const list = await res.json();
+	playlist = list.map((song) => {
+	let title = song.name ?? song.title ?? "未知歌曲";
+	let artist = song.artist ?? song.author ?? "未知艺术家";
+	let dur = song.duration ?? 0;
+	if (dur > 10000) dur = Math.floor(dur / 1000);
+	if (!Number.isFinite(dur) || dur <= 0) dur = 0;
 			return {
 				id: song.id,
 				title,
