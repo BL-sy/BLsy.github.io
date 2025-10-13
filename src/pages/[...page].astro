@@ -10,9 +10,9 @@ export const getStaticPaths = (async ({ paginate }) => {
 	const allBlogPosts = await getSortedPosts();
 	
 	const filteredPosts = allBlogPosts.filter(post => {
-	// 显示：普通文章 和 合集父文章
-	// 隐藏：合集子文章
-	return !post.data?.parentCollection;
+		// 显示：普通文章 和 合集父文章
+		// 隐藏：合集子文章
+		return !post.data?.parentCollection;
 	});
 	
 	return paginate(filteredPosts, { pageSize: PAGE_SIZE });

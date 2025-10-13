@@ -9,7 +9,6 @@ draft: false
 ---
 
 
-
 This blog template is built with [Astro](https://astro.build/). For the things that are not mentioned in this guide, you may find the answers in the [Astro Docs](https://docs.astro.build/).
 
 ## Front-matter of Posts
@@ -23,31 +22,33 @@ image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
 draft: false
+isCollection: false
 ---
 ```
 
 
 
 
-| Attribute     | Description                                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `title`       | The title of the post.                                                                                                                                                                                      |
-| `published`   | The date the post was published.                                                                                                                                                                            |
-| `pinned`      | Whether this post is pinned to the top of the post list.                                                                                                                                                   |
-| `description` | A short description of the post. Displayed on index page.                                                                                                                                                   |
-| `image`       | The cover image path of the post.<br/>1. Start with `http://` or `https://`: Use web image<br/>2. Start with `/`: For image in `public` dir<br/>3. With none of the prefixes: Relative to the markdown file |
-| `tags`        | The tags of the post.                                                                                                                                                                                       |
-| `category`    | The category of the post.                                                                                                                                                                                   |
-| `licenseName` | The license name for the post content.                                                                                                                                                                      |
-| `author`      | The author of the post.                                                                                                                                                                                     |
-| `sourceLink`  | The source link or reference for the post content.                                                                                                                                                          |
-| `draft`       | If this post is still a draft, which won't be displayed.                                                                                                                                                    |
+| Attribute         | Description                                                                                                                                                                                                 |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `title`           | 文章标题                                                                                                                                                                                     |
+| `published`       | 发布日期                                                                                                                                                                           |
+| `pinned`          | 是否粘贴在顶部                                                                                                                                                   |
+| `description`     | 文章的简短描述，列在文章开头                                                                                                                                                   |
+| `image`           | 文章封面图片url.<br/>1. Start with `http://` or `https://`: Use web image<br/>2. Start with `/`: For image in `public` dir<br/>3. With none of the prefixes: Relative to the markdown file |
+| `tags`            | 文章标签                                                                                                                                                                                      |
+| `category`        | 文章种类                                                                                                                                                                                   |
+| `licenseName`     | The license name for the post content.                                                                                                                                                                      |
+| `author`          | 作者                                                                                                                                                                      |
+| `sourceLink`      | The source link or reference for the post content.                                                                                                                                                          |
+| `draft`           | If this post is still a draft, which won't be displayed.                                                                                                                                                    |
+| `isCollection`    | 是否是合集                                                                                                                                                    |
+| `parentCollection`| 父合集（有就行，内容无所谓）                                                                                                                                                   |
 
 ## Where to Place the Post Files
 
 
-
-Your post files should be placed in `src/content/posts/` directory. You can also create sub-directories to better organize your posts and assets.
+你的文章应该存放在 `src/content/posts/` . 你也可以创建自己的子目录来更好的管理文章和资产。
 
 ```
 src/content/posts/
