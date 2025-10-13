@@ -22,7 +22,7 @@ const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 
 export const siteConfig: SiteConfig = {
 	title: "BLsy的博客",
-	subtitle: "One demo website",
+	subtitle: "welcome",
 
 	lang: SITE_LANG,
 
@@ -40,6 +40,7 @@ export const siteConfig: SiteConfig = {
 		mode: "bangumi", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
 	},
 
+	// 首页
 	banner: {
 		enable: true, // 是否启动Banner壁纸模式
 
@@ -49,7 +50,7 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/asuka.png",
 				"/assets/desktop-banner/baizi.png",
 				"/assets/desktop-banner/saber.png",
-				"/assets/desktop-banner/liang.png",
+				"/assets/desktop-banner/liang.png"
 			], // 桌面横幅图片
 			mobile: [
 				"/assets/mobile-banner/m1.webp",
@@ -82,7 +83,7 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "Welcome!", // 主页横幅主标题
+			title: "Welcome to my blog!", // 主页横幅主标题
 
 			subtitle: [
 				"tomorrow is another day",
@@ -94,8 +95,8 @@ export const siteConfig: SiteConfig = {
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
 
-				speed: 100, // 打字速度（毫秒）
-				deleteSpeed: 50, // 删除速度（毫秒）
+				speed: 75, // 打字速度（毫秒）
+				deleteSpeed: 30, // 删除速度（毫秒）
 				pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
 			},
 		},
@@ -131,23 +132,20 @@ export const siteConfig: SiteConfig = {
 			enable: false, // 启用全局圆体适合日语和英语，对中文适配一般
 		},
 		hanalei: {
-			enable: true, // 启用 Hanalei 字体作为全局字体，适合中文去使用
+			enable: false, // 启用 Hanalei 字体作为全局字体，适合中文去使用
 		},
 	},
 	showLastModified: true, // 控制“上次编辑”卡片显示的开关
 };
+
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true, // 启用全屏壁纸功能,非Banner模式下生效
 	src: {
 		desktop: [
-			"/assets/desktop-banner/d1.webp",
-			"/assets/desktop-banner/d2.webp",
-			"/assets/desktop-banner/d3.webp",
-			"/assets/desktop-banner/d4.webp",
-			"/assets/desktop-banner/d5.webp",
-			"/assets/desktop-banner/d6.webp",
-			"/assets/desktop-banner/d7.webp",
-			"/assets/desktop-banner/d8.webp",
+			"/assets/desktop-banner/asuka.png",
+			"/assets/desktop-banner/baizi.png",
+			"/assets/desktop-banner/saber.png",
+			"/assets/desktop-banner/liang.png"
 		], // 桌面横幅图片
 		mobile: [
 			"/assets/mobile-banner/m1.webp",
@@ -294,7 +292,7 @@ export const commentConfig: CommentConfig = {
 // 公告
 export const announcementConfig: AnnouncementConfig = {
 	title: "Announcement", // 公告标题
-	content: "Welcome to my blog! This is a sample announcement.", // 公告内容
+	content: "Welcome to my blog!", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接
