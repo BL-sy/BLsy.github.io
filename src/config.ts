@@ -427,6 +427,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 	},
 };
 
+// 樱花特效
 export const sakuraConfig: SakuraConfig = {
 	enable: false, // 默认关闭樱花特效
 	sakuraNum: 21, // 樱花数量
