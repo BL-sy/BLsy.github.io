@@ -210,7 +210,7 @@ https://github.com/gabime/spdlog.git
 这里直接使用cherno远程git仓库的文件,在希望的文件目录下打开控制台,输入
 
 ```cmd
-git submodule add https://github.com/gabime/spdlog Hazel/vendor/spdlog
+  git submodule add https://github.com/gabime/spdlog Hazel/vendor/spdlog
 ```
 
 添加附加目录,引用
@@ -218,35 +218,48 @@ git submodule add https://github.com/gabime/spdlog Hazel/vendor/spdlog
 我们这里进行一下封装,日后可以写自己的日志记录系统
 
 ```cpp
-  #include <memory>
-  #include "Core.h"
-  #include spdlog/spdlog.h"
-  namespace Hazel
-  class HAZEL API Log
-  {
-  public:
-  static void Init();
-  inline static std:shared_ptr<spdlog:logger>&GetCoreLogger(){return s_CoreLogger;}
-  inline static std:shared_ptr<spdlog:logger>&GetClientLogger()return s_ClientLogger;
-  private:
-  //两种日志记录器
-  //引擎日志和客户端日志
-  static std:shared _ptr<spdlog:logger>s_CoreLogger;
-  static std:shared_ptr<spdlog:logger>s_ClientLogger;
+$log.h
+#include <memory>
+#include "Core.h"
+#include spdlog/spdlog.h"
+namespace Hazel {
+	class HAZEL_API Log
+	{
+	public:
+		static void Init();
+
+		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
+		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
+
+	private:
+		//两种日志记录器
+		//引擎日志和客户端日志
+		static std::shared_ptr<spdlog::logger> s_CoreLogger;
+		static std::shared_ptr<spdlog::logger> s_ClientLogger;
+	};
+}
 ```
 
 ```cpp
-  #include"Log.h”
-  #include "spdlog/sinks/stdout_color_sinks.h"
-  namespace Hazel
-  std:shared_ptr<spdlog:logger>Log:s_CoreLogger;
-  std:shared ptr<spdlog:logger>Log:s_ClientLogger;
-  void Log:Init()
-  spdlog::set_pattern("%^[%T]%n:%v%$");/日志格式--[时间戳]日志名称：内容
-  s_CoreLogger spdlog:stdout_color_mt ("HAZEL);//
-  s_CoreLogger->set_level(spdlog:level:trace);
-  s_ClientLogger spdlog:stdout_color_mt ("APP");
-  s_ClientLogger->set_level(spdlog:level:trace);
+$log.cpp
+#include "Log.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
+
+namespace Hazel {
+	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
+	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
+
+	void Log::Init()
+	{
+		spdlog::set_pattern("%^[%T] %n: %v%$");//日志格式 --- [时间戳]日志名称:内容
+
+		s_CoreLogger = spdlog::stdout_color_mt("HAZEL");//命名
+		s_CoreLogger->set_level(spdlog::level::trace);
+
+		s_ClientLogger = spdlog::stdout_color_mt("APP");
+		s_ClientLogger->set_level(spdlog::level::trace);
+	}
+}
 ```
 
 **注**：这里直接使用会报错，需要在属性的命令行界面添加/utf-8
@@ -256,35 +269,27 @@ git submodule add https://github.com/gabime/spdlog Hazel/vendor/spdlog
 日志信息的宏定义，方便记录和观察
 
 ```cpp
-//Core log macros
-  #define HZ CORE TRACE(...)
-  Hazel:Log:GetCoreLogger()->trace(_VA_ARGS_)
-  #define HZ CORE INFO(...)
-  Hazel:Log:GetCoreLogger()->info(_VA_ARGS_)
-  #define HZ CORE WARN(...)
-  Hazel:Log:GetCoreLogger()->warn(__VA_ARGS_)
-  #define HZ CORE ERROR(...)
-  Hazel:Log:GetCoreLogger()->error(_VA_ARGS_)
-  #define HZ CORE FATAL(...)
-  Hazel:Log:GetCoreLogger()->fatal(_VA_ARGS_)
-  //Client log macros
-  #define HZ_TRACE(...)
-  Hazel:Log:GetClientLogger()->trace(_VA_ARGS_)
-  #define HZ INF0(...）
-  Hazel:Log:GetClientLogger()->info(_VA_ARGS_)
-  #define HZ WARN(...
-  Hazel:Log:GetClientLogger ()->warn(_VA_ARGS_)
-  #define HZ ERROR(...)
-  Hazel:Log:GetClientLogger()->error(_VA_ARGS_)
-  #define HZ_FATAL(...)
-  Hazel:Log:GetClientLogger()->fatal(_VA_ARGS_)
+$log.h
+// Core log macros
+#define HZ_CORE_TRACE(...)		::Hazel::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define HZ_CORE_INFO(...)		::Hazel::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define HZ_CORE_WARN(...)		::Hazel::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define HZ_CORE_ERROR(...)		::Hazel::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define HZ_CORE_FATAL(...)		::Hazel::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+								
+//Client log macros				
+#define HZ_TRACE(...)			::Hazel::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define HZ_INFO(...)			::Hazel::Log::GetClientLogger()->info(__VA_ARGS__)
+#define HZ_WARN(...)			::Hazel::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define HZ_ERROR(...)			::Hazel::Log::GetClientLogger()->error(__VA_ARGS__)
+#define HZ_FATAL(...)			::Hazel::Log::GetClientLogger()->fatal(__VA_ARGS__)
   ```
 
 我们的入口点现在：
 
 ```cpp
 #ifdef HZ_PLATFORM_WINDOWS
-extern Hazel::Application* Hazel:CreateApplication();
+extern Hazel::Application* Hazel::CreateApplication();
 
 int main(int argc,char** argv)
 {
@@ -306,91 +311,93 @@ int main(int argc,char** argv)
 不同级别的报告有不同的颜色.Done!(for now)
 
 
-
 # 四.事件系统
 
 ## （一）规划事件系统
 
-![e8e6f5c105662f40253d149031aab39e](D:\Typora文档\编程\GameEngine\assets\e8e6f5c105662f40253d149031aab39e.png)
+![007](../assets/007.png)
 
 ## （二）自定义事件类与使用
 
 ### 声明与定义类代码
 
-- Event
+- Event.h
 
   ```cpp
-  /*
-  	为了简便，自定义事件是立即处理事件，没有缓冲事件。
-  	缓冲事件：键盘a一直按下第一个立刻输出，顿了一下才一直输出。
-  */
-  // 事件类别-一个类一个标识
-  enum class EventType{
-      None = 0,
-      WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
-      AppTick, AppUpdate, AppRender,
-      KeyPressed, KeyReleased,
-      MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
-  };
-  // 事件分类-多个类一个分类，即多个类属于同一个分类
-  enum EventCategory
-  {
-      None = 0,
-      EventCategoryApplication	= BIT(0),	// 1
-      EventCategoryInput			= BIT(1),	// 2
-      EventCategoryKeyboard		= BIT(2),	// 4
-      EventCategoryMouse			= BIT(3),	// 8
-      EventCategoryMouseButton	= BIT(4)	// 16
-  };
-  // 宏定义：每个子类都需要重写父类虚函数代码，可以用宏定义简洁代码
+    /*
+    	为了简便，自定义事件是立即处理事件，没有缓冲事件。
+    	缓冲事件：键盘a一直按下第一个立刻输出，顿了一下才一直输出。
+    */
+    // 事件类别-一个类一个标识
+    	enum class EventType
+  	{
+  		None = 0,
+  		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
+  		AppTick, AppUpdate, AppRender,
+  		KeyPressed, KeyReleased,
+  		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
+  	};
+  
+  	enum EventCategory
+  	{
+  		None = 0,
+  		EventCategoryApplication	= BIT(0),
+  		EventCategoryInput			= BIT(1),
+  		EventCategoryKeyboard		= BIT(2),
+  		EventCategoryMouse			= BIT(3),
+  		EventCategoryMouseButton	= BIT(4)
+  	};
+  
   #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
   								virtual EventType GetEventType() const override { return GetStaticType(); }\
   								virtual const char* GetName() const override { return #type; }
   
   #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
   
-  class HAZEL_API Event
-  {
-      friend class EventDispatcher;
-      public:
-      virtual EventType GetEventType() const = 0;		// 获取本事件是哪个类型
-      virtual const char* GetName() const = 0;		// 获取本事件的名称c字符数组
-      virtual int GetCategoryFlags() const = 0;		// 获取本事件属于哪个分类
-      virtual std::string ToString() const { return GetName(); }	// 获取本事件的名称从c字符数组转为字符串
+  	class HAZEL_API Event
+  	{
+  		friend class EventDispatcher;
+  	public:
+  		virtual EventType GetEventType() const = 0;
+  		virtual const char* GetName() const = 0;
+  		virtual int GetCategoryFlags() const = 0;
+  		virtual std::string ToString() const { return GetName(); };
   
-      inline bool IsInCategory(EventCategory category)
-      {
-          return GetCategoryFlags() & category;
-      }
-      protected:
-      bool m_Handled = false;
-  };
-  ```
+  		inline bool IsInCategory(EventCategory category)
+  		{
+  			return GetCategoryFlags() & category;
+  		}
+  
+  		bool m_Handled = false;  // 事件处理状态
+  	};
+    ```
 
 - WindowResizeEvent
 
   ```cpp
+  $ApplicationEvent.h
   class HAZEL_API WindowResizeEvent : public Event
   {
-      public:
-      WindowResizeEvent(unsigned int width, unsigned int height)
-          : m_Width(width), m_Height(height) {}
-  
-      inline unsigned int GetWidth() const { return m_Width; }
-      inline unsigned int GetHeight() const { return m_Height; }
-  
-      std::string ToString() const override
-      {
-          std::stringstream ss;
-          ss << "WindowResizeEvent: " << m_Width << ", " << m_Height;
-          return ss.str();
-      }
-  	// 关键地方：用宏定义来重写虚函数
-      EVENT_CLASS_TYPE(WindowResize)
-          EVENT_CLASS_CATEGORY(EventCategoryApplication)
-          private:
-      unsigned int m_Width, m_Height;
-  };
+    public:
+        WindowResizeEvent(unsigned int width, unsigned int height)
+			:m_Width(width), m_Height(height) {
+		}
+
+		inline unsigned int GetWidth() const { return m_Width; }
+		inline unsigned int GetHeight() const { return m_Height; };
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "WindowResizeEvent: " << m_Width << ", " << m_Height;
+			return ss.str();
+		}
+		// 关键：用宏定义来重写虚函数
+		EVENT_CLASS_TYPE(WindowResize)
+			EVENT_CLASS_CATEGORY(EventCategoryApplication)
+	private:
+		unsigned int m_Width, m_Height;
+	};
   ```
 
 - 关键地方：用宏定义来重写虚函数
@@ -398,13 +405,13 @@ int main(int argc,char** argv)
   ```cpp
   // 宏定义：每个子类都需要重写父类虚函数代码，可以用宏定义简洁代码
   #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
-  								virtual EventType GetEventType() const override { return GetStaticType(); }\
-  								virtual const char* GetName() const override { return #type; }
-  
+								virtual EventType GetEventType() const override { return GetStaticType(); }\
+								virtual const char* GetName() const override { return #type; }
+
   #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
   
-  EVENT_CLASS_TYPE(WindowResize)
-  EVENT_CLASS_CATEGORY(EventCategoryApplication)
+  //EVENT_CLASS_TYPE(WindowResize)
+  //EVENT_CLASS_CATEGORY(EventCategoryApplication)
   // 会编译成
   //static EventType GetStaticType() { return EventType::WindowResize; } 
   //virtual EventType GetEventType() const override { return GetStaticType(); } 
@@ -438,13 +445,11 @@ int main(int argc,char** argv)
 
 ### 使用事件
 
-- application.h
+- Application.h
 
   ```cpp
   #include "Core.h"
   #include "Events/Event.h"// 包含事件基类
-  
-  namespace Hazel {
   ```
 
 - Application.cpp
@@ -475,33 +480,33 @@ int main(int argc,char** argv)
 
 - 效果
 
-  ![请添加图片描述](https://i-blog.csdnimg.cn/blog_migrate/da425609f6406d238846efefe53765df.png)
+  ![008](../assets/008.png)
 
 ### 事件调度器代码
 
 ```cpp
+$
 // 事件调度器类
 class EventDispatcher
 {
     template<typename T>
-    using EventFn = std::function<bool(T&)>;	// 声明function，接受返回类型bool，参数是T&的函数
+    using EventFn = std::function<bool(T&)>;// 声明function，接受返回类型bool，参数是T&的函数
     public:
     EventDispatcher(Event& event)
         : m_Event(event)
-        {
-        }
+        { }
     template<typename T>
-    bool Dispatch(EventFn<T> func)				// function参数接收函数指针
+    bool Dispatch(EventFn<T> func)// function参数接收函数指针
     {
-        if (m_Event.GetEventType() == T::GetStaticType())	// 拦截的事件和想处理的事件类型是否匹配
+        if (m_Event.GetEventType() == T::GetStaticType())// 拦截的事件和想处理的事件类型是否匹配
         {
-            m_Event.m_Handled = func(*(T*)&m_Event);		// 处理拦截的事件
+            m_Event.m_Handled = func(*(T*)&m_Event);// 处理拦截的事件
             return true;
         }
         return false;
     }
     private:
-    Event& m_Event;								// 拦截的事件
+        Event& m_Event;// 拦截的事件
 };
 ```
 
