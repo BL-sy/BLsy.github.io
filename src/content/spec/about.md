@@ -20,8 +20,8 @@
 
 - 🌐 **博客主页**: [https://BL-sy.github.io](https://BL-sy.github.io)
 - 💼 **GitHub**: [https://github.com/BL-sy](https://github.com/BL-sy)
-- 📺 **B站主页**: [https://space.bilibili.com/爷不是二刺螈-](https://space.bilibili.com/爷不是二刺螈-)
-- 📧 **联系邮箱**: [3026709446@qq.com]
+- 📺 **B站主页**: [https://space.bilibili.com/爷不是二刺螈-](https://space.bilibili.com/430912952?spm_id_from=333.1007.0.0)
+- 📧 **联系邮箱**: 3026709446@qq.com
 
 ## 技术栈
 
