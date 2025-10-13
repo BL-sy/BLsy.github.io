@@ -1,9 +1,9 @@
 ---
 title: Simple Guides for Mizuki
-published: 2024-04-01
+published: 2025-10-13
 description: "How to use this blog template."
 image: "./cover.jpeg"
-tags: ["Mizuki", "Blogging", "Customization"]
+tags: ["Mizuki", "Blogging"]
 category: Guides
 draft: false
 ---
@@ -21,8 +21,6 @@ description: This is the first post of my new Astro blog.
 image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
-draft: false
-isCollection: false
 ---
 ```
 
