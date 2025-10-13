@@ -16,5 +16,5 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 [参考](https://blog.csdn.net/qq_34060370/category_12203331.html)
 
 
-# [一.什么是游戏引擎](../001/index.md)
+# [一.什么是游戏引擎](../001/)
 
