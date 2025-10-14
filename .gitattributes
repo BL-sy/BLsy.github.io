@@ -1,1 +1,6 @@
+File: .gitattributes
+````````
 *.js linguist-language=astro
+
+ * text=auto
+     pnpm-lock.yaml text eol=lf
