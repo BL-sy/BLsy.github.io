@@ -40,12 +40,29 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 # 二.项目设置
 
+### 养成好习惯
 
-属性设置，将引擎设为动态库，新建一个游戏项目
+指定单独的输出目录
+
+![020](../assets/020.webp)
+
+新建src文件夹存储所有的代码文件
+
+### 属性设置
+
+将引擎设为动态库，新建一个游戏项目,新建两个项目,Hazel作为游戏引擎,Sandbox作为游戏
+
 
 ![001](../assets/001.webp)
 
-将引擎链接到游戏
+将Sandbox设置为启动项目
+
+这里用剪切板打开Solusion,更改默认启动项目
+
+![019](../assets/019.webp)
+
+
+将引擎链接到游戏(让游戏引用引擎)
 
 ![002](../assets/002.webp)
 
@@ -64,59 +81,45 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 ![003](../assets/003.webp)
 
-# 三.入口点
-
-
-我们希望在**游戏中而不是引擎中**决定建立的sandbox，并在**引擎中**实现
+# 三.测试
 
 ```cpp
-Hazel::Application* Hazel::CreateApplication()
-{
-    return new Sandbox();
+$Hazel/Test.h
+
+#pragma once
+#include <stdio.h>
+namespace Hazel {
+	//这里dllexport只做测试用
+	__declspec(dllexport) void Print();
+}
+```
+```cpp
+$Hazel/Test.cpp
+
+#include "Test.h"
+namespace Hazel {
+	void Print()
+	{
+		printf("test");
+	}
+}
+```
+```cpp
+$Sandbox/Application.cpp
+
+namespace Hazel {
+	//测试
+	__declspec(dllimport) void Print();
+}
+
+void main() {
+	Hazel::Print();
 }
 ```
 
-```cpp
-#ifdef HZ_PLATFORM_WINDOW
+**这里先把Hazel生成的dll文件放到Sandbox的输出目录下，后面会处理成自动链接**
 
-extern Hazel::Application* Hazel::CreateApplication();
-```
-
-将CreateApplication函数声明为**extern**，表示此函数会在Hazel外部定义，接下来使用的这函数时将使用在外部定义的CreateApplication
-
-
-
-- 在Core.h中
-
-  ```cpp
-  #pragma once
-  #ifdef HZ_PLATFORM_WINDOWS
-  	#ifdef HZ_BUILD_DLL
-  		#define HAZEL_API __declspec(dllexport)
-  	#else
-  		#define HAZEL_API __declspec(dllimport)
-  	#endif
-  #else
-  	#error Hazel only supports Windows!
-  #endif
-  ```
-
-  根据条件编译定义**HAZEL_API**是dll导入还是导出，可知Hazel项目将是__declspec(dllexport)**(导出作为dll的引擎Hazel)**，Sandbox项目是__declspec(dllimport)**(导入引擎dll)**
-
-- 由于Sandbox#include <Hazel.h>，而Hazel项目的Hazel.h**包含**了Application.h，Application.h又包含了Core.h文件，
-
-
-  ```cpp
-  #include <Hazel.h>
-  class Sandbox : public Hazel::Application
-  {
-  public:
-  	Sandbox(){}
-  	~Sandbox(){}
-  };
-  ```
-
-  所以Sandbox项目也有**HAZEL_API**宏定义，且**是__declspec(dllimport)**
+成功输出，Sandbox成功链接到Hazel
 
 
 # Tips
