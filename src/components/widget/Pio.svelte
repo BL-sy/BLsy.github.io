@@ -79,7 +79,12 @@ function loadPioAssets() {
 // 样式已通过 Layout.astro 静态引入，无需页面切换监听
 
 onMount(() => {
-	if (!pioConfig.enable) return;
+    if (!pioConfig.enable) return;
+
+    // 在移动端直接跳过资源加载，节省内存与带宽
+    if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 1023px)').matches) {
+        return;
+    }
 
 	// 加载资源并初始化
 	loadPioAssets();

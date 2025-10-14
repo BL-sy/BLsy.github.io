@@ -112,9 +112,9 @@ function initSemifullScrollDetection() {
     // 如果不是首页，移除滚动事件监听器并设置为半透明状态
     if (!isHomePage) {
         // 移除之前的滚动事件监听器（如果存在）
-        if (window.semifullScrollHandler) {
-            window.removeEventListener('scroll', window.semifullScrollHandler);
-            window.semifullScrollHandler = null;
+        if (typeof window !== 'undefined' && (window as any).semifullScrollHandler) {
+            window.removeEventListener('scroll', (window as any).semifullScrollHandler as EventListener);
+            (window as any).semifullScrollHandler = null;
         }
         // 设置为半透明状态
         navbar.classList.add('scrolled');
@@ -147,22 +147,22 @@ function initSemifullScrollDetection() {
     }
     
     // 移除之前的滚动事件监听器（如果存在）
-    if (window.semifullScrollHandler) {
-        window.removeEventListener('scroll', window.semifullScrollHandler);
+    if (typeof window !== 'undefined' && (window as any).semifullScrollHandler) {
+        window.removeEventListener('scroll', (window as any).semifullScrollHandler as EventListener);
     }
     
     // 保存新的事件处理器引用
-    window.semifullScrollHandler = requestTick;
+    (window as any).semifullScrollHandler = requestTick;
     
     // 监听滚动事件
-    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('scroll', requestTick as EventListener, { passive: true } as AddEventListenerOptions);
     
     // 初始化状态
     updateNavbarState();
 }
 
 // 将函数暴露到全局对象，供页面切换时调用
-window.initSemifullScrollDetection = initSemifullScrollDetection;
+(window as any).initSemifullScrollDetection = initSemifullScrollDetection;
 
 // 页面加载完成后初始化滚动检测
 if (document.readyState === 'loading') {
@@ -173,23 +173,23 @@ if (document.readyState === 'loading') {
 </script>
 
 {import.meta.env.PROD && <script is:inline define:vars={{scriptUrl: url('/pagefind/pagefind.js')}}>
+// 延迟到用户第一次聚焦搜索框或按下快捷键时再加载 Pagefind
+let pagefindLoading = false;
+let pagefindLoaded = false;
+
 async function loadPagefind() {
+    if (pagefindLoading || pagefindLoaded) return;
+    pagefindLoading = true;
     try {
         const response = await fetch(scriptUrl, { method: 'HEAD' });
-        if (!response.ok) {
-            throw new Error(`Pagefind script not found: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`Pagefind script not found: ${response.status}`);
 
         const pagefind = await import(scriptUrl);
-
-        await pagefind.options({
-            excerptLength: 20
-        });
+        await pagefind.options({ excerptLength: 20 });
 
         window.pagefind = pagefind;
-
+        pagefindLoaded = true;
         document.dispatchEvent(new CustomEvent('pagefindready'));
-        console.log('Pagefind loaded and initialized successfully, event dispatched.');
     } catch (error) {
         console.error('Failed to load Pagefind:', error);
         window.pagefind = {
@@ -197,13 +197,38 @@ async function loadPagefind() {
             options: () => Promise.resolve(),
         };
         document.dispatchEvent(new CustomEvent('pagefindloaderror'));
-        console.log('Pagefind load error, event dispatched.');
+    } finally {
+        pagefindLoading = false;
     }
 }
 
+function bindDeferredLoadTriggers() {
+    const input = document.querySelector('#search-bar input');
+    const button = document.getElementById('search-switch');
+
+    if (input) {
+        input.addEventListener('focus', loadPagefind, { once: true });
+        input.addEventListener('keydown', function(e) {
+            try { if (e && e.key === 'Enter') loadPagefind(); } catch(_) {}
+        });
+    }
+    if (button) {
+        button.addEventListener('click', loadPagefind, { once: true });
+    }
+
+    // 全局快捷键 Ctrl+K / Cmd+K 也触发懒加载
+    window.addEventListener('keydown', function(e) {
+        try {
+            if ((e.ctrlKey || e.metaKey) && String(e.key || '').toLowerCase() === 'k') {
+                loadPagefind();
+            }
+        } catch(_) {}
+    }, { passive: true });
+}
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadPagefind);
+    document.addEventListener('DOMContentLoaded', bindDeferredLoadTriggers);
 } else {
-    loadPagefind();
+    bindDeferredLoadTriggers();
 }
 </script>}
