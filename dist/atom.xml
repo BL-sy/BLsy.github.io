@@ -1,810 +1,802 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>BLsy的博客</title>
-  <subtitle>One demo website</subtitle>
+  <subtitle>welcome</subtitle>
   <link href="https://bl-sy.github.io/" rel="alternate" type="text/html"/>
   <link href="https://bl-sy.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://bl-sy.github.io/</id>
-  <updated>2025-10-12T13:27:29.616Z</updated>
+  <updated>2025-10-14T14:56:36.928Z</updated>
   <language>zh_CN</language>
   <entry>
-    <title>Markdown Tutorial</title>
-    <link href="https://bl-sy.github.io/posts/markdown-tutorial/" rel="alternate" type="text/html"/>
-    <id>https://bl-sy.github.io/posts/markdown-tutorial/</id>
-    <published>2025-01-20T00:00:00.000Z</published>
-    <updated>2025-01-20T00:00:00.000Z</updated>
-    <summary>A simple example of a Markdown blog post.</summary>
-    <content type="html"><![CDATA[<h1>Markdown Tutorial</h1>
-<p>A markdown example shows how to write a markdown file. This document integrates core syntax and extensions (GMF).</p>
-<ul>
-<li><a href="#block-elements">Block Elements</a>
-<ul>
-<li><a href="#paragraphs-and-line-breaks">Paragraphs and Line Breaks</a></li>
-<li><a href="#headers">Headers</a></li>
-<li><a href="#blockquotes">Blockquotes</a></li>
-<li><a href="#lists">Lists</a></li>
-<li><a href="#code-blocks">Code Blocks</a></li>
-<li><a href="#horizontal-rules">Horizontal Rules</a></li>
-<li><a href="#table">Table</a></li>
-</ul>
-</li>
-<li><a href="#span-elements">Span Elements</a>
-<ul>
-<li><a href="#links">Links</a></li>
-<li><a href="#emphasis">Emphasis</a></li>
-<li><a href="#code">Code</a></li>
-<li><a href="#images">Images</a></li>
-<li><a href="#strikethrough">Strikethrough</a></li>
-</ul>
-</li>
-<li><a href="#miscellaneous">Miscellaneous</a>
-<ul>
-<li><a href="#automatic-links">Automatic Links</a></li>
-<li><a href="#backslash-escapes">Backslash Escapes</a></li>
-</ul>
-</li>
-<li><a href="#inline-html">Inline HTML</a></li>
-</ul>
-<h2>Block Elements</h2>
-<h3>Paragraphs and Line Breaks</h3>
-<h4>Paragraphs</h4>
-<p>HTML Tag: <code>&lt;p&gt;</code></p>
-<p>One or more blank lines. (A blank line is a line containing nothing but <strong>spaces</strong> or <strong>tabs</strong> is considered blank.)</p>
-<p>Code:</p>
-<pre><code>This will be
-inline.
-
-This is second paragraph.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>This will be
-inline.</p>
-<p>This is second paragraph.</p>
-<hr />
-<h4>Line Breaks</h4>
-<p>HTML Tag: <code>&lt;br /&gt;</code></p>
-<p>End a line with <strong>two or more spaces</strong>.</p>
-<p>Code:</p>
-<pre><code>This will be not
-inline.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>This will be not<br />
-inline.</p>
-<hr />
-<h3>Headers</h3>
-<p>Markdown supports two styles of headers, Setext and atx.</p>
-<h4>Setext</h4>
-<p>HTML Tags: <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code></p>
-<p>"Underlined" using <strong>equal signs (=)</strong> as <code>&lt;h1&gt;</code> and <strong>dashes (-)</strong> as <code>&lt;h2&gt;</code> in any number.</p>
-<p>Code:</p>
-<pre><code>This is an H1
-=============
-This is an H2
--------------
-</code></pre>
-<p>Preview:</p>
-<hr />
-<h1>This is an H1</h1>
-<h2>This is an H2</h2>
-<hr />
-<h4>atx</h4>
-<p>HTML Tags: <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code></p>
-<p>Uses 1-6 <strong>hash characters (#)</strong> at the start of the line, corresponding to <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>.</p>
-<p>Code:</p>
-<pre><code># This is an H1
-## This is an H2
-###### This is an H6
-</code></pre>
-<p>Preview:</p>
-<hr />
-<h1>This is an H1</h1>
-<h2>This is an H2</h2>
-<h6>This is an H6</h6>
-<hr />
-<p>Optionally, you may "close" atx-style headers. The closing hashes <strong>don't need to match</strong> the number of hashes used to open the header.</p>
-<p>Code:</p>
-<pre><code># This is an H1 #
-## This is an H2 ##
-### This is an H3 ######
-</code></pre>
-<p>Preview:</p>
-<hr />
-<h1>This is an H1</h1>
-<h2>This is an H2</h2>
-<h3>This is an H3</h3>
-<hr />
-<h3>Blockquotes</h3>
-<p>HTML Tag: <code>&lt;blockquote&gt;</code></p>
-<p>Markdown uses email-style <strong>&gt;</strong> characters for blockquoting. It looks best if you hard wrap the text and put a &gt; before every line.</p>
-<p>Code:</p>
-<pre><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-&gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-&gt;
-&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-&gt; id sem consectetuer libero luctus adipiscing.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<blockquote>
-<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
-<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.</p>
-</blockquote>
-<hr />
-<p>Markdown allows you to be lazy and only put the &gt; before the first line of a hard-wrapped paragraph.</p>
-<p>Code:</p>
-<pre><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<blockquote>
-<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
-</blockquote>
-<blockquote>
-<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.</p>
-</blockquote>
-<hr />
-<p>Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by adding additional levels of &gt;.</p>
-<p>Code:</p>
-<pre><code>&gt; This is the first level of quoting.
-&gt;
-&gt; &gt; This is nested blockquote.
-&gt;
-&gt; Back to the first level.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<blockquote>
-<p>This is the first level of quoting.</p>
-<blockquote>
-<p>This is nested blockquote.</p>
-</blockquote>
-<p>Back to the first level.</p>
-</blockquote>
-<hr />
-<p>Blockquotes can contain other Markdown elements, including headers, lists, and code blocks.</p>
-<p>Code:</p>
-<pre><code>&gt; ## This is a header.
-&gt;
-&gt; 1.   This is the first list item.
-&gt; 2.   This is the second list item.
-&gt;
-&gt; Here's some example code:
-&gt;
-&gt;     return shell_exec("echo $input | $markdown_script");
-</code></pre>
-<p>Preview:</p>
-<hr />
-<blockquote>
-<h2>This is a header.</h2>
-<ol>
-<li>This is the first list item.</li>
-<li>This is the second list item.</li>
-</ol>
-<p>Here's some example code:</p>
-<pre><code>return shell_exec("echo $input | $markdown_script");
-</code></pre>
-</blockquote>
-<hr />
-<h3>Lists</h3>
-<p>Markdown supports ordered (numbered) and unordered (bulleted) lists.</p>
-<h4>Unordered</h4>
-<p>HTML Tag: <code>&lt;ul&gt;</code></p>
-<p>Unordered lists use <strong>asterisks (*)</strong>, <strong>pluses (+)</strong>, and <strong>hyphens (-)</strong>.</p>
-<p>Code:</p>
-<pre><code>*   Red
-*   Green
-*   Blue
-</code></pre>
-<p>Preview:</p>
-<hr />
-<ul>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ul>
-<hr />
-<p>is equivalent to:</p>
-<p>Code:</p>
-<pre><code>+   Red
-+   Green
-+   Blue
-</code></pre>
-<p>and:</p>
-<p>Code:</p>
-<pre><code>-   Red
--   Green
--   Blue
-</code></pre>
-<h4>Ordered</h4>
-<p>HTML Tag: <code>&lt;ol&gt;</code></p>
-<p>Ordered lists use numbers followed by periods:</p>
-<p>Code:</p>
-<pre><code>1.  Bird
-2.  McHale
-3.  Parish
-</code></pre>
-<p>Preview:</p>
-<hr />
-<ol>
-<li>Bird</li>
-<li>McHale</li>
-<li>Parish</li>
-</ol>
-<hr />
-<p>It's possible to trigger an ordered list by accident, by writing something like this:</p>
-<p>Code:</p>
-<pre><code>1986. What a great season.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<ol>
-<li>What a great season.</li>
-</ol>
-<hr />
-<p>You can <strong>backslash-escape (\)</strong> the period:</p>
-<p>Code:</p>
-<pre><code>1986\. What a great season.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>1986. What a great season.</p>
-<hr />
-<h4>Indented</h4>
-<h5>Blockquote</h5>
-<p>To put a blockquote within a list item, the blockquote's &gt; delimiters need to be indented:</p>
-<p>Code:</p>
-<pre><code>*   A list item with a blockquote:
-
-    &gt; This is a blockquote
-    &gt; inside a list item.
-</code></pre>
-<p>Preview:</p>
-<hr />
+    <title>事件系统</title>
+    <link href="https://bl-sy.github.io/posts/gameengine/004/" rel="alternate" type="text/html"/>
+    <id>https://bl-sy.github.io/posts/gameengine/004/</id>
+    <published>2025-10-14T00:00:00.000Z</published>
+    <updated>2025-10-14T00:00:00.000Z</updated>
+    <summary>基于cherno Hazel引擎教学</summary>
+    <content type="html"><![CDATA[<p>This blog template is built with <a href="https://astro.build/">Astro</a>. For the things that are not mentioned in this guide, you may find the answers in the <a href="https://docs.astro.build/">Astro Docs</a>.</p>
+<h1>一.规划事件系统</h1>
+<p><img src="../assets/007.webp" alt="007" /></p>
+<h1>二.自定义事件类与使用</h1>
+<h3>声明与定义类代码</h3>
 <ul>
 <li>
-<p>A list item with a blockquote:</p>
-<blockquote>
-<p>This is a blockquote
-inside a list item.</p>
-</blockquote>
+<p>Event.h</p>
+<pre><code>  /*
+  	为了简便，自定义事件是立即处理事件，没有缓冲事件。
+  	缓冲事件：键盘a一直按下第一个立刻输出，顿了一下才一直输出。
+  */
+  // 所有事件-一个类一个标识
+  enum class EventType
+	{
+      None = 0,
+      WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
+      AppTick, AppUpdate, AppRender,
+      KeyPressed, KeyReleased,
+      MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
+	};
+
+  // 事件种类
+	enum EventCategory
+	{
+		None = 0,
+		EventCategoryApplication	= BIT(0),
+		EventCategoryInput			= BIT(1),
+		EventCategoryKeyboard		= BIT(2),
+		EventCategoryMouse			= BIT(3),
+		EventCategoryMouseButton	= BIT(4)
+	};
+
+
+  // 用宏定义更简洁的定义事件种类
+  // 父类虚函数
+  #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
+								   virtual EventType GetEventType() const override { return GetStaticType(); }\
+								   virtual const char* GetName() const override { return #type; }
+  // ##type，是保持为变量，#type是转换为字符串
+
+  #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
+
+	class HAZEL_API Event
+	{
+      friend class EventDispatcher;
+	public:
+		virtual EventType GetEventType() const = 0;
+		virtual const char* GetName() const = 0;
+		virtual int GetCategoryFlags() const = 0;
+		virtual std::string ToString() const { return GetName(); };
+
+		inline bool IsInCategory(EventCategory category)
+		{
+			return GetCategoryFlags() &amp; category;
+		}
+
+		bool m_Handled = false;  // 事件处理状态
+	};
+</code></pre>
+</li>
+<li>
+<p>WindowResizeEvent</p>
+<pre><code>$ApplicationEvent.h
+class HAZEL_API WindowResizeEvent : public Event
+{
+  public:
+      WindowResizeEvent(unsigned int width, unsigned int height)
+  		:m_Width(width), m_Height(height) {
+  	}
+
+  	inline unsigned int GetWidth() const { return m_Width; }
+  	inline unsigned int GetHeight() const { return m_Height; };
+
+      // 重写ToString输出窗口宽高
+  	std::string ToString() const override
+  	{
+  		std::stringstream ss;
+  		ss &lt;&lt; "WindowResizeEvent: " &lt;&lt; m_Width &lt;&lt; ", " &lt;&lt; m_Height;
+  		return ss.str();
+  	}
+  	// 用宏定义来重写虚函数
+  	EVENT_CLASS_TYPE(WindowResize)
+  	EVENT_CLASS_CATEGORY(EventCategoryApplication)
+  private:
+  	unsigned int m_Width, m_Height;
+  };
+</code></pre>
+</li>
+<li>
+<p>用宏定义重写虚函数</p>
+<pre><code>// 宏定义：每个子类都需要重写父类虚函数代码，可以用宏定义简洁代码
+#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
+  							virtual EventType GetEventType() const override { return GetStaticType(); }\
+  							virtual const char* GetName() const override { return #type; }
+
+#define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
+
+EVENT_CLASS_TYPE(WindowResize)
+EVENT_CLASS_CATEGORY(EventCategoryApplication)
+// 会编译成
+static EventType GetStaticType() { return EventType::WindowResize; } 
+virtual EventType GetEventType() const override { return GetStaticType(); } 
+virtual const char* GetName() const override { return "WindowResize"; }
+virtual int GetCategoryFlags() const override { return EventCategoryApplication; }
+</code></pre>
+<p><strong>##type</strong>，是保持为变量，<strong>#type</strong>是转换为字符串</p>
 </li>
 </ul>
-<hr />
-<h5>Code Block</h5>
-<p>To put a code block within a list item, the code block needs to be indented twice — <strong>8 spaces</strong> or <strong>two tabs</strong>:</p>
-<p>Code:</p>
-<pre><code>*   A list item with a code block:
-
-        &lt;code goes here&gt;
-</code></pre>
-<p>Preview:</p>
-<hr />
+<h3>包含头文件</h3>
 <ul>
 <li>
-<p>A list item with a code block:</p>
-<pre><code>&lt;code goes here&gt;
+<p>premake的lua脚本中</p>
+<pre><code>includedirs
+{
+    "%{prj.name}/src",
+    "%{prj.name}/vendor/spdlog/include"
+}
+</code></pre>
+<p>所以Hazel项目的包含目录包含src目录</p>
+<pre><code>// 因为Event.h所在src/Hazel/Events/Event.h
+// 其它类包含Event.h，可以写成
+#include "Hazel/Events/Event.h"// 而不用前缀src
+</code></pre>
+<p>重新编译</p>
+</li>
+</ul>
+<h3>使用事件</h3>
+<ul>
+<li>
+<p>Application.h</p>
+<pre><code>#include "Core.h"
+#include "Events/Event.h"// 包含事件基类
+</code></pre>
+</li>
+<li>
+<p>Application.cpp</p>
+<pre><code>#include "Application.h"
+#include "Hazel/Events/ApplicationEvent.h" // 包含具体事件
+#include "Hazel/Log.h"
+
+namespace Hazel {
+	Application::Application(){}
+	Application::~Application(){}
+	void Application::Run()
+	{
+		WindowResizeEvent e(1280, 720);	// 使用自定义事件
+		if (e.IsInCategory(EventCategoryApplication))	// 判断是否对应的分类
+		{
+			HZ_TRACE(e);	// 输出事件
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			HZ_TRACE(e);
+		}
+		while (true);
+	}
+}
+</code></pre>
+</li>
+<li>
+<p>效果</p>
+<p><img src="../assets/008.webp" alt="008" /></p>
+</li>
+</ul>
+<h3>事件调度器代码</h3>
+<pre><code>$Event.h
+// 事件调度器类
+class EventDispatcher
+{
+    template&lt;typename T&gt;
+    using EventFn = std::function&lt;bool(T&amp;)&gt;;// 声明function，接受返回类型bool，参数是T&amp;的函数
+    public:
+    EventDispatcher(Event&amp; event)
+        : m_Event(event)
+        { }
+    template&lt;typename T&gt;
+    bool Dispatch(EventFn&lt;T&gt; func)// function参数接收函数指针
+    {
+        // 拦截的事件和想处理的事件类型是否匹配
+        // GetEventType()是被重写的函数
+        if (m_Event.GetEventType() == T::GetStaticType())
+        {
+            m_Event.m_Handled = func(*(T*)&amp;m_Event);// 处理拦截的事件
+            return true;
+        }
+        return false;
+    }
+    private:
+        Event&amp; m_Event;// 拦截的事件
+};
+</code></pre>
+<hr />
+<h1>三.窗口</h1>
+<h2>(一)窗口抽象和GLFW创建窗口</h2>
+<p>步骤</p>
+<h3>1.GIT添加GLFW子模块及编译</h3>
+<ul>
+<li>
+<p>添加glfw子模块</p>
+<pre><code>git add submodule https://github.com/TheCherno/glfw Hazel/vendor/GLFW
+</code></pre>
+</li>
+<li>
+<p>TheCherno的premake是不对的，会报错</p>
+<p>解决方案：更改premake</p>
+<pre><code>	filter "configurations:Debug"
+    defines "HZ_DEBUG"
+    buildoptions "/MTd"
+    symbols "On"
+
+    filter "configurations:Release"
+    defines "HZ_RELEASE"
+    buildoptions "/MT"
+    symbols "On"
+
+    filter "configurations:Dist"
+    defines "HZ_DIST"
+    buildoptions "/MT"
+    symbols "On"
+</code></pre>
+</li>
+<li>
+<p>修改premake</p>
+<p>解决方案下的premake修改</p>
+<pre><code>-- 包含相对解决方案的目录
+IncludeDir = {}
+IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
+-- 这个include，相当于把glfw下的premake5.lua内容拷贝到这里
+include "Hazel/vendor/GLFW"
+project "Hazel"		--Hazel项目
+	location "Hazel"--在sln所属文件夹下的Hazel文件夹
+	kind "SharedLib"--dll动态库
+	-- 包含目录
+	includedirs{
+	    "%{prj.name}/src",
+	    "%{prj.name}/vendor/spdlog/include",
+	    "%{IncludeDir.GLFW}"
+	}
+	-- Hazel链接glfw项目
+	links 
+	{ 
+	    "GLFW",
+	    "opengl32.lib"
+	}
+	filter "system:windows"
+	    defines{
+		    "HZ_PLATFORM_WINDOWS",
+		    "HZ_ENABLE_ASSERTS"
+		}
 </code></pre>
 </li>
 </ul>
-<hr />
-<h5>Nested List</h5>
-<p>Code:</p>
-<pre><code>* A
-  * A1
-  * A2
-* B
-* C
+<h3>2.Window类</h3>
+<ul>
+<li>
+<p>目前类图</p>
+<p><img src="../assets/011.webp" alt="011" /></p>
+<p>Application类可以调用创建窗口函数，而窗口类使用glfw库创建<strong>真正的</strong>窗口。</p>
+<p>窗口类<strong>检测</strong>glfw窗口的事件，并<strong>回调</strong>给Application的处理事件函数。</p>
+</li>
+<li>
+<p>代码</p>
+<p>window.h</p>
+<pre><code>#pragma once
+#include "hzpch.h"
+#include "Hazel/Core.h"
+#include "Hazel/Events/Event.h"
+namespace Hazel {
+	struct WindowProps{// 窗口初始化设置的内容
+		std::string Title;
+		unsigned int Width;
+		unsigned int Height;
+		WindowProps(const std::string&amp; title = "Hazel Engine",
+			unsigned int width = 1280,
+			unsigned int height = 720)
+			: Title(title), Width(width), Height(height){}
+	};
+	class HAZEL_API Window{
+	public:
+      using EventCallbackFn = std::function&lt;void(Event&amp;)&gt;;
+      virtual ~Window() {}
+      virtual void OnUpdate() = 0;
+      virtual unsigned int GetWidth() const = 0;
+      virtual unsigned int GetHeight() const = 0;
+      // Window attributes
+      virtual void SetEventCallback(const EventCallbackFn&amp; callback) = 0;
+      virtual void SetVSync(bool enabled) = 0;
+      virtual bool IsVSync() const = 0;
+      // 在Window父类声明创建函数
+      static Window* Create(const WindowProps&amp; props = WindowProps());
+	};
+}
 </code></pre>
-<p>Preview:</p>
-<hr />
+<p>WindowsWindow.h</p>
+<pre><code>#pragma once
+#include "Hazel/Window.h"
+#include &lt;GLFW/glfw3.h&gt;
+namespace Hazel {
+	class WindowsWindow : public Window{
+	public:
+		WindowsWindow(const WindowProps&amp; props);
+		virtual ~WindowsWindow();
+		void OnUpdate() override;
+		inline unsigned int GetWidth() const override { return m_Data.Width; }
+		inline unsigned int GetHeight() const override { return m_Data.Height; }
+		// 设置Application的回调函数
+		inline void SetEventCallback(const EventCallbackFn&amp; callback) override { m_Data.EventCallback = callback; }
+		void SetVSync(bool enabled) override;
+		bool IsVSync() const override;
+	private:
+		virtual void Init(const WindowProps&amp; props);
+		virtual void Shutdown();
+	private:
+		GLFWwindow* m_Window;
+		struct WindowData{
+			std::string Title;
+			unsigned int Width, Height;
+			bool VSync;
+			EventCallbackFn EventCallback;
+		};
+		WindowData m_Data;
+	};
+}
+</code></pre>
+<p>WindowsWindow.cpp</p>
+<pre><code>#include "hzpch.h"
+#include "WindowsWindow.h"
+
+namespace Hazel {
+
+	static bool s_GLFWInitialized = false;
+
+	// 在WindowsWindow子类定义在Window父类声明的函数
+	Window* Window::Create(const WindowProps&amp; props) { return new WindowsWindow(props); }
+
+	WindowsWindow::WindowsWindow(const WindowProps&amp; props) { Init(props); }
+
+	WindowsWindow::~WindowsWindow()
+	{
+		Shutdown();
+	}
+
+	void WindowsWindow::SetVSync(bool enabled)
+	{
+		if (enabled)
+			glfwSwapInterval(1);
+		else
+			glfwSwapInterval(0);
+
+		m_Data.VSync = enabled;
+	}
+
+	bool WindowsWindow::IsVSync() const
+	{
+		return m_Data.VSync;
+	}
+
+	void WindowsWindow::Init(const WindowProps&amp; props)
+	{
+		m_Data.Title = props.Title;
+		m_Data.Width = props.Width;
+		m_Data.Height = props.Height;
+
+		HZ_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
+
+		if (!s_GLFWInitialized)
+		{
+			// TODO: glfwTerminate on system shutdown
+			int success = glfwInit();
+			HZ_CORE_ASSERT(success, "Could not intialize GLFW!");// 断言，Core.h里面预处理器指令定义了HZ_CORE_ASSERT
+			s_GLFWInitialized = true;
+		}
+
+		// 创建窗口----------------------------------------------------------------------
+		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+		// 设置glfw当前的上下文
+		glfwMakeContextCurrent(m_Window);
+		/*
+			设置窗口关联的用户数据指针。这里GLFW仅做存储，不做任何的特殊处理和应用。
+			window表示操作的窗口句柄。
+			pointer表示用户数据指针。
+		*/
+
+		glfwSetWindowUserPointer(m_Window, &amp;m_Data);
+		SetVSync(true);
+	}
+
+	void WindowsWindow::Shutdown()
+	{
+		glfwDestroyWindow(m_Window);
+	}
+
+	void WindowsWindow::OnUpdate() 
+	{
+		glfwPollEvents();			// 轮询事件	
+		glfwSwapBuffers(m_Window);	// 交换缓冲
+	}
+
+}
+
+</code></pre>
+</li>
+<li>
+<p>HZ_CORE_ASSERT断言</p>
+<p>在Core.h中</p>
+<pre><code>#ifdef HZ_ENABLE_ASSERTS
+#define HZ_ASSERT(x, ...) { if(!(x)) { HZ_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#define HZ_CORE_ASSERT(x, ...) { if(!(x)) { HZ_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+#define HZ_ASSERT(x, ...)
+#define HZ_CORE_ASSERT(x, ...)
+#endif
+</code></pre>
+<pre><code>HZ_CORE_ASSERT(success, "Could not intialize GLFW!");
+// 转换成
+{ if(!(success)) { ::Hazel::Log::GetCoreLogger()-&gt;error("Assertion Failed: {0}", "Could not intialize GLFW!"); __debugbreak(); } };
+</code></pre>
+<p>…当做参数包被__VA_ARGS__展开；__debugbreak();是在debug模式下的断点</p>
+</li>
+</ul>
+<h2>(二)GLFW窗口事件</h2>
+<h3>如何确定GLFW窗口事件的回调函数参数</h3>
 <ul>
-<li>A
+<li>
+<p>引出</p>
+<pre><code>glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
+</code></pre>
+<p>如上代码，用lambda接收GLFW按键事件，怎么确定lambda的<strong>参数</strong></p>
+</li>
+<li>
+<p>ctrl+左键点开glfwSetKeyCallback</p>
+<p><img src="../assets/012.webp" alt="012" /></p>
+<p>不知道使用什么参数查一下就好了</p>
+</li>
+</ul>
+<h3>Application接收事件回调流程</h3>
+<p>项目流程(12345)</p>
+<p>按照1、2、3、4、5顺序</p>
+<p><img src="../assets/013.webp" alt="013" /></p>
 <ul>
-<li>A1</li>
-<li>A2</li>
+<li>
+<p>在Application实现事件系统</p>
+<pre><code>$Application.cpp
+
+#include "hzpch.h"
+
+#include "Application.h"
+#include &lt;stdio.h&gt;
+
+#include "Hazel/Events/MouseEvent.h"
+#include "Hazel/Log.h"
+
+#include &lt;GLFW/glfw3.h&gt;
+
+namespace Hazel {
+
+#define BIND_EVENT_FN(x) std::bind(&amp;Application::x, this, std::placeholders::_1)
+
+	Application::Application() 
+	{
+      // 创建窗口，设置回调
+		m_Window = std::unique_ptr&lt;Window&gt;(Window::Create());
+		m_Window-&gt;SetEventCallback(BIND_EVENT_FN(OnEvent));
+	}
+
+  // 事件调度器，处理希望的事件
+	void Application::OnEvent(Event&amp; e)
+	{
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch&lt;WindowClosedEvent&gt;(BIND_EVENT_FN(OnWindowClose));
+
+		HZ_CORE_TRACE("{0}", e.ToString());
+	}
+
+  // 窗口关闭
+	bool Application::OnWindowClose(WindowClosedEvent&amp; e)
+	{
+		m_Running = false;
+		return true;
+	}
+}
+</code></pre>
+</li>
+<li>
+<p>WindowsWindow.cpp</p>
+<pre><code>glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height){
+	// glfwGetWindowUserPointer获取void*指针可以转换为由glfwSetWindowUserPointer自定义数据类型，
+    WindowData&amp; data = *(WindowData*)glfwGetWindowUserPointer(window);
+    data.Width = width;
+    data.Height = height;
+
+	// 2.3将glfw窗口事件转换为自定义的事件
+    WindowResizeEvent event(width, height);
+	// 3.回调Application的OnEvent函数，并将事件作为其OnEvent的参数
+    data.EventCallback(event);
+});
+</code></pre>
+</li>
+<li>
+<p>效果</p>
+<p><img src="../assets/014.webp" alt="014" /></p>
+</li>
+<li>
+<p>调度器实现窗口关闭</p>
+<pre><code>EventDispatcher(Event&amp; event)
+	: m_Event(event){ }
+
+template&lt;typename T&gt;
+bool Dispatch(EventFn&lt;T&gt; func)
+{
+	// 若调度器事件与T类型一致，执行func
+	if(m_Event.GetEventType() == T::GetStaticType())
+	{
+		m_Event.m_Handled = func(*(T*)&amp;m_Event);
+		return true;
+	}
+	return false;
+}
+</code></pre>
+<pre><code>#define BIND_EVENT_FN(x) std::bind(&amp;Application::x, this, std::placeholders::_1)
+void Application::OnEvent(Event&amp; e)
+{
+	EventDispatcher dispatcher(e);
+	dispatcher.Dispatch&lt;WindowClosedEvent&gt;(BIND_EVENT_FN(OnWindowClose));
+
+	HZ_CORE_TRACE("{0}", e.ToString());
+}
+bool Application::OnWindowClose(WindowClosedEvent&amp; e)
+{
+	m_Running = false;
+	return true;
+}
+</code></pre>
+<p>如果传入调度器的事件是WindowClosedEvent，则执行OnWindowClose</p>
+</li>
+</ul>
+<h1>四.图层Layer</h1>
+<h3>前言</h3>
+<ul>
+<li>
+<p>此节目的</p>
+<ul>
+<li>
+<p>为完成事件系统设计的第四步，将事件从Application传递分发给Layer层。</p>
+<p><img src="../assets/015.webp" alt="015" /></p>
+</li>
 </ul>
 </li>
-<li>B</li>
-<li>C</li>
-</ul>
-<hr />
-<h3>Code Blocks</h3>
-<p>HTML Tag: <code>&lt;pre&gt;</code></p>
-<p>Indent every line of the block by at least <strong>4 spaces</strong> or <strong>1 tab</strong>.</p>
-<p>Code:</p>
-<pre><code>This is a normal paragraph:
-
-    This is a code block.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>This is a normal paragraph:</p>
-<pre><code>This is a code block.
-</code></pre>
-<hr />
-<p>A code block continues until it reaches a line that is not indented (or the end of the article).</p>
-<p>Within a code block, <strong><em>ampersands (&amp;)</em></strong> and angle <strong>brackets (&lt; and &gt;)</strong> are automatically converted into HTML entities.</p>
-<p>Code:</p>
-<pre><code>    &lt;div class="footer"&gt;
-        &amp;copy; 2004 Foo Corporation
-    &lt;/div&gt;
-</code></pre>
-<p>Preview:</p>
-<hr />
-<pre><code>&lt;div class="footer"&gt;
-    &amp;copy; 2004 Foo Corporation
-&lt;/div&gt;
-</code></pre>
-<hr />
-<p>Following sections Fenced Code Blocks and Syntax Highlighting are extensions, you can use the other way to write the code block.</p>
-<h4>Fenced Code Blocks</h4>
-<p>Just wrap your code in <code>```</code> (as shown below) and you won't need to indent it by four spaces.</p>
-<p>Code:</p>
-<pre><code>Here's an example:
-
-```
-function test() {
-  console.log("notice the blank line before this function?");
-}
-```
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>Here's an example:</p>
-<pre><code>function test() {
-  console.log("notice the blank line before this function?");
-}
-</code></pre>
-<hr />
-<h4>Syntax Highlighting</h4>
-<p>In your fenced block, add an optional language identifier and we'll run it through syntax highlighting (<a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">Support Languages</a>).</p>
-<p>Code:</p>
-<pre><code>```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-</code></pre>
-<p>Preview:</p>
-<hr />
-<pre><code>require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-</code></pre>
-<hr />
-<h3>Horizontal Rules</h3>
-<p>HTML Tag: <code>&lt;hr /&gt;</code>
-Places <strong>three or more hyphens (-), asterisks (*), or underscores (_)</strong> on a line by themselves. You may use spaces between the hyphens or asterisks.</p>
-<p>Code:</p>
-<pre><code>* * *
-***
-*****
-- - -
----------------------------------------
-___
-</code></pre>
-<p>Preview:</p>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h3>Table</h3>
-<p>HTML Tag: <code>&lt;table&gt;</code></p>
-<p>It's an extension.</p>
-<p>Separates column by <strong>pipe (|)</strong> and header by <strong>dashes (-)</strong>, and uses <strong>colon (:)</strong> for alignment.</p>
-<p>The outer <strong>pipes (|)</strong> and alignment are optional. There are <strong>3 delimiters</strong> each cell at least for separating header.</p>
-<p>Code:</p>
-<pre><code>| Left | Center | Right |
-|:-----|:------:|------:|
-|aaa   |bbb     |ccc    |
-|ddd   |eee     |fff    |
-
- A | B
----|---
-123|456
-
-
-A |B
---|--
-12|45
-</code></pre>
-<p>Preview:</p>
-<hr />
-<table>
-<thead>
-<tr>
-<th>Left</th>
-<th>Center</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>aaa</td>
-<td>bbb</td>
-<td>ccc</td>
-</tr>
-<tr>
-<td>ddd</td>
-<td>eee</td>
-<td>fff</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>A</th>
-<th>B</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>123</td>
-<td>456</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>A</th>
-<th>B</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>12</td>
-<td>45</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2>Span Elements</h2>
-<h3>Links</h3>
-<p>HTML Tag: <code>&lt;a&gt;</code></p>
-<p>Markdown supports two style of links: inline and reference.</p>
-<h4>Inline</h4>
-<p>Inline link format like this: <code>[Link Text](URL "Title")</code></p>
-<p>Title is optional.</p>
-<p>Code:</p>
-<pre><code>This is [an example](http://example.com/ "Title") inline link.
-
-[This link](http://example.net/) has no title attribute.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>This is <a href="http://example.com/">an example</a> inline link.</p>
-<p><a href="http://example.net/">This link</a> has no title attribute.</p>
-<hr />
-<p>If you're referring to a local resource on the same server, you can use relative paths:</p>
-<p>Code:</p>
-<pre><code>See my [About](/about/) page for details.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>See my <a href="/about/">About</a> page for details.</p>
-<hr />
-<h4>Reference</h4>
-<p>You could predefine link references. Format like this: <code>[id]: URL "Title"</code></p>
-<p>Title is also optional. And the you refer the link, format like this: <code>[Link Text][id]</code></p>
-<p>Code:</p>
-<pre><code>[id]: http://example.com/  "Optional Title Here"
-This is [an example][id] reference-style link.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>This is <a href="http://example.com/">an example</a> reference-style link.</p>
-<hr />
-<p>That is:</p>
+<li>
+<p>Layer的理解</p>
+<p>想象同Ps中一张图有多个层级，可以在层级上绘制图画</p>
+</li>
+<li>
+<p>Layer的设计</p>
 <ul>
-<li>Square brackets containing the link identifier (<strong>not case sensitive</strong>, optionally indented from the left margin using up to three spaces);</li>
-<li>followed by a colon;</li>
-<li>followed by one or more spaces (or tabs);</li>
-<li>followed by the URL for the link;</li>
-<li>The link URL may, optionally, be surrounded by angle brackets.</li>
-<li>optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses.</li>
+<li>
+<p>数据结构：vector</p>
+</li>
+<li>
+<p>渲染顺序</p>
+<p><strong>从前往后</strong>渲染各个层的图像，这样后面渲染的会覆盖前面渲染的图像，在屏幕的最顶层。</p>
+</li>
+<li>
+<p>处理事件顺序</p>
+<p><strong>从后往前</strong>依次处理事件，当一个事件被一个层处理完不会传递给前一个层，结合渲染顺序，这样在屏幕最顶层的（也就是在vector最后的layer）图像<strong>最先</strong>处理事件。</p>
+</li>
+<li>
+<p>例子解释</p>
+<p>比如常见的3D游戏有UI。</p>
+<p>渲染顺序：将3D图形先渲染，再渲染2DUI，这样屏幕上2DUI永远在3D图形上方，显示正确；</p>
+<p>事件顺序：点击屏幕的图形，应该是2DUI最先处理，如果是相应UI事件，处理完后<strong>不传递</strong>给前一个3D层，若不是自己的UI事件，<strong>才传递</strong>给前一个3D层。</p>
+</li>
 </ul>
-<p>The following three link definitions are equivalent:</p>
-<p>Code:</p>
-<pre><code>[foo]: http://example.com/  "Optional Title Here"
-[foo]: http://example.com/  'Optional Title Here'
-[foo]: http://example.com/  (Optional Title Here)
-[foo]: &lt;http://example.com/&gt;  "Optional Title Here"
-</code></pre>
-<p>Uses an empty set of square brackets, the link text itself is used as the name.</p>
-<p>Code:</p>
-<pre><code>[Google]: http://google.com/
-[Google][]
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p><a href="http://google.com/">Google</a></p>
-<hr />
-<h3>Emphasis</h3>
-<p>HTML Tags: <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code></p>
-<p>Markdown treats <strong>asterisks (*)</strong> and <strong>underscores (_)</strong> as indicators of emphasis. <strong>One delimiter</strong> will be <code>&lt;em&gt;</code>; *<em>double delimiters</em> will be <code>&lt;strong&gt;</code>.</p>
-<p>Code:</p>
-<pre><code>*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p><em>single asterisks</em></p>
-<p><em>single underscores</em></p>
-<p><strong>double asterisks</strong></p>
-<p><strong>double underscores</strong></p>
-<hr />
-<p>But if you surround an * or _ with spaces, it'll be treated as a literal asterisk or underscore.</p>
-<p>You can backslash escape it:</p>
-<p>Code:</p>
-<pre><code>\*this text is surrounded by literal asterisks\*
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>*this text is surrounded by literal asterisks*</p>
-<hr />
-<h3>Code</h3>
-<p>HTML Tag: <code>&lt;code&gt;</code></p>
-<p>Wraps it with <strong>backtick quotes (`)</strong>.</p>
-<p>Code:</p>
-<pre><code>Use the `printf()` function.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>Use the <code>printf()</code> function.</p>
-<hr />
-<p>To include a literal backtick character within a code span, you can use <strong>multiple backticks</strong> as the opening and closing delimiters:</p>
-<p>Code:</p>
-<pre><code>``There is a literal backtick (`) here.``
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p><code>There is a literal backtick (`) here.</code></p>
-<hr />
-<p>The backtick delimiters surrounding a code span may include spaces — one after the opening, one before the closing. This allows you to place literal backtick characters at the beginning or end of a code span:</p>
-<p>Code:</p>
-<pre><code>A single backtick in a code span: `` ` ``
-
-A backtick-delimited string in a code span: `` `foo` ``
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>A single backtick in a code span: <code>`</code></p>
-<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
-<hr />
-<h3>Images</h3>
-<p>HTML Tag: <code>&lt;img /&gt;</code></p>
-<p>Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: inline and reference.</p>
-<h4>Inline</h4>
-<p>Inline image syntax looks like this: <code>![Alt text](URL "Title")</code></p>
-<p>Title is optional.</p>
-<p>Code:</p>
-<pre><code>![Alt text](/path/to/img.jpg)
-
-![Alt text](/path/to/img.jpg "Optional title")
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p><img src="https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp" alt="Alt text" /></p>
-<p><img src="https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp" alt="Alt text" title="Optional title" /></p>
-<hr />
-<p>That is:</p>
+</li>
+</ul>
+<h5>增加Layer后的主要类图</h5>
+<p><img src="../assets/016.webp" alt="016" /></p>
+<p>注意区分LayerStack、Layer以及ExampleLayer</p>
 <ul>
-<li>An exclamation mark: !;</li>
-<li>followed by a set of square brackets, containing the alt attribute text for the image;</li>
-<li>followed by a set of parentheses, containing the URL or path to the image, and an optional title attribute enclosed in double or single quotes.</li>
+<li>
+<p><strong>LayerStack</strong></p>
+<p>管理Layer层的类</p>
+</li>
+<li>
+<p><strong>Layer</strong></p>
+<p>所有层的父类，定义了虚函数</p>
+</li>
+<li>
+<p><strong>Examplayer</strong></p>
+<p>真正需要更新和处理事件的层，被添加到LayerStack的vector中</p>
+</li>
 </ul>
-<h4>Reference</h4>
-<p>Reference-style image syntax looks like this: <code>![Alt text][id]</code></p>
-<p>Code:</p>
-<pre><code>[img id]: https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp  "Optional title attribute"
-![Alt text][img id]
+<h3>项目相关</h3>
+<p>代码</p>
+<ul>
+<li>
+<p>Layer</p>
+<pre><code>#pragma once
+#include "Hazel/Core.h"
+#include "Hazel/Events/Event.h"
+namespace Hazel {
+	class HAZEL_API Layer
+	{
+	public:
+		Layer(const std::string&amp; name = "Layer");
+		virtual ~Layer();
+		virtual void OnAttach() {} // 应用添加此层执行
+		virtual void OnDetach() {} // 应用分离此层执行
+		virtual void OnUpdate() {} // 每层更新
+		virtual void OnEvent(Event&amp; event) {}// 每层处理事件
+		inline const std::string&amp; GetName() const { return m_DebugName; }
+	protected:
+		std::string m_DebugName;
+	};
+}
 </code></pre>
-<p>Preview:</p>
-<hr />
-<p><img src="https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp" alt="Alt text" title="Optional title attribute" /></p>
-<hr />
-<h3>Strikethrough</h3>
-<p>HTML Tag: <code>&lt;del&gt;</code></p>
-<p>It's an extension.</p>
-<p>GFM adds syntax to strikethrough text.</p>
-<p>Code:</p>
-<pre><code>~~Mistaken text.~~
+</li>
+<li>
+<p>LayerStack</p>
+<pre><code>#pragma once
+namespace Hazel {
+	class HAZEL_API LayerStack{
+	public:
+		LayerStack();
+		~LayerStack();
+		void PushLayer(Layer* layer);	// vector在头部添加一个层
+		void PushOverlayer(Layer* overlayer);// 在vector末尾添加一个覆盖层，在屏幕的最上方的层
+		void PopLayer(Layer* layer);	// vector弹出指定层
+		void PopOverlayer(Layer* overlayer);// vector弹出覆盖层
+		std::vector&lt;Layer*&gt;::iterator begin() { return m_Layers.begin(); }
+		std::vector&lt;Layer*&gt;::iterator end() { return m_Layers.end(); }
+	private:
+		std::vector&lt;Layer*&gt; m_Layers;
+		std::vector&lt;Layer*&gt;::iterator m_LayerInsert;
+	};
+}
 </code></pre>
-<p>Preview:</p>
-<hr />
-<p><s>Mistaken text.</s></p>
-<hr />
-<h2>Miscellaneous</h2>
-<h3>Automatic Links</h3>
-<p>Markdown supports a shortcut style for creating "automatic" links for URLs and email addresses: simply surround the URL or email address with angle brackets.</p>
-<p>Code:</p>
-<pre><code>&lt;http://example.com/&gt;
+<pre><code>namespace Hazel {
+	LayerStack::LayerStack(){
+		m_LayerInsert = m_Layers.begin();
+	}
+	LayerStack::~LayerStack(){
+		for (Layer* layer : m_Layers)
+			delete layer;
+	}
+	void LayerStack::PushLayer(Layer* layer){
+		// emplace在vector容器指定位置之前插入一个新的元素。返回插入元素的位置
+		// 插入 1 2 3，vector是 3 2 1
+		m_LayerInsert = m_Layers.emplace(m_Layers.begin(), layer);
+	}
+	void LayerStack::PushOverlay(Layer* overlay){
+		m_Layers.emplace_back(overlay);
+	}
+	void LayerStack::PopLayer(Layer* layer){
+		auto it = std::find(m_Layers.begin(), m_Layers.end(), layer);
+		if (it != m_Layers.end()){
+			m_Layers.erase(it);
+			m_LayerInsert--;	// 指向Begin
+		}
+	}
+	void LayerStack::PopOverlay(Layer* overlay){
+		auto it = std::find(m_Layers.begin(), m_Layers.end(), overlay);
+		if (it != m_Layers.end())
+			m_Layers.erase(it);
+	}
+}
+</code></pre>
+</li>
+<li>
+<p>SandboxApp</p>
+<pre><code>class ExampleLayer : public Hazel::Layer{
+public:
+	ExampleLayer()
+		: Layer("Example"){}
+	void OnUpdate() override{
+		HZ_INFO("ExampleLayer::Update");	// 最终会被输出
+	}
+	void OnEvent(Hazel::Event&amp; event) override{
+		HZ_TRACE("{0}", event);	// 最终会被输出
+	}
+};
+class Sandbox : public Hazel::Application{
+public:
+	Sandbox(){
+		PushLayer(new ExampleLayer());
+	}
+	~Sandbox(){}
+};
+</code></pre>
+</li>
+<li>
+<p>Application</p>
+<pre><code>void Application::PushLayer(Layer* layer){
+    m_LayerStack.PushLayer(layer);
+}
 
-&lt;address@example.com&gt;
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p><a href="http://example.com/">http://example.com/</a></p>
-<p><a href="mailto:address@example.com">address@example.com</a></p>
-<hr />
-<p>GFM will autolink standard URLs.</p>
-<p>Code:</p>
-<pre><code>https://github.com/emn178/markdown
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>https://github.com/emn178/markdown</p>
-<hr />
-<h3>Backslash Escapes</h3>
-<p>Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown's formatting syntax.</p>
-<p>Code:</p>
-<pre><code>\*literal asterisks\*
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>*literal asterisks*</p>
-<hr />
-<p>Markdown provides backslash escapes for the following characters:</p>
-<p>Code:</p>
-<pre><code>\   backslash
-`   backtick
-*   asterisk
-_   underscore
-{}  curly braces
-[]  square brackets
-()  parentheses
-#   hash mark
-+   plus sign
--   minus sign (hyphen)
-.   dot
-!   exclamation mark
-</code></pre>
-<h2>Inline HTML</h2>
-<p>For any markup that is not covered by Markdown's syntax, you simply use HTML itself. There's no need to preface it or delimit it to indicate that you're switching from Markdown to HTML; you just use the tags.</p>
-<p>Code:</p>
-<pre><code>This is a regular paragraph.
+void Application::PushOverlay(Layer* layer){
+    m_LayerStack.PushOverlay(layer);
+}
+// 回调glfw窗口事件的函数
+void Application::OnEvent(Event&amp; e){
+    // 4.用事件调度器，拦截自己层想要拦截的事件并处理
+    EventDispatcher dispatcher(e);
+    dispatcher.Dispatch&lt;WindowCloseEvent&gt;(BIND_EVENT_FN(OnWindowClose));
 
-&lt;table&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Foo&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
+    // 从后往前顺序处理事件
+    for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); ){
+        (*--it)-&gt;OnEvent(e);
+        if (e.Handled)// 处理完就不要传入前一个层
+            break;
+    }
+}
+void Application::Run(){
+    while (m_Running){
+        glClearColor(1, 0, 1, 1);
+        glClear(GL_COLOR_BUFFER_BIT);
 
-This is another regular paragraph.
-</code></pre>
-<p>Preview:</p>
-<hr />
-<p>This is a regular paragraph.</p>
-<p>&lt;table&gt;
-&lt;tr&gt;
-&lt;td&gt;Foo&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;</p>
-<p>This is another regular paragraph.</p>
-<hr />
-<p>Note that Markdown formatting syntax is <strong>not processed within block-level HTML tags</strong>.</p>
-<p>Unlike block-level HTML tags, Markdown syntax is <strong>processed within span-level tags</strong>.</p>
-<p>Code:</p>
-<pre><code>&lt;span&gt;**Work**&lt;/span&gt;
+        // 从前往后顺序更新层
+        for (Layer* layer : m_LayerStack)
+            layer-&gt;OnUpdate();
 
-&lt;div&gt;
-    **No Work**
-&lt;/div&gt;
+        m_Window-&gt;OnUpdate();	// 更新glfw
+    }
+}
 </code></pre>
-<p>Preview:</p>
-<hr />
-<p>&lt;span&gt;<strong>Work</strong>&lt;/span&gt;</p>
-<p>&lt;div&gt;
-<strong>No Work</strong>
-&lt;/div&gt;</p>
-<hr />
+</li>
+</ul>
+<h3>项目流程</h3>
+<ul>
+<li>
+<p>文字</p>
+<ol>
+<li>Application定义了LayerStack对象m_LayerStack</li>
+<li>在Sandbox构造函数中，执行PushLayer(new ExampleLayer());，将ExampleLayer放入m_LayerStack的vector中</li>
+<li>Application的OnEvent函数从后往前顺序遍历m_LayerStack的vector，得到ExampleLayer对象，并把事件e作为参数执行它的OnEvent函数，所以一直在控制台输出<strong>窗口事件</strong></li>
+<li>Application的OnUpdate函数从前往后遍历m_LayerStack的vector，得到ExampleLayer对象，并执行它的OnUpdate函数，所以一直在控制台输出**“ExampleLayer::Update”**</li>
+</ol>
+</li>
+<li>
+<p>图示</p>
+<p><img src="../assets/017.webp" alt="017" /></p>
+</li>
+</ul>
+<h3>效果</h3>
+<p><img src="../assets/018.webp" alt="018" /></p>
 ]]></content>
     <author>
-      <name>Mizuki</name>
+      <name>BLsy</name>
     </author>
-    <category term="Examples"></category>
+    <category term="学习"></category>
   </entry>
   <entry>
-    <title>Markdown Extended Features</title>
-    <link href="https://bl-sy.github.io/posts/markdown-extended/" rel="alternate" type="text/html"/>
-    <id>https://bl-sy.github.io/posts/markdown-extended/</id>
-    <published>2024-05-01T00:00:00.000Z</published>
-    <updated>2024-11-29T00:00:00.000Z</updated>
-    <summary>Read more about Markdown features in Mizuki</summary>
-    <content type="html"><![CDATA[<h2>GitHub Repository Cards</h2>
-<p>You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API.</p>
-<p>::github{repo="matsuzaka-yuki/Mizuki"}</p>
-<p>Create a GitHub repository card with the code <code>::github{repo="matsuzaka-yuki/Mizuki"}</code>.</p>
-<pre><code>::github{repo="matsuzaka-yuki/Mizuki"}
-</code></pre>
-<h2>Admonitions</h2>
-<p>Following types of admonitions are supported: <code>note</code> <code>tip</code> <code>important</code> <code>warning</code> <code>caution</code></p>
-<p>:::note
-Highlights information that users should take into account, even when skimming.
-:::</p>
-<p>:::tip
-Optional information to help a user be more successful.
-:::</p>
-<p>:::important
-Crucial information necessary for users to succeed.
-:::</p>
-<p>:::warning
-Critical content demanding immediate user attention due to potential risks.
-:::</p>
-<p>:::caution
-Negative potential consequences of an action.
-:::</p>
-<h3>Basic Syntax</h3>
-<pre><code>:::note
-Highlights information that users should take into account, even when skimming.
-:::
-
-:::tip
-Optional information to help a user be more successful.
-:::
-</code></pre>
-<h3>Custom Titles</h3>
-<p>The title of the admonition can be customized.</p>
-<p>:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::</p>
-<pre><code>:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-</code></pre>
-<h3>GitHub Syntax</h3>
-<blockquote>
-<p>[!TIP]
-<a href="https://github.com/orgs/community/discussions/16925">The GitHub syntax</a> is also supported.</p>
-</blockquote>
-<pre><code>&gt; [!NOTE]
-&gt; The GitHub syntax is also supported.
-
-&gt; [!TIP]
-&gt; The GitHub syntax is also supported.
-</code></pre>
-<h3>Spoiler</h3>
-<p>You can add spoilers to your text. The text also supports <strong>Markdown</strong> syntax.</p>
-<p>The content :spoiler[is hidden <strong>ayyy</strong>]!</p>
-<pre><code>The content :spoiler[is hidden **ayyy**]!</code></pre>
+    <title>游戏引擎学习</title>
+    <link href="https://bl-sy.github.io/posts/gameengine/guide/" rel="alternate" type="text/html"/>
+    <id>https://bl-sy.github.io/posts/gameengine/guide/</id>
+    <published>2025-10-13T00:00:00.000Z</published>
+    <updated>2025-10-13T00:00:00.000Z</updated>
+    <summary>基于cherno Hazel引擎教学</summary>
+    <content type="html"><![CDATA[<p>This blog template is built with <a href="https://astro.build/">Astro</a>. For the things that are not mentioned in this guide, you may find the answers in the <a href="https://docs.astro.build/">Astro Docs</a>.</p>
+<p><a href="https://github.com/TheCherno/Hazel">Hazel github</a></p>
+<p><a href="https://www.bilibili.com/video/BV1wtLazEEmC?spm_id_from=333.788.videopod.sections&amp;vd_source=eb85f257702408f4a9f49c4f9d9696c0">b站教程地址</a></p>
+<p><a href="https://blog.csdn.net/qq_34060370/category_12203331.html">参考</a></p>
+<p><a href="https://github.com/BL-sy/myGameEngine">我的项目</a></p>
+<hr />
+<h1>目录</h1>
+<h2><a href="../001/">一.初识游戏引擎</a></h2>
+<h2><a href="../002/">二.入口点</a></h2>
+<h2><a href="../003/">三.项目管理</a></h2>
+<h2><a href="../004/">四.窗口</a></h2>
+<hr />
 ]]></content>
     <author>
-      <name>Mizuki</name>
+      <name>BLsy</name>
     </author>
-    <category term="Examples"></category>
+    <category term="学习"></category>
   </entry>
   <entry>
     <title>Simple Guides for Mizuki</title>
     <link href="https://bl-sy.github.io/posts/guide/" rel="alternate" type="text/html"/>
     <id>https://bl-sy.github.io/posts/guide/</id>
-    <published>2024-04-01T00:00:00.000Z</published>
-    <updated>2024-04-01T00:00:00.000Z</updated>
+    <published>2025-10-13T00:00:00.000Z</published>
+    <updated>2025-10-13T00:00:00.000Z</updated>
     <summary>How to use this blog template.</summary>
     <content type="html"><![CDATA[<p>This blog template is built with <a href="https://astro.build/">Astro</a>. For the things that are not mentioned in this guide, you may find the answers in the <a href="https://docs.astro.build/">Astro Docs</a>.</p>
 <h2>Front-matter of Posts</h2>
@@ -815,7 +807,6 @@ description: This is the first post of my new Astro blog.
 image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
-draft: false
 ---
 </code></pre>
 <table>
@@ -828,31 +819,31 @@ draft: false
 <tbody>
 <tr>
 <td><code>title</code></td>
-<td>The title of the post.</td>
+<td>文章标题</td>
 </tr>
 <tr>
 <td><code>published</code></td>
-<td>The date the post was published.</td>
+<td>发布日期</td>
 </tr>
 <tr>
 <td><code>pinned</code></td>
-<td>Whether this post is pinned to the top of the post list.</td>
+<td>是否粘贴在顶部</td>
 </tr>
 <tr>
 <td><code>description</code></td>
-<td>A short description of the post. Displayed on index page.</td>
+<td>文章的简短描述，列在文章开头</td>
 </tr>
 <tr>
 <td><code>image</code></td>
-<td>The cover image path of the post.&lt;br/&gt;1. Start with <code>http://</code> or <code>https://</code>: Use web image&lt;br/&gt;2. Start with <code>/</code>: For image in <code>public</code> dir&lt;br/&gt;3. With none of the prefixes: Relative to the markdown file</td>
+<td>文章封面图片url.&lt;br/&gt;1. Start with <code>http://</code> or <code>https://</code>: Use web image&lt;br/&gt;2. Start with <code>/</code>: For image in <code>public</code> dir&lt;br/&gt;3. With none of the prefixes: Relative to the markdown file</td>
 </tr>
 <tr>
 <td><code>tags</code></td>
-<td>The tags of the post.</td>
+<td>文章标签</td>
 </tr>
 <tr>
 <td><code>category</code></td>
-<td>The category of the post.</td>
+<td>文章种类</td>
 </tr>
 <tr>
 <td><code>licenseName</code></td>
@@ -860,7 +851,7 @@ draft: false
 </tr>
 <tr>
 <td><code>author</code></td>
-<td>The author of the post.</td>
+<td>作者</td>
 </tr>
 <tr>
 <td><code>sourceLink</code></td>
@@ -870,10 +861,18 @@ draft: false
 <td><code>draft</code></td>
 <td>If this post is still a draft, which won't be displayed.</td>
 </tr>
+<tr>
+<td><code>isCollection</code></td>
+<td>是否是合集</td>
+</tr>
+<tr>
+<td><code>parentCollection</code></td>
+<td>父合集（有就行，内容无所谓）</td>
+</tr>
 </tbody>
 </table>
 <h2>Where to Place the Post Files</h2>
-<p>Your post files should be placed in <code>src/content/posts/</code> directory. You can also create sub-directories to better organize your posts and assets.</p>
+<p>你的文章应该存放在 <code>src/content/posts/</code> . 你也可以创建自己的子目录来更好的管理文章和资产。</p>
 <pre><code>src/content/posts/
 ├── post-1.md
 └── post-2/
@@ -882,198 +881,640 @@ draft: false
 </code></pre>
 ]]></content>
     <author>
-      <name>Mizuki</name>
+      <name>BLsy</name>
     </author>
     <category term="Guides"></category>
   </entry>
   <entry>
-    <title>Markdown Mermaid</title>
-    <link href="https://bl-sy.github.io/posts/markdown-mermaid/" rel="alternate" type="text/html"/>
-    <id>https://bl-sy.github.io/posts/markdown-mermaid/</id>
-    <published>2023-10-01T00:00:00.000Z</published>
-    <updated>2023-10-01T00:00:00.000Z</updated>
-    <summary>A simple example of a Markdown blog post with Mermaid.</summary>
-    <content type="html"><![CDATA[<h1>Complete Guide to Markdown with Mermaid Diagrams</h1>
-<p>This article demonstrates how to create various complex diagrams using Mermaid in Markdown documents, including flowcharts, sequence diagrams, Gantt charts, class diagrams, and state diagrams.</p>
-<h2>Flowchart Example</h2>
-<p>Flowcharts are excellent for representing processes or algorithm steps.</p>
-<pre><code>graph TD
-    A[Start] --&gt; B{Condition Check}
-    B --&gt;|Yes| C[Process Step 1]
-    B --&gt;|No| D[Process Step 2]
-    C --&gt; E[Subprocess]
-    D --&gt; E
-    subgraph E [Subprocess Details]
-        E1[Substep 1] --&gt; E2[Substep 2]
-        E2 --&gt; E3[Substep 3]
-    end
-    E --&gt; F{Another Decision}
-    F --&gt;|Option 1| G[Result 1]
-    F --&gt;|Option 2| H[Result 2]
-    F --&gt;|Option 3| I[Result 3]
-    G --&gt; J[End]
-    H --&gt; J
-    I --&gt; J
-</code></pre>
-<h2>Sequence Diagram Example</h2>
-<p>Sequence diagrams show interactions between objects over time.</p>
-<pre><code>sequenceDiagram
-    participant User
-    participant WebApp
-    participant Server
-    participant Database
+    <title>初识游戏引擎</title>
+    <link href="https://bl-sy.github.io/posts/gameengine/001/" rel="alternate" type="text/html"/>
+    <id>https://bl-sy.github.io/posts/gameengine/001/</id>
+    <published>2025-10-13T00:00:00.000Z</published>
+    <updated>2025-10-13T00:00:00.000Z</updated>
+    <summary>基于cherno Hazel引擎教学</summary>
+    <content type="html"><![CDATA[<p>This blog template is built with <a href="https://astro.build/">Astro</a>. For the things that are not mentioned in this guide, you may find the answers in the <a href="https://docs.astro.build/">Astro Docs</a>.</p>
+<h1>一.什么是游戏引擎</h1>
+<p>创造游戏的工具Unity，Unreal</p>
+<p>交互应用，可视化，平台</p>
+<p>读取文件(资产，游戏引擎作为输入的文件)、转换他们、然后把他们放到屏幕上，并且也增加了交互能力。</p>
+<h3>一个游戏引擎需要什么？</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>entry point</code></td>
+<td>入口</td>
+</tr>
+<tr>
+<td><code>application layer</code></td>
+<td>应用层</td>
+</tr>
+<tr>
+<td><code>window layer</code></td>
+<td>系统窗口层(input,event)</td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td>渲染器</td>
+</tr>
+<tr>
+<td><code>Render API abstract</code></td>
+<td>渲染API抽象</td>
+</tr>
+<tr>
+<td><code>Debugging support</code></td>
+<td>Debug支持</td>
+</tr>
+<tr>
+<td><code>Scripting languag</code></td>
+<td>脚本语言</td>
+</tr>
+<tr>
+<td><code>Memory System</code></td>
+<td>内存系统</td>
+</tr>
+<tr>
+<td><code>Entity-Component System</code></td>
+<td>实体组件系统</td>
+</tr>
+<tr>
+<td><code>Physics</code></td>
+<td>物理</td>
+</tr>
+<tr>
+<td><code>File I/O</code></td>
+<td>文件I0(VFS)</td>
+</tr>
+<tr>
+<td><code>Build System</code></td>
+<td>构建系统</td>
+</tr>
+</tbody>
+</table>
+<h1>二.项目设置</h1>
+<h3>养成好习惯</h3>
+<p>指定单独的输出目录</p>
+<p><img src="../assets/020.webp" alt="020" /></p>
+<p>新建src文件夹存储所有的代码文件</p>
+<h3>属性设置</h3>
+<p>将引擎设为动态库，新建一个游戏项目,新建两个项目,Hazel作为游戏引擎,Sandbox作为游戏</p>
+<p><img src="../assets/001.webp" alt="001" /></p>
+<p>将Sandbox设置为启动项目</p>
+<p>这里用剪切板打开Solusion,更改默认启动项目</p>
+<p><img src="../assets/019.webp" alt="019" /></p>
+<p>将引擎链接到游戏(让游戏引用引擎)</p>
+<p><img src="../assets/002.webp" alt="002" /></p>
+<ul>
+<li>
+<p>说明</p>
+<p>此引用将会链接Hazel.lib文件。</p>
+</li>
+<li>
+<p>问题:
+明明设置为dll为什么会有lib文件。</p>
+<p>解释:
+在动态库情况，有lib和dll两个文件，lib包含被DLL导出的函数的<em>名称和位置</em>，DLL包含实际的函数和数据。
+exe程序在编译期间链接lib文件，访问存放了DLL中所要调用的函数的内存地址</p>
+</li>
+</ul>
+<p>打开项目属性-链接器可以看到链接命令</p>
+<p><img src="../assets/003.webp" alt="003" /></p>
+<h1>三.测试</h1>
+<pre><code>$Hazel/Test.h
 
-    User-&gt;&gt;WebApp: Submit Login Request
-    WebApp-&gt;&gt;Server: Send Auth Request
-    Server-&gt;&gt;Database: Query User Credentials
-    Database--&gt;&gt;Server: Return User Data
-    Server--&gt;&gt;WebApp: Return Auth Result
-    
-    alt Auth Successful
-        WebApp-&gt;&gt;User: Show Welcome Page
-        WebApp-&gt;&gt;Server: Request User Data
-        Server-&gt;&gt;Database: Get User Preferences
-        Database--&gt;&gt;Server: Return Preferences
-        Server--&gt;&gt;WebApp: Return User Data
-        WebApp-&gt;&gt;User: Load Personalized Interface
-    else Auth Failed
-        WebApp-&gt;&gt;User: Show Error Message
-        WebApp-&gt;&gt;User: Prompt Re-entry
-    end
+#pragma once
+#include &lt;stdio.h&gt;
+namespace Hazel {
+	//这里dllexport只做测试用
+	__declspec(dllexport) void Print();
+}
 </code></pre>
-<h2>Gantt Chart Example</h2>
-<p>Gantt charts are perfect for displaying project schedules and timelines.</p>
-<pre><code>gantt
-    title Website Development Project Timeline
-    dateFormat  YYYY-MM-DD
-    axisFormat  %m/%d
-    
-    section Design Phase
-    Requirements Analysis      :a1, 2023-10-01, 7d
-    UI Design                 :a2, after a1, 10d
-    Prototype Creation        :a3, after a2, 5d
-    
-    section Development Phase
-    Frontend Development      :b1, 2023-10-20, 15d
-    Backend Development       :b2, after a2, 18d
-    Database Design           :b3, after a1, 12d
-    
-    section Testing Phase
-    Unit Testing              :c1, after b1, 8d
-    Integration Testing       :c2, after b2, 10d
-    User Acceptance Testing   :c3, after c2, 7d
-    
-    section Deployment
-    Production Deployment     :d1, after c3, 3d
-    Launch                    :milestone, after d1, 0d
+<pre><code>$Hazel/Test.cpp
+
+#include "Test.h"
+namespace Hazel {
+	void Print()
+	{
+		printf("test");
+	}
+}
 </code></pre>
-<h2>Class Diagram Example</h2>
-<p>Class diagrams show the static structure of a system, including classes, attributes, methods, and their relationships.</p>
-<pre><code>classDiagram
-    class User {
-        +String username
-        +String password
-        +String email
-        +Boolean active
-        +login()
-        +logout()
-        +updateProfile()
-    }
-    
-    class Article {
-        +String title
-        +String content
-        +Date publishDate
-        +Boolean published
-        +publish()
-        +edit()
-        +delete()
-    }
-    
-    class Comment {
-        +String content
-        +Date commentDate
-        +addComment()
-        +deleteComment()
-    }
-    
-    class Category {
-        +String name
-        +String description
-        +addArticle()
-        +removeArticle()
-    }
-    
-    User "1" -- "*" Article : writes
-    User "1" -- "*" Comment : posts
-    Article "1" -- "*" Comment : has
-    Article "1" -- "*" Category : belongs to
+<pre><code>$Sandbox/Application.cpp
+
+namespace Hazel {
+	//测试
+	__declspec(dllimport) void Print();
+}
+
+void main() {
+	Hazel::Print();
+}
 </code></pre>
-<h2>State Diagram Example</h2>
-<p>State diagrams show the sequence of states an object goes through during its life cycle.</p>
-<pre><code>stateDiagram-v2
-    [*] --&gt; Draft
-    
-    Draft --&gt; UnderReview : submit
-    UnderReview --&gt; Draft : reject
-    UnderReview --&gt; Approved : approve
-    Approved --&gt; Published : publish
-    Published --&gt; Archived : archive
-    Published --&gt; Draft : retract
-    
-    state Published {
-        [*] --&gt; Active
-        Active --&gt; Hidden : temporarily hide
-        Hidden --&gt; Active : restore
-        Active --&gt; [*]
-        Hidden --&gt; [*]
-    }
-    
-    Archived --&gt; [*]
-</code></pre>
-<h2>Pie Chart Example</h2>
-<p>Pie charts are ideal for displaying proportions and percentage data.</p>
-<pre><code>pie title Website Traffic Sources Analysis
-    "Search Engines" : 45.6
-    "Direct Access" : 30.1
-    "Social Media" : 15.3
-    "Referral Links" : 6.4
-    "Other Sources" : 2.6
-</code></pre>
-<h2>Conclusion</h2>
-<p>Mermaid is a powerful tool for creating various types of diagrams in Markdown documents. This article demonstrated how to use flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, and pie charts. These diagrams can help you express complex concepts, processes, and data structures more clearly.</p>
-<p>To use Mermaid, simply specify the mermaid language in a code block and describe the diagram using concise text syntax. Mermaid will automatically convert these descriptions into beautiful visual diagrams.</p>
-<p>Try using Mermaid diagrams in your next technical blog post or project documentation - they will make your content more professional and easier to understand!</p>
+<p><strong>这里先把Hazel生成的dll文件放到Sandbox的输出目录下，后面会处理成自动链接</strong></p>
+<p>成功输出，Sandbox成功链接到Hazel</p>
+<h1>Tips</h1>
+<p><strong>静态链接</strong></p>
+<p>使用静态库方式链接，编译后链接时会将使用的库函数对应所包含库函数定义的==.o目标文件都包含在exe文件==中。</p>
+<p><em>优点</em></p>
+<p>执行速度快：因为可执行文件程序内部包含了所有需要执行的东西</p>
+<p><em>缺点</em></p>
+<p>浪费空间：因为多个可执行程序对同所需要的目标文件都有一份副本</p>
+<p>更新慢：如果有一个.o目标文件发生改变，那么对应的使用这个.o目标文件的多个可执行程序需要重新来一遍链接过程，即链接多个.o目标文件来实现生成可执行文件。</p>
+<p><strong>动态链接</strong></p>
+<p>使用动态库方式链接，编译后因为推迟链接不会将使用的库函数对应的dll文件都包含在exe文件中，而是==在exe运行的时候将dll加载到内存CPU中再链接==。</p>
+<p><em>优点</em></p>
+<p>节省空间：多个可执行程序对同所需要的库函数共享一份副本</p>
+<p>更新快：一个源文件发生改变，只需更新编译成dll文件，不用每个可执行程序需要重新来一遍链接过程，因为多个可执行程序在运行时时链接，且共享一份副本</p>
+<p><em>缺点</em></p>
+<p>启动速度慢：因为每次执行程序都需要链接</p>
 ]]></content>
     <author>
-      <name>Mizuki</name>
+      <name>BLsy</name>
     </author>
-    <category term="Examples"></category>
+    <category term="学习"></category>
   </entry>
   <entry>
-    <title>Include Video in the Posts</title>
-    <link href="https://bl-sy.github.io/posts/video/" rel="alternate" type="text/html"/>
-    <id>https://bl-sy.github.io/posts/video/</id>
-    <published>2022-08-01T00:00:00.000Z</published>
-    <updated>2022-08-01T00:00:00.000Z</updated>
-    <summary>This post demonstrates how to include embedded video in a blog post.</summary>
-    <content type="html"><![CDATA[<p>Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.</p>
-<pre><code>---
-title: Include Video in the Post
-published: 2023-10-19
-// ...
----
-
-&lt;iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+    <title>入口点</title>
+    <link href="https://bl-sy.github.io/posts/gameengine/002/" rel="alternate" type="text/html"/>
+    <id>https://bl-sy.github.io/posts/gameengine/002/</id>
+    <published>2025-10-13T00:00:00.000Z</published>
+    <updated>2025-10-13T00:00:00.000Z</updated>
+    <summary>基于cherno Hazel引擎教学</summary>
+    <content type="html"><![CDATA[<p>This blog template is built with <a href="https://astro.build/">Astro</a>. For the things that are not mentioned in this guide, you may find the answers in the <a href="https://docs.astro.build/">Astro Docs</a>.</p>
+<h1>入口点</h1>
+<p>我们希望在<strong>游戏中而不是引擎中</strong>决定建立的sandbox，并在<strong>引擎中</strong>实现</p>
+<pre><code>Hazel::Application* Hazel::CreateApplication()
+{
+    return new Sandbox();
+}
 </code></pre>
-<h2>YouTube</h2>
-<p>&lt;iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;</p>
-<h2>Bilibili</h2>
-<p>&lt;iframe width="100%" height="468" src="//player.bilibili.com/player.html?bvid=BV1fK4y1s7Qf&amp;p=1&amp;autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &amp;autoplay=0&gt; &lt;/iframe&gt;</p>
+<pre><code>#ifdef HZ_PLATFORM_WINDOW
+
+extern Hazel::Application* Hazel::CreateApplication();
+</code></pre>
+<p>将CreateApplication函数声明为<strong>extern</strong>，表示此函数会在Hazel外部定义，接下来使用的这函数时将使用在外部定义的CreateApplication</p>
+<ul>
+<li>
+<p>在Core.h中</p>
+<pre><code>#pragma once
+#ifdef HZ_PLATFORM_WINDOWS
+	#ifdef HZ_BUILD_DLL
+		#define HAZEL_API __declspec(dllexport)
+	#else
+		#define HAZEL_API __declspec(dllimport)
+	#endif
+#else
+	#error Hazel only supports Windows!
+#endif
+</code></pre>
+<p>根据条件编译定义<strong>HAZEL_API</strong>是dll导入还是导出，可知Hazel项目将是__declspec(dllexport)<strong>(导出作为dll的引擎Hazel)</strong>，Sandbox项目是__declspec(dllimport)<strong>(导入引擎dll)</strong></p>
+</li>
+<li>
+<p>由于Sandbox#include &lt;Hazel.h&gt;，而Hazel项目的Hazel.h<strong>包含</strong>了Application.h，Application.h又包含了Core.h文件，</p>
+<pre><code>#include &lt;Hazel.h&gt;
+class Sandbox : public Hazel::Application
+{
+public:
+	Sandbox(){}
+	~Sandbox(){}
+};
+</code></pre>
+<p>所以Sandbox项目也有<strong>HAZEL_API</strong>宏定义，且<strong>是__declspec(dllimport)</strong></p>
+</li>
+</ul>
 ]]></content>
     <author>
-      <name>Mizuki</name>
+      <name>BLsy</name>
     </author>
-    <category term="Examples"></category>
+    <category term="学习"></category>
+  </entry>
+  <entry>
+    <title>项目管理</title>
+    <link href="https://bl-sy.github.io/posts/gameengine/003/" rel="alternate" type="text/html"/>
+    <id>https://bl-sy.github.io/posts/gameengine/003/</id>
+    <published>2025-10-13T00:00:00.000Z</published>
+    <updated>2025-10-13T00:00:00.000Z</updated>
+    <summary>基于cherno Hazel引擎教学</summary>
+    <content type="html"><![CDATA[<p>This blog template is built with <a href="https://astro.build/">Astro</a>. For the things that are not mentioned in this guide, you may find the answers in the <a href="https://docs.astro.build/">Astro Docs</a>.</p>
+<h1>一.链接github远程仓库</h1>
+<ul>
+<li>
+<p>在自己的github账号创建自己的仓库</p>
+</li>
+<li>
+<p>.gitignore</p>
+<p>在.git文件夹下新建.gitignore文件，可以声明一些不想提交到暂存区的文件</p>
+<pre><code># Binaries
+**/bin/
+bin-int/
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+**.csproj
+</code></pre>
+<p>本地项目执行</p>
+<pre><code>git init
+git remote add origin &lt;远程仓库URL&gt;
+git add .
+git commit -m "first commit"
+git push origin main
+</code></pre>
+</li>
+<li>
+<p>一些git命令</p>
+<pre><code>git add *// 提交文件到暂存区
+git reset . // 将暂存区文件返回
+git status // 查看文件有无提交到暂存区状态
+git commit -m "注释"// 将暂存区的内容添加到仓库
+git push origin main // 将本地的分支版本上传到远程并合并
+</code></pre>
+</li>
+</ul>
+<h1>二.Premake维护项目</h1>
+<p>由于之前配置VS项目各项属性需要根据不同平台<strong>手动</strong>一个一个设置，很麻烦，缺乏灵活性。</p>
+<p>用<a href="https://so.csdn.net/so/search?q=lua%E8%84%9A%E6%9C%AC&amp;spm=1001.2101.3001.7020">lua脚本</a>配置项目属性，使用premake运行程序<strong>一键生成</strong>VS项目及属性，更灵活简便</p>
+<pre><code>EngineName = "Hazel" -- 引擎名称
+
+workspace (EngineName)
+    architecture "x64"
+    startproject "Sandbox"  -- 启动项目
+
+    configurations 
+    {
+        "Debug",
+        "Release",
+        "Dist"  -- 发行版本
+    }
+
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+project (EngineName)
+    location (EngineName)
+    kind "SharedLib"  -- Dll
+    language "C++"
+
+    -- 创建必要的目录结构
+    os.mkdir(EngineName .. "/src/Hazel")
+
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin/intermediate/" .. outputdir .. "/%{prj.name}")
+
+    files {
+        EngineName .. "/src/**.h",
+        EngineName .. "/src/**.cpp"
+    }
+
+    includedirs 
+    {
+        "%{prj.name}/vendor/spdlog/include"
+    }
+
+    filter "system:windows"
+        cppdialect "C++17"
+        staticruntime "On"
+        systemversion "10.0"
+
+        defines -- 宏
+        {
+            "HZ_PLATFORM_WINDOWS",
+            "HZ_BUILD_DLL"
+        }
+        buildoptions   -- 命令行
+        { 
+            "/utf-8" 
+        }
+
+        -- 使用绝对路径和正斜杠
+        postbuildcommands  -- 后处理
+        {
+            "{COPY} %{cfg.buildtarget.relpath} \"" .. "%{wks.location}bin/" .. outputdir .. "/Sandbox" .. "\""
+        }
+
+    filter "configurations:Debug"
+        defines "HZ_DEBUG"
+        symbols "On"
+        -- 禁用 LTO 并启用增量链接
+        linktimeoptimization "Off"
+        flags { "MultiProcessorCompile" }
+        disablewarnings { "4503" }  -- 禁用装饰名过长警告
+
+    filter "configurations:Release"
+        defines "HZ_RELEASE"
+        optimize "Speed"  -- 明确优化速度
+        -- 启用 LTO 和优化
+        linktimeoptimization "On"
+        linkoptions { "/OPT:REF", "/OPT:ICF" }
+
+    filter "configurations:Dist"
+        defines "HZ_DIST"
+        optimize "Full"
+        linktimeoptimization "On"
+
+
+project "Sandbox"
+    location "Sandbox"
+    kind "ConsoleApp"
+    language "C++"
+
+    -- 创建必要的目录结构
+    os.mkdir("Sandbox/src")
+
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin/intermediate/" .. outputdir .. "/%{prj.name}")
+
+    files 
+    {
+        "%{prj.name}/src/**.h",
+        "%{prj.name}/src/**.cpp"
+    }
+
+    includedirs 
+    {
+        "Hazel/vendor/spdlog/include",
+        "Hazel/src"
+    }
+
+    links 
+    {
+        "Hazel"
+    }
+
+    filter "system:windows"
+        cppdialect "C++17"
+        staticruntime "On"
+        systemversion "10.0"
+        defines 
+        {
+            "HZ_PLATFORM_WINDOWS"
+        }
+        buildoptions { "/utf-8" }
+
+    filter "configurations:Debug"
+        defines "HZ_DEBUG"
+        symbols "On"
+        -- 启用调试构建优化
+        flags { "MultiProcessorCompile" }
+
+    filter "configurations:Release"
+        defines "HZ_RELEASE"
+        optimize "On"
+
+    filter "configurations:Dist"
+        defines "HZ_DIST"
+        optimize "On"
+</code></pre>
+<p>我们再新建一个bat文件，这样就不需要每次打开控制台手动输入了</p>
+<pre><code>call vendor\bin\premake\premake5.exe vs2022
+PAUSE
+</code></pre>
+<h1>三.日志系统</h1>
+<p>这里暂时使用spdlog</p>
+<p>https://github.com/gabime/spdlog.git</p>
+<h3>本地添加spdlog</h3>
+<p>这里直接使用cherno远程git仓库的文件,在希望的文件目录下打开控制台,输入</p>
+<pre><code>  git submodule add https://github.com/gabime/spdlog Hazel/vendor/spdlog
+</code></pre>
+<p>添加附加目录,引用</p>
+<p>我们这里进行一下封装,日后可以写自己的日志记录系统</p>
+<pre><code>$log.h
+#include &lt;memory&gt;
+#include "Core.h"
+#include spdlog/spdlog.h"
+namespace Hazel {
+	class HAZEL_API Log
+	{
+	public:
+		static void Init();
+
+		inline static std::shared_ptr&lt;spdlog::logger&gt;&amp; GetCoreLogger() { return s_CoreLogger; }
+		inline static std::shared_ptr&lt;spdlog::logger&gt;&amp; GetClientLogger() { return s_ClientLogger; }
+
+	private:
+		//两种日志记录器
+		//引擎日志和客户端日志
+		static std::shared_ptr&lt;spdlog::logger&gt; s_CoreLogger;
+		static std::shared_ptr&lt;spdlog::logger&gt; s_ClientLogger;
+	};
+}
+</code></pre>
+<pre><code>$log.cpp
+#include "Log.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
+
+namespace Hazel {
+	std::shared_ptr&lt;spdlog::logger&gt; Log::s_CoreLogger;
+	std::shared_ptr&lt;spdlog::logger&gt; Log::s_ClientLogger;
+
+	void Log::Init()
+	{
+		spdlog::set_pattern("%^[%T] %n: %v%$");//日志格式 --- [时间戳]日志名称:内容
+
+		s_CoreLogger = spdlog::stdout_color_mt("HAZEL");//命名
+		s_CoreLogger-&gt;set_level(spdlog::level::trace);
+
+		s_ClientLogger = spdlog::stdout_color_mt("APP");
+		s_ClientLogger-&gt;set_level(spdlog::level::trace);
+	}
+}
+</code></pre>
+<p><strong>注</strong>：这里直接使用会报错，需要在属性的命令行界面添加/utf-8</p>
+<p><img src="../assets/005.webp" alt="005" /></p>
+<p>日志信息的宏定义，方便记录和观察</p>
+<pre><code>$log.h
+// Core log macros
+#define HZ_CORE_TRACE(...)		::Hazel::Log::GetCoreLogger()-&gt;trace(__VA_ARGS__)
+#define HZ_CORE_INFO(...)		::Hazel::Log::GetCoreLogger()-&gt;info(__VA_ARGS__)
+#define HZ_CORE_WARN(...)		::Hazel::Log::GetCoreLogger()-&gt;warn(__VA_ARGS__)
+#define HZ_CORE_ERROR(...)		::Hazel::Log::GetCoreLogger()-&gt;error(__VA_ARGS__)
+#define HZ_CORE_FATAL(...)		::Hazel::Log::GetCoreLogger()-&gt;fatal(__VA_ARGS__)
+								
+//Client log macros				
+#define HZ_TRACE(...)			::Hazel::Log::GetClientLogger()-&gt;trace(__VA_ARGS__)
+#define HZ_INFO(...)			::Hazel::Log::GetClientLogger()-&gt;info(__VA_ARGS__)
+#define HZ_WARN(...)			::Hazel::Log::GetClientLogger()-&gt;warn(__VA_ARGS__)
+#define HZ_ERROR(...)			::Hazel::Log::GetClientLogger()-&gt;error(__VA_ARGS__)
+#define HZ_FATAL(...)			::Hazel::Log::GetClientLogger()-&gt;fatal(__VA_ARGS__)
+</code></pre>
+<p>我们的入口点现在：</p>
+<pre><code>#ifdef HZ_PLATFORM_WINDOWS
+extern Hazel::Application* Hazel::CreateApplication();
+
+int main(int argc,char** argv)
+{
+    Hazel::Log::Init();
+    HZ_CORE_WARN(Initialized Log!);
+    int a = 5;
+    HZ_INFO(“Hello!Var={0}",a);
+
+    auto app = Hazel:CreateApplication();
+    app-&gt;Run()
+    delete app;
+}
+#endif
+</code></pre>
+<p>运行结果：</p>
+<p><img src="../assets/006.webp" alt="006" /></p>
+<p>不同级别的报告有不同的颜色.Done!(for now)</p>
+<h1>四.预编译头</h1>
+<ul>
+<li>
+<p><strong>此节目的</strong></p>
+<p>由于项目中的<a href="https://so.csdn.net/so/search?q=%E5%A4%B4%E6%96%87%E4%BB%B6&amp;spm=1001.2101.3001.7020">头文件</a>或者cpp文件都包含着c++的头文件，有些<strong>重复</strong>，可以将它们包含的c++头文件放在一个头文件内，这样不仅使代码<strong>简洁</strong>，而且<a href="https://so.csdn.net/so/search?q=%E9%A2%84%E7%BC%96%E8%AF%91&amp;spm=1001.2101.3001.7020">预编译</a>头可以<strong>加快编译速度</strong>。</p>
+</li>
+</ul>
+<h3>如何实现</h3>
+<ul>
+<li>
+<p>src文件夹下创建hzpch类</p>
+<p>hzpch.h</p>
+<pre><code>#pragma once
+
+#include &lt;iostream&gt;
+#include &lt;memory&gt;
+#include &lt;utility&gt;
+#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;vector&gt;
+#include &lt;unordered_map&gt;
+#include &lt;unordered_set&gt;
+
+#ifdef HZ_PLATFORM_WINDOWS
+#include &lt;Windows.h&gt;
+#endif
+</code></pre>
+<p>hzpch.cpp</p>
+<pre><code>#include "hzpch.h"
+</code></pre>
+</li>
+<li>
+<p>修改premake</p>
+<pre><code>project "Hazel"		--Hazel项目
+	location "Hazel"--在sln所属文件夹下的Hazel文件夹
+	kind "SharedLib"--dll动态库
+	language "C++"
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}") -- 输出目录
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")-- 中间目录
+
+	-- 预编译头 
+	pchheader "hzpch.h"
+	pchsource "Hazel/src/hzpch.cpp"
+</code></pre>
+</li>
+<li>
+<p>在每个cpp文件的顶部引入hzpch.h文件,不然会报错</p>
+</li>
+<li>
+<p>重新生成后，premake预编译头设置的对应效果</p>
+<p><img src="../assets/009.webp" alt="009" /></p>
+<p><img src="../assets/010.webp" alt="010" /></p>
+</li>
+</ul>
+<h1>Tips</h1>
+<h3>Premake创建新项目</h3>
+<p>有了premake，我们可以写一个premake文件，以后每次需要新建项目，不需要每次都麻烦的配置属性了，只需要双击</p>
+<pre><code>projname = "NewProject"
+
+workspace (projname)  -- 使用括号包裹变量
+    architecture "x64"
+    configurations { "Debug", "Release" }
+
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+project (projname) 
+    location (projname) 
+    kind "ConsoleApp"
+    language "C++"
+    
+    -- 创建必要的目录结构
+    os.mkdir(projname .. "/src")  -- 这里不能用%{prj.name}，不知道为什么
+    
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin/intermediate/" .. outputdir .. "/%{prj.name}")
+
+    files {
+        "%{prj.name}/src/**.h",
+        "%{prj.name}/src/**.cpp"
+    }
+    
+    -- 如果src目录为空，创建默认main.cpp
+    if #os.matchfiles("%{prj.name}/src/**.cpp") == 0 then
+        local main_cpp = [[
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, NewProject!" &lt;&lt; std::endl;
+    return 0;
+}
+]]
+        -- 使用直接路径
+        local file = io.open(projname .. "/src/main.cpp", "w")
+        file:write(main_cpp)
+        file:close()
+    end
+
+    filter "system:windows"
+        cppdialect "C++17"
+        staticruntime "On"
+        systemversion "10.0"
+        defines { "WINDOWS_PLATFORM" }
+
+    filter "configurations:Debug"
+        defines { "DEBUG" }
+        symbols "On"
+
+    filter "configurations:Release"
+        defines { "RELEASE" }
+        optimize "On"
+</code></pre>
+<pre><code>call premake5.exe vs2022
+PAUSE
+</code></pre>
+<p><img src="../assets/004.webp" alt="004" /></p>
+<p>放在同一级目录即可，保持简洁，点击bat文件就创建了新项目，可以在lua文件先修改项目名称</p>
+<h3>C++知识：Function</h3>
+<p>1.Bind用法</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;functional&gt;
+using namespace std;
+using namespace std::placeholders;// 占位符空间
+void f(int a, int b, int c, int d, int e)
+{
+	cout &lt;&lt; a &lt;&lt; " " &lt;&lt; b &lt;&lt; " " &lt;&lt; c &lt;&lt; " " &lt;&lt; d &lt;&lt; " " &lt;&lt; e &lt;&lt; endl;
+}
+// _1 是在命名空间里的，bind可以翻转参数位置
+int main(){
+	int a = 1, b = 2, c = 3;
+	auto g = bind(f, a, b, c, _2, _1);
+	g(4, 5);	// 1 2 3 5 4
+	return 0;
+}
+</code></pre>
+<ul>
+<li>说明
+<ul>
+<li>bind可以用_1,_2<strong>预占位</strong>，g可以理解是function&lt;void(int a, int b, int c, int d, int e);function对象</li>
+<li>auto g = bind(f, a, b, c, _2, _1);将f函数绑定到function对象g上，并定好第一、二、三个参数</li>
+<li>g(4, 5)，将调用执行f函数，4将绑定到_1上，5将绑定到_2上，本来_1实参会赋给f函数的d形参，_2实参给e形参，但由于bind时<strong>改变</strong>了对应位置</li>
+<li>于是_1给e，_2给d，输出 1 2 3 5 4</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    <author>
+      <name>BLsy</name>
+    </author>
+    <category term="学习"></category>
   </entry>
 </feed>

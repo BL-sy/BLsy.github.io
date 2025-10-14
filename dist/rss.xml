@@ -1,770 +1,762 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>BLsy的博客</title><description>One demo website</description><link>https://bl-sy.github.io/</link><language>zh_CN</language><item><title>Markdown Tutorial</title><link>https://bl-sy.github.io/posts/markdown-tutorial/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/markdown-tutorial/</guid><description>A simple example of a Markdown blog post.</description><pubDate>Mon, 20 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Markdown Tutorial&lt;/h1&gt;
-&lt;p&gt;A markdown example shows how to write a markdown file. This document integrates core syntax and extensions (GMF).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#block-elements&quot;&gt;Block Elements&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#paragraphs-and-line-breaks&quot;&gt;Paragraphs and Line Breaks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#headers&quot;&gt;Headers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#lists&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#code-blocks&quot;&gt;Code Blocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#horizontal-rules&quot;&gt;Horizontal Rules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#table&quot;&gt;Table&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#span-elements&quot;&gt;Span Elements&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#links&quot;&gt;Links&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#emphasis&quot;&gt;Emphasis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#images&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#strikethrough&quot;&gt;Strikethrough&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#miscellaneous&quot;&gt;Miscellaneous&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#automatic-links&quot;&gt;Automatic Links&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#backslash-escapes&quot;&gt;Backslash Escapes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#inline-html&quot;&gt;Inline HTML&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Block Elements&lt;/h2&gt;
-&lt;h3&gt;Paragraphs and Line Breaks&lt;/h3&gt;
-&lt;h4&gt;Paragraphs&lt;/h4&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;One or more blank lines. (A blank line is a line containing nothing but &lt;strong&gt;spaces&lt;/strong&gt; or &lt;strong&gt;tabs&lt;/strong&gt; is considered blank.)&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This will be
-inline.
-
-This is second paragraph.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This will be
-inline.&lt;/p&gt;
-&lt;p&gt;This is second paragraph.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h4&gt;Line Breaks&lt;/h4&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;End a line with &lt;strong&gt;two or more spaces&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This will be not
-inline.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This will be not&lt;br /&gt;
-inline.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Headers&lt;/h3&gt;
-&lt;p&gt;Markdown supports two styles of headers, Setext and atx.&lt;/p&gt;
-&lt;h4&gt;Setext&lt;/h4&gt;
-&lt;p&gt;HTML Tags: &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&quot;Underlined&quot; using &lt;strong&gt;equal signs (=)&lt;/strong&gt; as &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; and &lt;strong&gt;dashes (-)&lt;/strong&gt; as &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; in any number.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is an H1
-=============
-This is an H2
--------------
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-&lt;hr /&gt;
-&lt;h4&gt;atx&lt;/h4&gt;
-&lt;p&gt;HTML Tags: &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h4&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h5&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Uses 1-6 &lt;strong&gt;hash characters (#)&lt;/strong&gt; at the start of the line, corresponding to &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; - &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# This is an H1
-## This is an H2
-###### This is an H6
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-&lt;h6&gt;This is an H6&lt;/h6&gt;
-&lt;hr /&gt;
-&lt;p&gt;Optionally, you may &quot;close&quot; atx-style headers. The closing hashes &lt;strong&gt;don&apos;t need to match&lt;/strong&gt; the number of hashes used to open the header.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# This is an H1 #
-## This is an H2 ##
-### This is an H3 ######
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-&lt;h3&gt;This is an H3&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Blockquotes&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Markdown uses email-style &lt;strong&gt;&amp;gt;&lt;/strong&gt; characters for blockquoting. It looks best if you hard wrap the text and put a &amp;gt; before every line.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-&amp;gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-&amp;gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-&amp;gt;
-&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-&amp;gt; id sem consectetuer libero luctus adipiscing.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;p&gt;Markdown allows you to be lazy and only put the &amp;gt; before the first line of a hard-wrapped paragraph.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;p&gt;Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by adding additional levels of &amp;gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; This is the first level of quoting.
-&amp;gt;
-&amp;gt; &amp;gt; This is nested blockquote.
-&amp;gt;
-&amp;gt; Back to the first level.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is the first level of quoting.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is nested blockquote.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Back to the first level.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;p&gt;Blockquotes can contain other Markdown elements, including headers, lists, and code blocks.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; ## This is a header.
-&amp;gt;
-&amp;gt; 1.   This is the first list item.
-&amp;gt; 2.   This is the second list item.
-&amp;gt;
-&amp;gt; Here&apos;s some example code:
-&amp;gt;
-&amp;gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;h2&gt;This is a header.&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;This is the first list item.&lt;/li&gt;
-&lt;li&gt;This is the second list item.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Here&apos;s some example code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;return shell_exec(&quot;echo $input | $markdown_script&quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Lists&lt;/h3&gt;
-&lt;p&gt;Markdown supports ordered (numbered) and unordered (bulleted) lists.&lt;/p&gt;
-&lt;h4&gt;Unordered&lt;/h4&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Unordered lists use &lt;strong&gt;asterisks (*)&lt;/strong&gt;, &lt;strong&gt;pluses (+)&lt;/strong&gt;, and &lt;strong&gt;hyphens (-)&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;*   Red
-*   Green
-*   Blue
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;is equivalent to:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+   Red
-+   Green
-+   Blue
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;and:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-   Red
--   Green
--   Blue
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;Ordered&lt;/h4&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Ordered lists use numbers followed by periods:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1.  Bird
-2.  McHale
-3.  Parish
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li&gt;Bird&lt;/li&gt;
-&lt;li&gt;McHale&lt;/li&gt;
-&lt;li&gt;Parish&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;p&gt;It&apos;s possible to trigger an ordered list by accident, by writing something like this:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1986. What a great season.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li&gt;What a great season.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;p&gt;You can &lt;strong&gt;backslash-escape (\)&lt;/strong&gt; the period:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1986\. What a great season.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;1986. What a great season.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h4&gt;Indented&lt;/h4&gt;
-&lt;h5&gt;Blockquote&lt;/h5&gt;
-&lt;p&gt;To put a blockquote within a list item, the blockquote&apos;s &amp;gt; delimiters need to be indented:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;*   A list item with a blockquote:
-
-    &amp;gt; This is a blockquote
-    &amp;gt; inside a list item.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>BLsy的博客</title><description>welcome</description><link>https://bl-sy.github.io/</link><language>zh_CN</language><item><title>事件系统</title><link>https://bl-sy.github.io/posts/gameengine/004/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/gameengine/004/</guid><description>基于cherno Hazel引擎教学</description><pubDate>Tue, 14 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog template is built with &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt;. For the things that are not mentioned in this guide, you may find the answers in the &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro Docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;一.规划事件系统&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/007.webp&quot; alt=&quot;007&quot; /&gt;&lt;/p&gt;
+&lt;h1&gt;二.自定义事件类与使用&lt;/h1&gt;
+&lt;h3&gt;声明与定义类代码&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;A list item with a blockquote:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote
-inside a list item.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Event.h&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  /*
+  	为了简便，自定义事件是立即处理事件，没有缓冲事件。
+  	缓冲事件：键盘a一直按下第一个立刻输出，顿了一下才一直输出。
+  */
+  // 所有事件-一个类一个标识
+  enum class EventType
+	{
+      None = 0,
+      WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
+      AppTick, AppUpdate, AppRender,
+      KeyPressed, KeyReleased,
+      MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
+	};
+
+  // 事件种类
+	enum EventCategory
+	{
+		None = 0,
+		EventCategoryApplication	= BIT(0),
+		EventCategoryInput			= BIT(1),
+		EventCategoryKeyboard		= BIT(2),
+		EventCategoryMouse			= BIT(3),
+		EventCategoryMouseButton	= BIT(4)
+	};
+
+
+  // 用宏定义更简洁的定义事件种类
+  // 父类虚函数
+  #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
+								   virtual EventType GetEventType() const override { return GetStaticType(); }\
+								   virtual const char* GetName() const override { return #type; }
+  // ##type，是保持为变量，#type是转换为字符串
+
+  #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
+
+	class HAZEL_API Event
+	{
+      friend class EventDispatcher;
+	public:
+		virtual EventType GetEventType() const = 0;
+		virtual const char* GetName() const = 0;
+		virtual int GetCategoryFlags() const = 0;
+		virtual std::string ToString() const { return GetName(); };
+
+		inline bool IsInCategory(EventCategory category)
+		{
+			return GetCategoryFlags() &amp;amp; category;
+		}
+
+		bool m_Handled = false;  // 事件处理状态
+	};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WindowResizeEvent&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ApplicationEvent.h
+class HAZEL_API WindowResizeEvent : public Event
+{
+  public:
+      WindowResizeEvent(unsigned int width, unsigned int height)
+  		:m_Width(width), m_Height(height) {
+  	}
+
+  	inline unsigned int GetWidth() const { return m_Width; }
+  	inline unsigned int GetHeight() const { return m_Height; };
+
+      // 重写ToString输出窗口宽高
+  	std::string ToString() const override
+  	{
+  		std::stringstream ss;
+  		ss &amp;lt;&amp;lt; &quot;WindowResizeEvent: &quot; &amp;lt;&amp;lt; m_Width &amp;lt;&amp;lt; &quot;, &quot; &amp;lt;&amp;lt; m_Height;
+  		return ss.str();
+  	}
+  	// 用宏定义来重写虚函数
+  	EVENT_CLASS_TYPE(WindowResize)
+  	EVENT_CLASS_CATEGORY(EventCategoryApplication)
+  private:
+  	unsigned int m_Width, m_Height;
+  };
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用宏定义重写虚函数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 宏定义：每个子类都需要重写父类虚函数代码，可以用宏定义简洁代码
+#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
+  							virtual EventType GetEventType() const override { return GetStaticType(); }\
+  							virtual const char* GetName() const override { return #type; }
+
+#define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
+
+EVENT_CLASS_TYPE(WindowResize)
+EVENT_CLASS_CATEGORY(EventCategoryApplication)
+// 会编译成
+static EventType GetStaticType() { return EventType::WindowResize; } 
+virtual EventType GetEventType() const override { return GetStaticType(); } 
+virtual const char* GetName() const override { return &quot;WindowResize&quot;; }
+virtual int GetCategoryFlags() const override { return EventCategoryApplication; }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;##type&lt;/strong&gt;，是保持为变量，&lt;strong&gt;#type&lt;/strong&gt;是转换为字符串&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h5&gt;Code Block&lt;/h5&gt;
-&lt;p&gt;To put a code block within a list item, the code block needs to be indented twice — &lt;strong&gt;8 spaces&lt;/strong&gt; or &lt;strong&gt;two tabs&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;*   A list item with a code block:
-
-        &amp;lt;code goes here&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
+&lt;h3&gt;包含头文件&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;A list item with a code block:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;code goes here&amp;gt;
+&lt;p&gt;premake的lua脚本中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;includedirs
+{
+    &quot;%{prj.name}/src&quot;,
+    &quot;%{prj.name}/vendor/spdlog/include&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;所以Hazel项目的包含目录包含src目录&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 因为Event.h所在src/Hazel/Events/Event.h
+// 其它类包含Event.h，可以写成
+#include &quot;Hazel/Events/Event.h&quot;// 而不用前缀src
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;重新编译&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;使用事件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Application.h&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include &quot;Core.h&quot;
+#include &quot;Events/Event.h&quot;// 包含事件基类
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Application.cpp&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include &quot;Application.h&quot;
+#include &quot;Hazel/Events/ApplicationEvent.h&quot; // 包含具体事件
+#include &quot;Hazel/Log.h&quot;
+
+namespace Hazel {
+	Application::Application(){}
+	Application::~Application(){}
+	void Application::Run()
+	{
+		WindowResizeEvent e(1280, 720);	// 使用自定义事件
+		if (e.IsInCategory(EventCategoryApplication))	// 判断是否对应的分类
+		{
+			HZ_TRACE(e);	// 输出事件
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			HZ_TRACE(e);
+		}
+		while (true);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/008.webp&quot; alt=&quot;008&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;事件调度器代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$Event.h
+// 事件调度器类
+class EventDispatcher
+{
+    template&amp;lt;typename T&amp;gt;
+    using EventFn = std::function&amp;lt;bool(T&amp;amp;)&amp;gt;;// 声明function，接受返回类型bool，参数是T&amp;amp;的函数
+    public:
+    EventDispatcher(Event&amp;amp; event)
+        : m_Event(event)
+        { }
+    template&amp;lt;typename T&amp;gt;
+    bool Dispatch(EventFn&amp;lt;T&amp;gt; func)// function参数接收函数指针
+    {
+        // 拦截的事件和想处理的事件类型是否匹配
+        // GetEventType()是被重写的函数
+        if (m_Event.GetEventType() == T::GetStaticType())
+        {
+            m_Event.m_Handled = func(*(T*)&amp;amp;m_Event);// 处理拦截的事件
+            return true;
+        }
+        return false;
+    }
+    private:
+        Event&amp;amp; m_Event;// 拦截的事件
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h1&gt;三.窗口&lt;/h1&gt;
+&lt;h2&gt;(一)窗口抽象和GLFW创建窗口&lt;/h2&gt;
+&lt;p&gt;步骤&lt;/p&gt;
+&lt;h3&gt;1.GIT添加GLFW子模块及编译&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;添加glfw子模块&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add submodule https://github.com/TheCherno/glfw Hazel/vendor/GLFW
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TheCherno的premake是不对的，会报错&lt;/p&gt;
+&lt;p&gt;解决方案：更改premake&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;	filter &quot;configurations:Debug&quot;
+    defines &quot;HZ_DEBUG&quot;
+    buildoptions &quot;/MTd&quot;
+    symbols &quot;On&quot;
+
+    filter &quot;configurations:Release&quot;
+    defines &quot;HZ_RELEASE&quot;
+    buildoptions &quot;/MT&quot;
+    symbols &quot;On&quot;
+
+    filter &quot;configurations:Dist&quot;
+    defines &quot;HZ_DIST&quot;
+    buildoptions &quot;/MT&quot;
+    symbols &quot;On&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改premake&lt;/p&gt;
+&lt;p&gt;解决方案下的premake修改&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-- 包含相对解决方案的目录
+IncludeDir = {}
+IncludeDir[&quot;GLFW&quot;] = &quot;Hazel/vendor/GLFW/include&quot;
+-- 这个include，相当于把glfw下的premake5.lua内容拷贝到这里
+include &quot;Hazel/vendor/GLFW&quot;
+project &quot;Hazel&quot;		--Hazel项目
+	location &quot;Hazel&quot;--在sln所属文件夹下的Hazel文件夹
+	kind &quot;SharedLib&quot;--dll动态库
+	-- 包含目录
+	includedirs{
+	    &quot;%{prj.name}/src&quot;,
+	    &quot;%{prj.name}/vendor/spdlog/include&quot;,
+	    &quot;%{IncludeDir.GLFW}&quot;
+	}
+	-- Hazel链接glfw项目
+	links 
+	{ 
+	    &quot;GLFW&quot;,
+	    &quot;opengl32.lib&quot;
+	}
+	filter &quot;system:windows&quot;
+	    defines{
+		    &quot;HZ_PLATFORM_WINDOWS&quot;,
+		    &quot;HZ_ENABLE_ASSERTS&quot;
+		}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h5&gt;Nested List&lt;/h5&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;* A
-  * A1
-  * A2
-* B
-* C
+&lt;h3&gt;2.Window类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;目前类图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/011.webp&quot; alt=&quot;011&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Application类可以调用创建窗口函数，而窗口类使用glfw库创建&lt;strong&gt;真正的&lt;/strong&gt;窗口。&lt;/p&gt;
+&lt;p&gt;窗口类&lt;strong&gt;检测&lt;/strong&gt;glfw窗口的事件，并&lt;strong&gt;回调&lt;/strong&gt;给Application的处理事件函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;代码&lt;/p&gt;
+&lt;p&gt;window.h&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#pragma once
+#include &quot;hzpch.h&quot;
+#include &quot;Hazel/Core.h&quot;
+#include &quot;Hazel/Events/Event.h&quot;
+namespace Hazel {
+	struct WindowProps{// 窗口初始化设置的内容
+		std::string Title;
+		unsigned int Width;
+		unsigned int Height;
+		WindowProps(const std::string&amp;amp; title = &quot;Hazel Engine&quot;,
+			unsigned int width = 1280,
+			unsigned int height = 720)
+			: Title(title), Width(width), Height(height){}
+	};
+	class HAZEL_API Window{
+	public:
+      using EventCallbackFn = std::function&amp;lt;void(Event&amp;amp;)&amp;gt;;
+      virtual ~Window() {}
+      virtual void OnUpdate() = 0;
+      virtual unsigned int GetWidth() const = 0;
+      virtual unsigned int GetHeight() const = 0;
+      // Window attributes
+      virtual void SetEventCallback(const EventCallbackFn&amp;amp; callback) = 0;
+      virtual void SetVSync(bool enabled) = 0;
+      virtual bool IsVSync() const = 0;
+      // 在Window父类声明创建函数
+      static Window* Create(const WindowProps&amp;amp; props = WindowProps());
+	};
+}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;WindowsWindow.h&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#pragma once
+#include &quot;Hazel/Window.h&quot;
+#include &amp;lt;GLFW/glfw3.h&amp;gt;
+namespace Hazel {
+	class WindowsWindow : public Window{
+	public:
+		WindowsWindow(const WindowProps&amp;amp; props);
+		virtual ~WindowsWindow();
+		void OnUpdate() override;
+		inline unsigned int GetWidth() const override { return m_Data.Width; }
+		inline unsigned int GetHeight() const override { return m_Data.Height; }
+		// 设置Application的回调函数
+		inline void SetEventCallback(const EventCallbackFn&amp;amp; callback) override { m_Data.EventCallback = callback; }
+		void SetVSync(bool enabled) override;
+		bool IsVSync() const override;
+	private:
+		virtual void Init(const WindowProps&amp;amp; props);
+		virtual void Shutdown();
+	private:
+		GLFWwindow* m_Window;
+		struct WindowData{
+			std::string Title;
+			unsigned int Width, Height;
+			bool VSync;
+			EventCallbackFn EventCallback;
+		};
+		WindowData m_Data;
+	};
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;WindowsWindow.cpp&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include &quot;hzpch.h&quot;
+#include &quot;WindowsWindow.h&quot;
+
+namespace Hazel {
+
+	static bool s_GLFWInitialized = false;
+
+	// 在WindowsWindow子类定义在Window父类声明的函数
+	Window* Window::Create(const WindowProps&amp;amp; props) { return new WindowsWindow(props); }
+
+	WindowsWindow::WindowsWindow(const WindowProps&amp;amp; props) { Init(props); }
+
+	WindowsWindow::~WindowsWindow()
+	{
+		Shutdown();
+	}
+
+	void WindowsWindow::SetVSync(bool enabled)
+	{
+		if (enabled)
+			glfwSwapInterval(1);
+		else
+			glfwSwapInterval(0);
+
+		m_Data.VSync = enabled;
+	}
+
+	bool WindowsWindow::IsVSync() const
+	{
+		return m_Data.VSync;
+	}
+
+	void WindowsWindow::Init(const WindowProps&amp;amp; props)
+	{
+		m_Data.Title = props.Title;
+		m_Data.Width = props.Width;
+		m_Data.Height = props.Height;
+
+		HZ_CORE_INFO(&quot;Creating window {0} ({1}, {2})&quot;, props.Title, props.Width, props.Height);
+
+		if (!s_GLFWInitialized)
+		{
+			// TODO: glfwTerminate on system shutdown
+			int success = glfwInit();
+			HZ_CORE_ASSERT(success, &quot;Could not intialize GLFW!&quot;);// 断言，Core.h里面预处理器指令定义了HZ_CORE_ASSERT
+			s_GLFWInitialized = true;
+		}
+
+		// 创建窗口----------------------------------------------------------------------
+		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+		// 设置glfw当前的上下文
+		glfwMakeContextCurrent(m_Window);
+		/*
+			设置窗口关联的用户数据指针。这里GLFW仅做存储，不做任何的特殊处理和应用。
+			window表示操作的窗口句柄。
+			pointer表示用户数据指针。
+		*/
+
+		glfwSetWindowUserPointer(m_Window, &amp;amp;m_Data);
+		SetVSync(true);
+	}
+
+	void WindowsWindow::Shutdown()
+	{
+		glfwDestroyWindow(m_Window);
+	}
+
+	void WindowsWindow::OnUpdate() 
+	{
+		glfwPollEvents();			// 轮询事件	
+		glfwSwapBuffers(m_Window);	// 交换缓冲
+	}
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HZ_CORE_ASSERT断言&lt;/p&gt;
+&lt;p&gt;在Core.h中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#ifdef HZ_ENABLE_ASSERTS
+#define HZ_ASSERT(x, ...) { if(!(x)) { HZ_ERROR(&quot;Assertion Failed: {0}&quot;, __VA_ARGS__); __debugbreak(); } }
+#define HZ_CORE_ASSERT(x, ...) { if(!(x)) { HZ_CORE_ERROR(&quot;Assertion Failed: {0}&quot;, __VA_ARGS__); __debugbreak(); } }
+#else
+#define HZ_ASSERT(x, ...)
+#define HZ_CORE_ASSERT(x, ...)
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;HZ_CORE_ASSERT(success, &quot;Could not intialize GLFW!&quot;);
+// 转换成
+{ if(!(success)) { ::Hazel::Log::GetCoreLogger()-&amp;gt;error(&quot;Assertion Failed: {0}&quot;, &quot;Could not intialize GLFW!&quot;); __debugbreak(); } };
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…当做参数包被__VA_ARGS__展开；__debugbreak();是在debug模式下的断点&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;(二)GLFW窗口事件&lt;/h2&gt;
+&lt;h3&gt;如何确定GLFW窗口事件的回调函数参数&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A
+&lt;li&gt;
+&lt;p&gt;引出&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如上代码，用lambda接收GLFW按键事件，怎么确定lambda的&lt;strong&gt;参数&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl+左键点开glfwSetKeyCallback&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/012.webp&quot; alt=&quot;012&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;不知道使用什么参数查一下就好了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Application接收事件回调流程&lt;/h3&gt;
+&lt;p&gt;项目流程(12345)&lt;/p&gt;
+&lt;p&gt;按照1、2、3、4、5顺序&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/013.webp&quot; alt=&quot;013&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;A1&lt;/li&gt;
-&lt;li&gt;A2&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Application实现事件系统&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$Application.cpp
+
+#include &quot;hzpch.h&quot;
+
+#include &quot;Application.h&quot;
+#include &amp;lt;stdio.h&amp;gt;
+
+#include &quot;Hazel/Events/MouseEvent.h&quot;
+#include &quot;Hazel/Log.h&quot;
+
+#include &amp;lt;GLFW/glfw3.h&amp;gt;
+
+namespace Hazel {
+
+#define BIND_EVENT_FN(x) std::bind(&amp;amp;Application::x, this, std::placeholders::_1)
+
+	Application::Application() 
+	{
+      // 创建窗口，设置回调
+		m_Window = std::unique_ptr&amp;lt;Window&amp;gt;(Window::Create());
+		m_Window-&amp;gt;SetEventCallback(BIND_EVENT_FN(OnEvent));
+	}
+
+  // 事件调度器，处理希望的事件
+	void Application::OnEvent(Event&amp;amp; e)
+	{
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch&amp;lt;WindowClosedEvent&amp;gt;(BIND_EVENT_FN(OnWindowClose));
+
+		HZ_CORE_TRACE(&quot;{0}&quot;, e.ToString());
+	}
+
+  // 窗口关闭
+	bool Application::OnWindowClose(WindowClosedEvent&amp;amp; e)
+	{
+		m_Running = false;
+		return true;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WindowsWindow.cpp&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height){
+	// glfwGetWindowUserPointer获取void*指针可以转换为由glfwSetWindowUserPointer自定义数据类型，
+    WindowData&amp;amp; data = *(WindowData*)glfwGetWindowUserPointer(window);
+    data.Width = width;
+    data.Height = height;
+
+	// 2.3将glfw窗口事件转换为自定义的事件
+    WindowResizeEvent event(width, height);
+	// 3.回调Application的OnEvent函数，并将事件作为其OnEvent的参数
+    data.EventCallback(event);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/014.webp&quot; alt=&quot;014&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;调度器实现窗口关闭&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;EventDispatcher(Event&amp;amp; event)
+	: m_Event(event){ }
+
+template&amp;lt;typename T&amp;gt;
+bool Dispatch(EventFn&amp;lt;T&amp;gt; func)
+{
+	// 若调度器事件与T类型一致，执行func
+	if(m_Event.GetEventType() == T::GetStaticType())
+	{
+		m_Event.m_Handled = func(*(T*)&amp;amp;m_Event);
+		return true;
+	}
+	return false;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;#define BIND_EVENT_FN(x) std::bind(&amp;amp;Application::x, this, std::placeholders::_1)
+void Application::OnEvent(Event&amp;amp; e)
+{
+	EventDispatcher dispatcher(e);
+	dispatcher.Dispatch&amp;lt;WindowClosedEvent&amp;gt;(BIND_EVENT_FN(OnWindowClose));
+
+	HZ_CORE_TRACE(&quot;{0}&quot;, e.ToString());
+}
+bool Application::OnWindowClose(WindowClosedEvent&amp;amp; e)
+{
+	m_Running = false;
+	return true;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果传入调度器的事件是WindowClosedEvent，则执行OnWindowClose&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;四.图层Layer&lt;/h1&gt;
+&lt;h3&gt;前言&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;此节目的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;为完成事件系统设计的第四步，将事件从Application传递分发给Layer层。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/015.webp&quot; alt=&quot;015&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;B&lt;/li&gt;
-&lt;li&gt;C&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Code Blocks&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Indent every line of the block by at least &lt;strong&gt;4 spaces&lt;/strong&gt; or &lt;strong&gt;1 tab&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is a normal paragraph:
-
-    This is a code block.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is a code block.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;p&gt;A code block continues until it reaches a line that is not indented (or the end of the article).&lt;/p&gt;
-&lt;p&gt;Within a code block, &lt;strong&gt;&lt;em&gt;ampersands (&amp;amp;)&lt;/em&gt;&lt;/strong&gt; and angle &lt;strong&gt;brackets (&amp;lt; and &amp;gt;)&lt;/strong&gt; are automatically converted into HTML entities.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    &amp;lt;div class=&quot;footer&quot;&amp;gt;
-        &amp;amp;copy; 2004 Foo Corporation
-    &amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;footer&quot;&amp;gt;
-    &amp;amp;copy; 2004 Foo Corporation
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;p&gt;Following sections Fenced Code Blocks and Syntax Highlighting are extensions, you can use the other way to write the code block.&lt;/p&gt;
-&lt;h4&gt;Fenced Code Blocks&lt;/h4&gt;
-&lt;p&gt;Just wrap your code in &lt;code&gt;```&lt;/code&gt; (as shown below) and you won&apos;t need to indent it by four spaces.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Here&apos;s an example:
-
-```
-function test() {
-  console.log(&quot;notice the blank line before this function?&quot;);
-}
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Here&apos;s an example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function test() {
-  console.log(&quot;notice the blank line before this function?&quot;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h4&gt;Syntax Highlighting&lt;/h4&gt;
-&lt;p&gt;In your fenced block, add an optional language identifier and we&apos;ll run it through syntax highlighting (&lt;a href=&quot;https://github.com/github/linguist/blob/master/lib/linguist/languages.yml&quot;&gt;Support Languages&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```ruby
-require &apos;redcarpet&apos;
-markdown = Redcarpet.new(&quot;Hello World!&quot;)
-puts markdown.to_html
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;pre&gt;&lt;code&gt;require &apos;redcarpet&apos;
-markdown = Redcarpet.new(&quot;Hello World!&quot;)
-puts markdown.to_html
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Horizontal Rules&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;hr /&amp;gt;&lt;/code&gt;
-Places &lt;strong&gt;three or more hyphens (-), asterisks (*), or underscores (_)&lt;/strong&gt; on a line by themselves. You may use spaces between the hyphens or asterisks.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;* * *
-***
-*****
-- - -
----------------------------------------
-___
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Table&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;It&apos;s an extension.&lt;/p&gt;
-&lt;p&gt;Separates column by &lt;strong&gt;pipe (|)&lt;/strong&gt; and header by &lt;strong&gt;dashes (-)&lt;/strong&gt;, and uses &lt;strong&gt;colon (:)&lt;/strong&gt; for alignment.&lt;/p&gt;
-&lt;p&gt;The outer &lt;strong&gt;pipes (|)&lt;/strong&gt; and alignment are optional. There are &lt;strong&gt;3 delimiters&lt;/strong&gt; each cell at least for separating header.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;| Left | Center | Right |
-|:-----|:------:|------:|
-|aaa   |bbb     |ccc    |
-|ddd   |eee     |fff    |
-
- A | B
----|---
-123|456
-
-
-A |B
---|--
-12|45
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Left&lt;/th&gt;
-&lt;th&gt;Center&lt;/th&gt;
-&lt;th&gt;Right&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;aaa&lt;/td&gt;
-&lt;td&gt;bbb&lt;/td&gt;
-&lt;td&gt;ccc&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ddd&lt;/td&gt;
-&lt;td&gt;eee&lt;/td&gt;
-&lt;td&gt;fff&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;A&lt;/th&gt;
-&lt;th&gt;B&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;123&lt;/td&gt;
-&lt;td&gt;456&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;A&lt;/th&gt;
-&lt;th&gt;B&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Span Elements&lt;/h2&gt;
-&lt;h3&gt;Links&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Markdown supports two style of links: inline and reference.&lt;/p&gt;
-&lt;h4&gt;Inline&lt;/h4&gt;
-&lt;p&gt;Inline link format like this: &lt;code&gt;[Link Text](URL &quot;Title&quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Title is optional.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is [an example](http://example.com/ &quot;Title&quot;) inline link.
-
-[This link](http://example.net/) has no title attribute.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot;&gt;an example&lt;/a&gt; inline link.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.net/&quot;&gt;This link&lt;/a&gt; has no title attribute.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;If you&apos;re referring to a local resource on the same server, you can use relative paths:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;See my [About](/about/) page for details.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;See my &lt;a href=&quot;/about/&quot;&gt;About&lt;/a&gt; page for details.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h4&gt;Reference&lt;/h4&gt;
-&lt;p&gt;You could predefine link references. Format like this: &lt;code&gt;[id]: URL &quot;Title&quot;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Title is also optional. And the you refer the link, format like this: &lt;code&gt;[Link Text][id]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[id]: http://example.com/  &quot;Optional Title Here&quot;
-This is [an example][id] reference-style link.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;That is:&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Layer的理解&lt;/p&gt;
+&lt;p&gt;想象同Ps中一张图有多个层级，可以在层级上绘制图画&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Layer的设计&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Square brackets containing the link identifier (&lt;strong&gt;not case sensitive&lt;/strong&gt;, optionally indented from the left margin using up to three spaces);&lt;/li&gt;
-&lt;li&gt;followed by a colon;&lt;/li&gt;
-&lt;li&gt;followed by one or more spaces (or tabs);&lt;/li&gt;
-&lt;li&gt;followed by the URL for the link;&lt;/li&gt;
-&lt;li&gt;The link URL may, optionally, be surrounded by angle brackets.&lt;/li&gt;
-&lt;li&gt;optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据结构：vector&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;渲染顺序&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;从前往后&lt;/strong&gt;渲染各个层的图像，这样后面渲染的会覆盖前面渲染的图像，在屏幕的最顶层。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;处理事件顺序&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;从后往前&lt;/strong&gt;依次处理事件，当一个事件被一个层处理完不会传递给前一个层，结合渲染顺序，这样在屏幕最顶层的（也就是在vector最后的layer）图像&lt;strong&gt;最先&lt;/strong&gt;处理事件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;例子解释&lt;/p&gt;
+&lt;p&gt;比如常见的3D游戏有UI。&lt;/p&gt;
+&lt;p&gt;渲染顺序：将3D图形先渲染，再渲染2DUI，这样屏幕上2DUI永远在3D图形上方，显示正确；&lt;/p&gt;
+&lt;p&gt;事件顺序：点击屏幕的图形，应该是2DUI最先处理，如果是相应UI事件，处理完后&lt;strong&gt;不传递&lt;/strong&gt;给前一个3D层，若不是自己的UI事件，&lt;strong&gt;才传递&lt;/strong&gt;给前一个3D层。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The following three link definitions are equivalent:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[foo]: http://example.com/  &quot;Optional Title Here&quot;
-[foo]: http://example.com/  &apos;Optional Title Here&apos;
-[foo]: http://example.com/  (Optional Title Here)
-[foo]: &amp;lt;http://example.com/&amp;gt;  &quot;Optional Title Here&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Uses an empty set of square brackets, the link text itself is used as the name.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Google]: http://google.com/
-[Google][]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Emphasis&lt;/h3&gt;
-&lt;p&gt;HTML Tags: &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Markdown treats &lt;strong&gt;asterisks (*)&lt;/strong&gt; and &lt;strong&gt;underscores (_)&lt;/strong&gt; as indicators of emphasis. &lt;strong&gt;One delimiter&lt;/strong&gt; will be &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;; *&lt;em&gt;double delimiters&lt;/em&gt; will be &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;But if you surround an * or _ with spaces, it&apos;ll be treated as a literal asterisk or underscore.&lt;/p&gt;
-&lt;p&gt;You can backslash escape it:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;\*this text is surrounded by literal asterisks\*
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;*this text is surrounded by literal asterisks*&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Code&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Wraps it with &lt;strong&gt;backtick quotes (`)&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Use the `printf()` function.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;To include a literal backtick character within a code span, you can use &lt;strong&gt;multiple backticks&lt;/strong&gt; as the opening and closing delimiters:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;``There is a literal backtick (`) here.``
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;The backtick delimiters surrounding a code span may include spaces — one after the opening, one before the closing. This allows you to place literal backtick characters at the beginning or end of a code span:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;A single backtick in a code span: `` ` ``
-
-A backtick-delimited string in a code span: `` `foo` ``
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Images&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;img /&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: inline and reference.&lt;/p&gt;
-&lt;h4&gt;Inline&lt;/h4&gt;
-&lt;p&gt;Inline image syntax looks like this: &lt;code&gt;![Alt text](URL &quot;Title&quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Title is optional.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;![Alt text](/path/to/img.jpg)
-
-![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot; /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;That is:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;增加Layer后的主要类图&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/016.webp&quot; alt=&quot;016&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;注意区分LayerStack、Layer以及ExampleLayer&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;An exclamation mark: !;&lt;/li&gt;
-&lt;li&gt;followed by a set of square brackets, containing the alt attribute text for the image;&lt;/li&gt;
-&lt;li&gt;followed by a set of parentheses, containing the URL or path to the image, and an optional title attribute enclosed in double or single quotes.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LayerStack&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;管理Layer层的类&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Layer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所有层的父类，定义了虚函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Examplayer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;真正需要更新和处理事件的层，被添加到LayerStack的vector中&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;Reference&lt;/h4&gt;
-&lt;p&gt;Reference-style image syntax looks like this: &lt;code&gt;![Alt text][id]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[img id]: https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp  &quot;Optional title attribute&quot;
-![Alt text][img id]
+&lt;h3&gt;项目相关&lt;/h3&gt;
+&lt;p&gt;代码&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Layer&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#pragma once
+#include &quot;Hazel/Core.h&quot;
+#include &quot;Hazel/Events/Event.h&quot;
+namespace Hazel {
+	class HAZEL_API Layer
+	{
+	public:
+		Layer(const std::string&amp;amp; name = &quot;Layer&quot;);
+		virtual ~Layer();
+		virtual void OnAttach() {} // 应用添加此层执行
+		virtual void OnDetach() {} // 应用分离此层执行
+		virtual void OnUpdate() {} // 每层更新
+		virtual void OnEvent(Event&amp;amp; event) {}// 每层处理事件
+		inline const std::string&amp;amp; GetName() const { return m_DebugName; }
+	protected:
+		std::string m_DebugName;
+	};
+}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp&quot; alt=&quot;Alt text&quot; title=&quot;Optional title attribute&quot; /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Strikethrough&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;It&apos;s an extension.&lt;/p&gt;
-&lt;p&gt;GFM adds syntax to strikethrough text.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~~Mistaken text.~~
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LayerStack&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#pragma once
+namespace Hazel {
+	class HAZEL_API LayerStack{
+	public:
+		LayerStack();
+		~LayerStack();
+		void PushLayer(Layer* layer);	// vector在头部添加一个层
+		void PushOverlayer(Layer* overlayer);// 在vector末尾添加一个覆盖层，在屏幕的最上方的层
+		void PopLayer(Layer* layer);	// vector弹出指定层
+		void PopOverlayer(Layer* overlayer);// vector弹出覆盖层
+		std::vector&amp;lt;Layer*&amp;gt;::iterator begin() { return m_Layers.begin(); }
+		std::vector&amp;lt;Layer*&amp;gt;::iterator end() { return m_Layers.end(); }
+	private:
+		std::vector&amp;lt;Layer*&amp;gt; m_Layers;
+		std::vector&amp;lt;Layer*&amp;gt;::iterator m_LayerInsert;
+	};
+}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;s&gt;Mistaken text.&lt;/s&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Miscellaneous&lt;/h2&gt;
-&lt;h3&gt;Automatic Links&lt;/h3&gt;
-&lt;p&gt;Markdown supports a shortcut style for creating &quot;automatic&quot; links for URLs and email addresses: simply surround the URL or email address with angle brackets.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;http://example.com/&amp;gt;
+&lt;pre&gt;&lt;code&gt;namespace Hazel {
+	LayerStack::LayerStack(){
+		m_LayerInsert = m_Layers.begin();
+	}
+	LayerStack::~LayerStack(){
+		for (Layer* layer : m_Layers)
+			delete layer;
+	}
+	void LayerStack::PushLayer(Layer* layer){
+		// emplace在vector容器指定位置之前插入一个新的元素。返回插入元素的位置
+		// 插入 1 2 3，vector是 3 2 1
+		m_LayerInsert = m_Layers.emplace(m_Layers.begin(), layer);
+	}
+	void LayerStack::PushOverlay(Layer* overlay){
+		m_Layers.emplace_back(overlay);
+	}
+	void LayerStack::PopLayer(Layer* layer){
+		auto it = std::find(m_Layers.begin(), m_Layers.end(), layer);
+		if (it != m_Layers.end()){
+			m_Layers.erase(it);
+			m_LayerInsert--;	// 指向Begin
+		}
+	}
+	void LayerStack::PopOverlay(Layer* overlay){
+		auto it = std::find(m_Layers.begin(), m_Layers.end(), overlay);
+		if (it != m_Layers.end())
+			m_Layers.erase(it);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SandboxApp&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class ExampleLayer : public Hazel::Layer{
+public:
+	ExampleLayer()
+		: Layer(&quot;Example&quot;){}
+	void OnUpdate() override{
+		HZ_INFO(&quot;ExampleLayer::Update&quot;);	// 最终会被输出
+	}
+	void OnEvent(Hazel::Event&amp;amp; event) override{
+		HZ_TRACE(&quot;{0}&quot;, event);	// 最终会被输出
+	}
+};
+class Sandbox : public Hazel::Application{
+public:
+	Sandbox(){
+		PushLayer(new ExampleLayer());
+	}
+	~Sandbox(){}
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Application&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;void Application::PushLayer(Layer* layer){
+    m_LayerStack.PushLayer(layer);
+}
 
-&amp;lt;address@example.com&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;mailto:address@example.com&quot;&gt;address@example.com&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;GFM will autolink standard URLs.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/emn178/markdown
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;https://github.com/emn178/markdown&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Backslash Escapes&lt;/h3&gt;
-&lt;p&gt;Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown&apos;s formatting syntax.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;\*literal asterisks\*
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;*literal asterisks*&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Markdown provides backslash escapes for the following characters:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;\   backslash
-`   backtick
-*   asterisk
-_   underscore
-{}  curly braces
-[]  square brackets
-()  parentheses
-#   hash mark
-+   plus sign
--   minus sign (hyphen)
-.   dot
-!   exclamation mark
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Inline HTML&lt;/h2&gt;
-&lt;p&gt;For any markup that is not covered by Markdown&apos;s syntax, you simply use HTML itself. There&apos;s no need to preface it or delimit it to indicate that you&apos;re switching from Markdown to HTML; you just use the tags.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is a regular paragraph.
+void Application::PushOverlay(Layer* layer){
+    m_LayerStack.PushOverlay(layer);
+}
+// 回调glfw窗口事件的函数
+void Application::OnEvent(Event&amp;amp; e){
+    // 4.用事件调度器，拦截自己层想要拦截的事件并处理
+    EventDispatcher dispatcher(e);
+    dispatcher.Dispatch&amp;lt;WindowCloseEvent&amp;gt;(BIND_EVENT_FN(OnWindowClose));
 
-&amp;lt;table&amp;gt;
-    &amp;lt;tr&amp;gt;
-        &amp;lt;td&amp;gt;Foo&amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-&amp;lt;/table&amp;gt;
+    // 从后往前顺序处理事件
+    for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); ){
+        (*--it)-&amp;gt;OnEvent(e);
+        if (e.Handled)// 处理完就不要传入前一个层
+            break;
+    }
+}
+void Application::Run(){
+    while (m_Running){
+        glClearColor(1, 0, 1, 1);
+        glClear(GL_COLOR_BUFFER_BIT);
 
-This is another regular paragraph.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
-&lt;p&gt;&amp;lt;table&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;Foo&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;/table&amp;gt;&lt;/p&gt;
-&lt;p&gt;This is another regular paragraph.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Note that Markdown formatting syntax is &lt;strong&gt;not processed within block-level HTML tags&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Unlike block-level HTML tags, Markdown syntax is &lt;strong&gt;processed within span-level tags&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;span&amp;gt;**Work**&amp;lt;/span&amp;gt;
+        // 从前往后顺序更新层
+        for (Layer* layer : m_LayerStack)
+            layer-&amp;gt;OnUpdate();
 
-&amp;lt;div&amp;gt;
-    **No Work**
-&amp;lt;/div&amp;gt;
+        m_Window-&amp;gt;OnUpdate();	// 更新glfw
+    }
+}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;项目流程&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;文字&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Application定义了LayerStack对象m_LayerStack&lt;/li&gt;
+&lt;li&gt;在Sandbox构造函数中，执行PushLayer(new ExampleLayer());，将ExampleLayer放入m_LayerStack的vector中&lt;/li&gt;
+&lt;li&gt;Application的OnEvent函数从后往前顺序遍历m_LayerStack的vector，得到ExampleLayer对象，并把事件e作为参数执行它的OnEvent函数，所以一直在控制台输出&lt;strong&gt;窗口事件&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Application的OnUpdate函数从前往后遍历m_LayerStack的vector，得到ExampleLayer对象，并执行它的OnUpdate函数，所以一直在控制台输出**“ExampleLayer::Update”**&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;图示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/017.webp&quot; alt=&quot;017&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;效果&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/018.webp&quot; alt=&quot;018&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>游戏引擎学习</title><link>https://bl-sy.github.io/posts/gameengine/guide/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/gameengine/guide/</guid><description>基于cherno Hazel引擎教学</description><pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog template is built with &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt;. For the things that are not mentioned in this guide, you may find the answers in the &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro Docs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/TheCherno/Hazel&quot;&gt;Hazel github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1wtLazEEmC?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=eb85f257702408f4a9f49c4f9d9696c0&quot;&gt;b站教程地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_34060370/category_12203331.html&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/BL-sy/myGameEngine&quot;&gt;我的项目&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&amp;lt;span&amp;gt;&lt;strong&gt;Work&lt;/strong&gt;&amp;lt;/span&amp;gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;div&amp;gt;
-&lt;strong&gt;No Work&lt;/strong&gt;
-&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;h1&gt;目录&lt;/h1&gt;
+&lt;h2&gt;&lt;a href=&quot;../001/&quot;&gt;一.初识游戏引擎&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href=&quot;../002/&quot;&gt;二.入口点&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href=&quot;../003/&quot;&gt;三.项目管理&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href=&quot;../004/&quot;&gt;四.窗口&lt;/a&gt;&lt;/h2&gt;
 &lt;hr /&gt;
-</content:encoded></item><item><title>Markdown Extended Features</title><link>https://bl-sy.github.io/posts/markdown-extended/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/markdown-extended/</guid><description>Read more about Markdown features in Mizuki</description><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;GitHub Repository Cards&lt;/h2&gt;
-&lt;p&gt;You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API.&lt;/p&gt;
-&lt;p&gt;::github{repo=&quot;matsuzaka-yuki/Mizuki&quot;}&lt;/p&gt;
-&lt;p&gt;Create a GitHub repository card with the code &lt;code&gt;::github{repo=&quot;matsuzaka-yuki/Mizuki&quot;}&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;::github{repo=&quot;matsuzaka-yuki/Mizuki&quot;}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Admonitions&lt;/h2&gt;
-&lt;p&gt;Following types of admonitions are supported: &lt;code&gt;note&lt;/code&gt; &lt;code&gt;tip&lt;/code&gt; &lt;code&gt;important&lt;/code&gt; &lt;code&gt;warning&lt;/code&gt; &lt;code&gt;caution&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;:::note
-Highlights information that users should take into account, even when skimming.
-:::&lt;/p&gt;
-&lt;p&gt;:::tip
-Optional information to help a user be more successful.
-:::&lt;/p&gt;
-&lt;p&gt;:::important
-Crucial information necessary for users to succeed.
-:::&lt;/p&gt;
-&lt;p&gt;:::warning
-Critical content demanding immediate user attention due to potential risks.
-:::&lt;/p&gt;
-&lt;p&gt;:::caution
-Negative potential consequences of an action.
-:::&lt;/p&gt;
-&lt;h3&gt;Basic Syntax&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;:::note
-Highlights information that users should take into account, even when skimming.
-:::
-
-:::tip
-Optional information to help a user be more successful.
-:::
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Custom Titles&lt;/h3&gt;
-&lt;p&gt;The title of the admonition can be customized.&lt;/p&gt;
-&lt;p&gt;:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;GitHub Syntax&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!TIP]
-&lt;a href=&quot;https://github.com/orgs/community/discussions/16925&quot;&gt;The GitHub syntax&lt;/a&gt; is also supported.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; [!NOTE]
-&amp;gt; The GitHub syntax is also supported.
-
-&amp;gt; [!TIP]
-&amp;gt; The GitHub syntax is also supported.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Spoiler&lt;/h3&gt;
-&lt;p&gt;You can add spoilers to your text. The text also supports &lt;strong&gt;Markdown&lt;/strong&gt; syntax.&lt;/p&gt;
-&lt;p&gt;The content :spoiler[is hidden &lt;strong&gt;ayyy&lt;/strong&gt;]!&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;The content :spoiler[is hidden **ayyy**]!&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Simple Guides for Mizuki</title><link>https://bl-sy.github.io/posts/guide/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/guide/</guid><description>How to use this blog template.</description><pubDate>Mon, 01 Apr 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog template is built with &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt;. For the things that are not mentioned in this guide, you may find the answers in the &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro Docs&lt;/a&gt;.&lt;/p&gt;
+</content:encoded></item><item><title>Simple Guides for Mizuki</title><link>https://bl-sy.github.io/posts/guide/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/guide/</guid><description>How to use this blog template.</description><pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog template is built with &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt;. For the things that are not mentioned in this guide, you may find the answers in the &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro Docs&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Front-matter of Posts&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;---
 title: My First Blog Post
@@ -773,7 +765,6 @@ description: This is the first post of my new Astro blog.
 image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
-draft: false
 ---
 &lt;/code&gt;&lt;/pre&gt;
 &lt;table&gt;
@@ -786,31 +777,31 @@ draft: false
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The title of the post.&lt;/td&gt;
+&lt;td&gt;文章标题&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;published&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The date the post was published.&lt;/td&gt;
+&lt;td&gt;发布日期&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;pinned&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether this post is pinned to the top of the post list.&lt;/td&gt;
+&lt;td&gt;是否粘贴在顶部&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;description&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A short description of the post. Displayed on index page.&lt;/td&gt;
+&lt;td&gt;文章的简短描述，列在文章开头&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;image&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The cover image path of the post.&amp;lt;br/&amp;gt;1. Start with &lt;code&gt;http://&lt;/code&gt; or &lt;code&gt;https://&lt;/code&gt;: Use web image&amp;lt;br/&amp;gt;2. Start with &lt;code&gt;/&lt;/code&gt;: For image in &lt;code&gt;public&lt;/code&gt; dir&amp;lt;br/&amp;gt;3. With none of the prefixes: Relative to the markdown file&lt;/td&gt;
+&lt;td&gt;文章封面图片url.&amp;lt;br/&amp;gt;1. Start with &lt;code&gt;http://&lt;/code&gt; or &lt;code&gt;https://&lt;/code&gt;: Use web image&amp;lt;br/&amp;gt;2. Start with &lt;code&gt;/&lt;/code&gt;: For image in &lt;code&gt;public&lt;/code&gt; dir&amp;lt;br/&amp;gt;3. With none of the prefixes: Relative to the markdown file&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;tags&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The tags of the post.&lt;/td&gt;
+&lt;td&gt;文章标签&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;category&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The category of the post.&lt;/td&gt;
+&lt;td&gt;文章种类&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;licenseName&lt;/code&gt;&lt;/td&gt;
@@ -818,7 +809,7 @@ draft: false
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;author&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The author of the post.&lt;/td&gt;
+&lt;td&gt;作者&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;sourceLink&lt;/code&gt;&lt;/td&gt;
@@ -828,178 +819,615 @@ draft: false
 &lt;td&gt;&lt;code&gt;draft&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;If this post is still a draft, which won&apos;t be displayed.&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;isCollection&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;是否是合集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;parentCollection&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;父合集（有就行，内容无所谓）&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2&gt;Where to Place the Post Files&lt;/h2&gt;
-&lt;p&gt;Your post files should be placed in &lt;code&gt;src/content/posts/&lt;/code&gt; directory. You can also create sub-directories to better organize your posts and assets.&lt;/p&gt;
+&lt;p&gt;你的文章应该存放在 &lt;code&gt;src/content/posts/&lt;/code&gt; . 你也可以创建自己的子目录来更好的管理文章和资产。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;src/content/posts/
 ├── post-1.md
 └── post-2/
     ├── cover.png
     └── index.md
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Markdown Mermaid</title><link>https://bl-sy.github.io/posts/markdown-mermaid/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/markdown-mermaid/</guid><description>A simple example of a Markdown blog post with Mermaid.</description><pubDate>Sun, 01 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Complete Guide to Markdown with Mermaid Diagrams&lt;/h1&gt;
-&lt;p&gt;This article demonstrates how to create various complex diagrams using Mermaid in Markdown documents, including flowcharts, sequence diagrams, Gantt charts, class diagrams, and state diagrams.&lt;/p&gt;
-&lt;h2&gt;Flowchart Example&lt;/h2&gt;
-&lt;p&gt;Flowcharts are excellent for representing processes or algorithm steps.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;graph TD
-    A[Start] --&amp;gt; B{Condition Check}
-    B --&amp;gt;|Yes| C[Process Step 1]
-    B --&amp;gt;|No| D[Process Step 2]
-    C --&amp;gt; E[Subprocess]
-    D --&amp;gt; E
-    subgraph E [Subprocess Details]
-        E1[Substep 1] --&amp;gt; E2[Substep 2]
-        E2 --&amp;gt; E3[Substep 3]
-    end
-    E --&amp;gt; F{Another Decision}
-    F --&amp;gt;|Option 1| G[Result 1]
-    F --&amp;gt;|Option 2| H[Result 2]
-    F --&amp;gt;|Option 3| I[Result 3]
-    G --&amp;gt; J[End]
-    H --&amp;gt; J
-    I --&amp;gt; J
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Sequence Diagram Example&lt;/h2&gt;
-&lt;p&gt;Sequence diagrams show interactions between objects over time.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sequenceDiagram
-    participant User
-    participant WebApp
-    participant Server
-    participant Database
+</content:encoded></item><item><title>初识游戏引擎</title><link>https://bl-sy.github.io/posts/gameengine/001/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/gameengine/001/</guid><description>基于cherno Hazel引擎教学</description><pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog template is built with &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt;. For the things that are not mentioned in this guide, you may find the answers in the &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro Docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;一.什么是游戏引擎&lt;/h1&gt;
+&lt;p&gt;创造游戏的工具Unity，Unreal&lt;/p&gt;
+&lt;p&gt;交互应用，可视化，平台&lt;/p&gt;
+&lt;p&gt;读取文件(资产，游戏引擎作为输入的文件)、转换他们、然后把他们放到屏幕上，并且也增加了交互能力。&lt;/p&gt;
+&lt;h3&gt;一个游戏引擎需要什么？&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Attribute&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;entry point&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;入口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;application layer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;应用层&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;window layer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;系统窗口层(input,event)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;renderer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;渲染器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Render API abstract&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;渲染API抽象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Debugging support&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Debug支持&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Scripting languag&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;脚本语言&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Memory System&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;内存系统&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Entity-Component System&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;实体组件系统&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Physics&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;物理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;File I/O&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文件I0(VFS)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Build System&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;构建系统&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1&gt;二.项目设置&lt;/h1&gt;
+&lt;h3&gt;养成好习惯&lt;/h3&gt;
+&lt;p&gt;指定单独的输出目录&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/020.webp&quot; alt=&quot;020&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;新建src文件夹存储所有的代码文件&lt;/p&gt;
+&lt;h3&gt;属性设置&lt;/h3&gt;
+&lt;p&gt;将引擎设为动态库，新建一个游戏项目,新建两个项目,Hazel作为游戏引擎,Sandbox作为游戏&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/001.webp&quot; alt=&quot;001&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;将Sandbox设置为启动项目&lt;/p&gt;
+&lt;p&gt;这里用剪切板打开Solusion,更改默认启动项目&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/019.webp&quot; alt=&quot;019&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;将引擎链接到游戏(让游戏引用引擎)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/002.webp&quot; alt=&quot;002&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;说明&lt;/p&gt;
+&lt;p&gt;此引用将会链接Hazel.lib文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;问题:
+明明设置为dll为什么会有lib文件。&lt;/p&gt;
+&lt;p&gt;解释:
+在动态库情况，有lib和dll两个文件，lib包含被DLL导出的函数的&lt;em&gt;名称和位置&lt;/em&gt;，DLL包含实际的函数和数据。
+exe程序在编译期间链接lib文件，访问存放了DLL中所要调用的函数的内存地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;打开项目属性-链接器可以看到链接命令&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/003.webp&quot; alt=&quot;003&quot; /&gt;&lt;/p&gt;
+&lt;h1&gt;三.测试&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;$Hazel/Test.h
 
-    User-&amp;gt;&amp;gt;WebApp: Submit Login Request
-    WebApp-&amp;gt;&amp;gt;Server: Send Auth Request
-    Server-&amp;gt;&amp;gt;Database: Query User Credentials
-    Database--&amp;gt;&amp;gt;Server: Return User Data
-    Server--&amp;gt;&amp;gt;WebApp: Return Auth Result
-    
-    alt Auth Successful
-        WebApp-&amp;gt;&amp;gt;User: Show Welcome Page
-        WebApp-&amp;gt;&amp;gt;Server: Request User Data
-        Server-&amp;gt;&amp;gt;Database: Get User Preferences
-        Database--&amp;gt;&amp;gt;Server: Return Preferences
-        Server--&amp;gt;&amp;gt;WebApp: Return User Data
-        WebApp-&amp;gt;&amp;gt;User: Load Personalized Interface
-    else Auth Failed
-        WebApp-&amp;gt;&amp;gt;User: Show Error Message
-        WebApp-&amp;gt;&amp;gt;User: Prompt Re-entry
-    end
+#pragma once
+#include &amp;lt;stdio.h&amp;gt;
+namespace Hazel {
+	//这里dllexport只做测试用
+	__declspec(dllexport) void Print();
+}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Gantt Chart Example&lt;/h2&gt;
-&lt;p&gt;Gantt charts are perfect for displaying project schedules and timelines.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gantt
-    title Website Development Project Timeline
-    dateFormat  YYYY-MM-DD
-    axisFormat  %m/%d
-    
-    section Design Phase
-    Requirements Analysis      :a1, 2023-10-01, 7d
-    UI Design                 :a2, after a1, 10d
-    Prototype Creation        :a3, after a2, 5d
-    
-    section Development Phase
-    Frontend Development      :b1, 2023-10-20, 15d
-    Backend Development       :b2, after a2, 18d
-    Database Design           :b3, after a1, 12d
-    
-    section Testing Phase
-    Unit Testing              :c1, after b1, 8d
-    Integration Testing       :c2, after b2, 10d
-    User Acceptance Testing   :c3, after c2, 7d
-    
-    section Deployment
-    Production Deployment     :d1, after c3, 3d
-    Launch                    :milestone, after d1, 0d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Class Diagram Example&lt;/h2&gt;
-&lt;p&gt;Class diagrams show the static structure of a system, including classes, attributes, methods, and their relationships.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;classDiagram
-    class User {
-        +String username
-        +String password
-        +String email
-        +Boolean active
-        +login()
-        +logout()
-        +updateProfile()
-    }
-    
-    class Article {
-        +String title
-        +String content
-        +Date publishDate
-        +Boolean published
-        +publish()
-        +edit()
-        +delete()
-    }
-    
-    class Comment {
-        +String content
-        +Date commentDate
-        +addComment()
-        +deleteComment()
-    }
-    
-    class Category {
-        +String name
-        +String description
-        +addArticle()
-        +removeArticle()
-    }
-    
-    User &quot;1&quot; -- &quot;*&quot; Article : writes
-    User &quot;1&quot; -- &quot;*&quot; Comment : posts
-    Article &quot;1&quot; -- &quot;*&quot; Comment : has
-    Article &quot;1&quot; -- &quot;*&quot; Category : belongs to
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;State Diagram Example&lt;/h2&gt;
-&lt;p&gt;State diagrams show the sequence of states an object goes through during its life cycle.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;stateDiagram-v2
-    [*] --&amp;gt; Draft
-    
-    Draft --&amp;gt; UnderReview : submit
-    UnderReview --&amp;gt; Draft : reject
-    UnderReview --&amp;gt; Approved : approve
-    Approved --&amp;gt; Published : publish
-    Published --&amp;gt; Archived : archive
-    Published --&amp;gt; Draft : retract
-    
-    state Published {
-        [*] --&amp;gt; Active
-        Active --&amp;gt; Hidden : temporarily hide
-        Hidden --&amp;gt; Active : restore
-        Active --&amp;gt; [*]
-        Hidden --&amp;gt; [*]
-    }
-    
-    Archived --&amp;gt; [*]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Pie Chart Example&lt;/h2&gt;
-&lt;p&gt;Pie charts are ideal for displaying proportions and percentage data.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;pie title Website Traffic Sources Analysis
-    &quot;Search Engines&quot; : 45.6
-    &quot;Direct Access&quot; : 30.1
-    &quot;Social Media&quot; : 15.3
-    &quot;Referral Links&quot; : 6.4
-    &quot;Other Sources&quot; : 2.6
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Mermaid is a powerful tool for creating various types of diagrams in Markdown documents. This article demonstrated how to use flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, and pie charts. These diagrams can help you express complex concepts, processes, and data structures more clearly.&lt;/p&gt;
-&lt;p&gt;To use Mermaid, simply specify the mermaid language in a code block and describe the diagram using concise text syntax. Mermaid will automatically convert these descriptions into beautiful visual diagrams.&lt;/p&gt;
-&lt;p&gt;Try using Mermaid diagrams in your next technical blog post or project documentation - they will make your content more professional and easier to understand!&lt;/p&gt;
-</content:encoded></item><item><title>Include Video in the Posts</title><link>https://bl-sy.github.io/posts/video/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/video/</guid><description>This post demonstrates how to include embedded video in a blog post.</description><pubDate>Mon, 01 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: Include Video in the Post
-published: 2023-10-19
-// ...
----
+&lt;pre&gt;&lt;code&gt;$Hazel/Test.cpp
 
-&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;
+#include &quot;Test.h&quot;
+namespace Hazel {
+	void Print()
+	{
+		printf(&quot;test&quot;);
+	}
+}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;YouTube&lt;/h2&gt;
-&lt;p&gt;&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/p&gt;
-&lt;h2&gt;Bilibili&lt;/h2&gt;
-&lt;p&gt;&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;//player.bilibili.com/player.html?bvid=BV1fK4y1s7Qf&amp;amp;p=1&amp;amp;autoplay=0&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; &amp;amp;autoplay=0&amp;gt; &amp;lt;/iframe&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$Sandbox/Application.cpp
+
+namespace Hazel {
+	//测试
+	__declspec(dllimport) void Print();
+}
+
+void main() {
+	Hazel::Print();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;这里先把Hazel生成的dll文件放到Sandbox的输出目录下，后面会处理成自动链接&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;成功输出，Sandbox成功链接到Hazel&lt;/p&gt;
+&lt;h1&gt;Tips&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;静态链接&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用静态库方式链接，编译后链接时会将使用的库函数对应所包含库函数定义的==.o目标文件都包含在exe文件==中。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;优点&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;执行速度快：因为可执行文件程序内部包含了所有需要执行的东西&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;缺点&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;浪费空间：因为多个可执行程序对同所需要的目标文件都有一份副本&lt;/p&gt;
+&lt;p&gt;更新慢：如果有一个.o目标文件发生改变，那么对应的使用这个.o目标文件的多个可执行程序需要重新来一遍链接过程，即链接多个.o目标文件来实现生成可执行文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;动态链接&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用动态库方式链接，编译后因为推迟链接不会将使用的库函数对应的dll文件都包含在exe文件中，而是==在exe运行的时候将dll加载到内存CPU中再链接==。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;优点&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;节省空间：多个可执行程序对同所需要的库函数共享一份副本&lt;/p&gt;
+&lt;p&gt;更新快：一个源文件发生改变，只需更新编译成dll文件，不用每个可执行程序需要重新来一遍链接过程，因为多个可执行程序在运行时时链接，且共享一份副本&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;缺点&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;启动速度慢：因为每次执行程序都需要链接&lt;/p&gt;
+</content:encoded></item><item><title>入口点</title><link>https://bl-sy.github.io/posts/gameengine/002/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/gameengine/002/</guid><description>基于cherno Hazel引擎教学</description><pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog template is built with &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt;. For the things that are not mentioned in this guide, you may find the answers in the &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro Docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;入口点&lt;/h1&gt;
+&lt;p&gt;我们希望在&lt;strong&gt;游戏中而不是引擎中&lt;/strong&gt;决定建立的sandbox，并在&lt;strong&gt;引擎中&lt;/strong&gt;实现&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Hazel::Application* Hazel::CreateApplication()
+{
+    return new Sandbox();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;#ifdef HZ_PLATFORM_WINDOW
+
+extern Hazel::Application* Hazel::CreateApplication();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将CreateApplication函数声明为&lt;strong&gt;extern&lt;/strong&gt;，表示此函数会在Hazel外部定义，接下来使用的这函数时将使用在外部定义的CreateApplication&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在Core.h中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#pragma once
+#ifdef HZ_PLATFORM_WINDOWS
+	#ifdef HZ_BUILD_DLL
+		#define HAZEL_API __declspec(dllexport)
+	#else
+		#define HAZEL_API __declspec(dllimport)
+	#endif
+#else
+	#error Hazel only supports Windows!
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;根据条件编译定义&lt;strong&gt;HAZEL_API&lt;/strong&gt;是dll导入还是导出，可知Hazel项目将是__declspec(dllexport)&lt;strong&gt;(导出作为dll的引擎Hazel)&lt;/strong&gt;，Sandbox项目是__declspec(dllimport)&lt;strong&gt;(导入引擎dll)&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于Sandbox#include &amp;lt;Hazel.h&amp;gt;，而Hazel项目的Hazel.h&lt;strong&gt;包含&lt;/strong&gt;了Application.h，Application.h又包含了Core.h文件，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;Hazel.h&amp;gt;
+class Sandbox : public Hazel::Application
+{
+public:
+	Sandbox(){}
+	~Sandbox(){}
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;所以Sandbox项目也有&lt;strong&gt;HAZEL_API&lt;/strong&gt;宏定义，且&lt;strong&gt;是__declspec(dllimport)&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>项目管理</title><link>https://bl-sy.github.io/posts/gameengine/003/</link><guid isPermaLink="true">https://bl-sy.github.io/posts/gameengine/003/</guid><description>基于cherno Hazel引擎教学</description><pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog template is built with &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt;. For the things that are not mentioned in this guide, you may find the answers in the &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro Docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;一.链接github远程仓库&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在自己的github账号创建自己的仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.gitignore&lt;/p&gt;
+&lt;p&gt;在.git文件夹下新建.gitignore文件，可以声明一些不想提交到暂存区的文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Binaries
+**/bin/
+bin-int/
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+**.csproj
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;本地项目执行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init
+git remote add origin &amp;lt;远程仓库URL&amp;gt;
+git add .
+git commit -m &quot;first commit&quot;
+git push origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一些git命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add *// 提交文件到暂存区
+git reset . // 将暂存区文件返回
+git status // 查看文件有无提交到暂存区状态
+git commit -m &quot;注释&quot;// 将暂存区的内容添加到仓库
+git push origin main // 将本地的分支版本上传到远程并合并
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;二.Premake维护项目&lt;/h1&gt;
+&lt;p&gt;由于之前配置VS项目各项属性需要根据不同平台&lt;strong&gt;手动&lt;/strong&gt;一个一个设置，很麻烦，缺乏灵活性。&lt;/p&gt;
+&lt;p&gt;用&lt;a href=&quot;https://so.csdn.net/so/search?q=lua%E8%84%9A%E6%9C%AC&amp;amp;spm=1001.2101.3001.7020&quot;&gt;lua脚本&lt;/a&gt;配置项目属性，使用premake运行程序&lt;strong&gt;一键生成&lt;/strong&gt;VS项目及属性，更灵活简便&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;EngineName = &quot;Hazel&quot; -- 引擎名称
+
+workspace (EngineName)
+    architecture &quot;x64&quot;
+    startproject &quot;Sandbox&quot;  -- 启动项目
+
+    configurations 
+    {
+        &quot;Debug&quot;,
+        &quot;Release&quot;,
+        &quot;Dist&quot;  -- 发行版本
+    }
+
+outputdir = &quot;%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}&quot;
+
+project (EngineName)
+    location (EngineName)
+    kind &quot;SharedLib&quot;  -- Dll
+    language &quot;C++&quot;
+
+    -- 创建必要的目录结构
+    os.mkdir(EngineName .. &quot;/src/Hazel&quot;)
+
+    targetdir (&quot;bin/&quot; .. outputdir .. &quot;/%{prj.name}&quot;)
+    objdir (&quot;bin/intermediate/&quot; .. outputdir .. &quot;/%{prj.name}&quot;)
+
+    files {
+        EngineName .. &quot;/src/**.h&quot;,
+        EngineName .. &quot;/src/**.cpp&quot;
+    }
+
+    includedirs 
+    {
+        &quot;%{prj.name}/vendor/spdlog/include&quot;
+    }
+
+    filter &quot;system:windows&quot;
+        cppdialect &quot;C++17&quot;
+        staticruntime &quot;On&quot;
+        systemversion &quot;10.0&quot;
+
+        defines -- 宏
+        {
+            &quot;HZ_PLATFORM_WINDOWS&quot;,
+            &quot;HZ_BUILD_DLL&quot;
+        }
+        buildoptions   -- 命令行
+        { 
+            &quot;/utf-8&quot; 
+        }
+
+        -- 使用绝对路径和正斜杠
+        postbuildcommands  -- 后处理
+        {
+            &quot;{COPY} %{cfg.buildtarget.relpath} \&quot;&quot; .. &quot;%{wks.location}bin/&quot; .. outputdir .. &quot;/Sandbox&quot; .. &quot;\&quot;&quot;
+        }
+
+    filter &quot;configurations:Debug&quot;
+        defines &quot;HZ_DEBUG&quot;
+        symbols &quot;On&quot;
+        -- 禁用 LTO 并启用增量链接
+        linktimeoptimization &quot;Off&quot;
+        flags { &quot;MultiProcessorCompile&quot; }
+        disablewarnings { &quot;4503&quot; }  -- 禁用装饰名过长警告
+
+    filter &quot;configurations:Release&quot;
+        defines &quot;HZ_RELEASE&quot;
+        optimize &quot;Speed&quot;  -- 明确优化速度
+        -- 启用 LTO 和优化
+        linktimeoptimization &quot;On&quot;
+        linkoptions { &quot;/OPT:REF&quot;, &quot;/OPT:ICF&quot; }
+
+    filter &quot;configurations:Dist&quot;
+        defines &quot;HZ_DIST&quot;
+        optimize &quot;Full&quot;
+        linktimeoptimization &quot;On&quot;
+
+
+project &quot;Sandbox&quot;
+    location &quot;Sandbox&quot;
+    kind &quot;ConsoleApp&quot;
+    language &quot;C++&quot;
+
+    -- 创建必要的目录结构
+    os.mkdir(&quot;Sandbox/src&quot;)
+
+    targetdir (&quot;bin/&quot; .. outputdir .. &quot;/%{prj.name}&quot;)
+    objdir (&quot;bin/intermediate/&quot; .. outputdir .. &quot;/%{prj.name}&quot;)
+
+    files 
+    {
+        &quot;%{prj.name}/src/**.h&quot;,
+        &quot;%{prj.name}/src/**.cpp&quot;
+    }
+
+    includedirs 
+    {
+        &quot;Hazel/vendor/spdlog/include&quot;,
+        &quot;Hazel/src&quot;
+    }
+
+    links 
+    {
+        &quot;Hazel&quot;
+    }
+
+    filter &quot;system:windows&quot;
+        cppdialect &quot;C++17&quot;
+        staticruntime &quot;On&quot;
+        systemversion &quot;10.0&quot;
+        defines 
+        {
+            &quot;HZ_PLATFORM_WINDOWS&quot;
+        }
+        buildoptions { &quot;/utf-8&quot; }
+
+    filter &quot;configurations:Debug&quot;
+        defines &quot;HZ_DEBUG&quot;
+        symbols &quot;On&quot;
+        -- 启用调试构建优化
+        flags { &quot;MultiProcessorCompile&quot; }
+
+    filter &quot;configurations:Release&quot;
+        defines &quot;HZ_RELEASE&quot;
+        optimize &quot;On&quot;
+
+    filter &quot;configurations:Dist&quot;
+        defines &quot;HZ_DIST&quot;
+        optimize &quot;On&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们再新建一个bat文件，这样就不需要每次打开控制台手动输入了&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;call vendor\bin\premake\premake5.exe vs2022
+PAUSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1&gt;三.日志系统&lt;/h1&gt;
+&lt;p&gt;这里暂时使用spdlog&lt;/p&gt;
+&lt;p&gt;https://github.com/gabime/spdlog.git&lt;/p&gt;
+&lt;h3&gt;本地添加spdlog&lt;/h3&gt;
+&lt;p&gt;这里直接使用cherno远程git仓库的文件,在希望的文件目录下打开控制台,输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  git submodule add https://github.com/gabime/spdlog Hazel/vendor/spdlog
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;添加附加目录,引用&lt;/p&gt;
+&lt;p&gt;我们这里进行一下封装,日后可以写自己的日志记录系统&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$log.h
+#include &amp;lt;memory&amp;gt;
+#include &quot;Core.h&quot;
+#include spdlog/spdlog.h&quot;
+namespace Hazel {
+	class HAZEL_API Log
+	{
+	public:
+		static void Init();
+
+		inline static std::shared_ptr&amp;lt;spdlog::logger&amp;gt;&amp;amp; GetCoreLogger() { return s_CoreLogger; }
+		inline static std::shared_ptr&amp;lt;spdlog::logger&amp;gt;&amp;amp; GetClientLogger() { return s_ClientLogger; }
+
+	private:
+		//两种日志记录器
+		//引擎日志和客户端日志
+		static std::shared_ptr&amp;lt;spdlog::logger&amp;gt; s_CoreLogger;
+		static std::shared_ptr&amp;lt;spdlog::logger&amp;gt; s_ClientLogger;
+	};
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;$log.cpp
+#include &quot;Log.h&quot;
+#include &quot;spdlog/sinks/stdout_color_sinks.h&quot;
+
+namespace Hazel {
+	std::shared_ptr&amp;lt;spdlog::logger&amp;gt; Log::s_CoreLogger;
+	std::shared_ptr&amp;lt;spdlog::logger&amp;gt; Log::s_ClientLogger;
+
+	void Log::Init()
+	{
+		spdlog::set_pattern(&quot;%^[%T] %n: %v%$&quot;);//日志格式 --- [时间戳]日志名称:内容
+
+		s_CoreLogger = spdlog::stdout_color_mt(&quot;HAZEL&quot;);//命名
+		s_CoreLogger-&amp;gt;set_level(spdlog::level::trace);
+
+		s_ClientLogger = spdlog::stdout_color_mt(&quot;APP&quot;);
+		s_ClientLogger-&amp;gt;set_level(spdlog::level::trace);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：这里直接使用会报错，需要在属性的命令行界面添加/utf-8&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/005.webp&quot; alt=&quot;005&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;日志信息的宏定义，方便记录和观察&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$log.h
+// Core log macros
+#define HZ_CORE_TRACE(...)		::Hazel::Log::GetCoreLogger()-&amp;gt;trace(__VA_ARGS__)
+#define HZ_CORE_INFO(...)		::Hazel::Log::GetCoreLogger()-&amp;gt;info(__VA_ARGS__)
+#define HZ_CORE_WARN(...)		::Hazel::Log::GetCoreLogger()-&amp;gt;warn(__VA_ARGS__)
+#define HZ_CORE_ERROR(...)		::Hazel::Log::GetCoreLogger()-&amp;gt;error(__VA_ARGS__)
+#define HZ_CORE_FATAL(...)		::Hazel::Log::GetCoreLogger()-&amp;gt;fatal(__VA_ARGS__)
+								
+//Client log macros				
+#define HZ_TRACE(...)			::Hazel::Log::GetClientLogger()-&amp;gt;trace(__VA_ARGS__)
+#define HZ_INFO(...)			::Hazel::Log::GetClientLogger()-&amp;gt;info(__VA_ARGS__)
+#define HZ_WARN(...)			::Hazel::Log::GetClientLogger()-&amp;gt;warn(__VA_ARGS__)
+#define HZ_ERROR(...)			::Hazel::Log::GetClientLogger()-&amp;gt;error(__VA_ARGS__)
+#define HZ_FATAL(...)			::Hazel::Log::GetClientLogger()-&amp;gt;fatal(__VA_ARGS__)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们的入口点现在：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#ifdef HZ_PLATFORM_WINDOWS
+extern Hazel::Application* Hazel::CreateApplication();
+
+int main(int argc,char** argv)
+{
+    Hazel::Log::Init();
+    HZ_CORE_WARN(Initialized Log!);
+    int a = 5;
+    HZ_INFO(“Hello!Var={0}&quot;,a);
+
+    auto app = Hazel:CreateApplication();
+    app-&amp;gt;Run()
+    delete app;
+}
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;运行结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/006.webp&quot; alt=&quot;006&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;不同级别的报告有不同的颜色.Done!(for now)&lt;/p&gt;
+&lt;h1&gt;四.预编译头&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;此节目的&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;由于项目中的&lt;a href=&quot;https://so.csdn.net/so/search?q=%E5%A4%B4%E6%96%87%E4%BB%B6&amp;amp;spm=1001.2101.3001.7020&quot;&gt;头文件&lt;/a&gt;或者cpp文件都包含着c++的头文件，有些&lt;strong&gt;重复&lt;/strong&gt;，可以将它们包含的c++头文件放在一个头文件内，这样不仅使代码&lt;strong&gt;简洁&lt;/strong&gt;，而且&lt;a href=&quot;https://so.csdn.net/so/search?q=%E9%A2%84%E7%BC%96%E8%AF%91&amp;amp;spm=1001.2101.3001.7020&quot;&gt;预编译&lt;/a&gt;头可以&lt;strong&gt;加快编译速度&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;如何实现&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;src文件夹下创建hzpch类&lt;/p&gt;
+&lt;p&gt;hzpch.h&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#pragma once
+
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;memory&amp;gt;
+#include &amp;lt;utility&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;functional&amp;gt;
+
+#include &amp;lt;string&amp;gt;
+#include &amp;lt;sstream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;unordered_map&amp;gt;
+#include &amp;lt;unordered_set&amp;gt;
+
+#ifdef HZ_PLATFORM_WINDOWS
+#include &amp;lt;Windows.h&amp;gt;
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;hzpch.cpp&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include &quot;hzpch.h&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改premake&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;project &quot;Hazel&quot;		--Hazel项目
+	location &quot;Hazel&quot;--在sln所属文件夹下的Hazel文件夹
+	kind &quot;SharedLib&quot;--dll动态库
+	language &quot;C++&quot;
+	targetdir (&quot;bin/&quot; .. outputdir .. &quot;/%{prj.name}&quot;) -- 输出目录
+	objdir (&quot;bin-int/&quot; .. outputdir .. &quot;/%{prj.name}&quot;)-- 中间目录
+
+	-- 预编译头 
+	pchheader &quot;hzpch.h&quot;
+	pchsource &quot;Hazel/src/hzpch.cpp&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在每个cpp文件的顶部引入hzpch.h文件,不然会报错&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重新生成后，premake预编译头设置的对应效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/009.webp&quot; alt=&quot;009&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/010.webp&quot; alt=&quot;010&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Tips&lt;/h1&gt;
+&lt;h3&gt;Premake创建新项目&lt;/h3&gt;
+&lt;p&gt;有了premake，我们可以写一个premake文件，以后每次需要新建项目，不需要每次都麻烦的配置属性了，只需要双击&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;projname = &quot;NewProject&quot;
+
+workspace (projname)  -- 使用括号包裹变量
+    architecture &quot;x64&quot;
+    configurations { &quot;Debug&quot;, &quot;Release&quot; }
+
+outputdir = &quot;%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}&quot;
+
+project (projname) 
+    location (projname) 
+    kind &quot;ConsoleApp&quot;
+    language &quot;C++&quot;
+    
+    -- 创建必要的目录结构
+    os.mkdir(projname .. &quot;/src&quot;)  -- 这里不能用%{prj.name}，不知道为什么
+    
+    targetdir (&quot;bin/&quot; .. outputdir .. &quot;/%{prj.name}&quot;)
+    objdir (&quot;bin/intermediate/&quot; .. outputdir .. &quot;/%{prj.name}&quot;)
+
+    files {
+        &quot;%{prj.name}/src/**.h&quot;,
+        &quot;%{prj.name}/src/**.cpp&quot;
+    }
+    
+    -- 如果src目录为空，创建默认main.cpp
+    if #os.matchfiles(&quot;%{prj.name}/src/**.cpp&quot;) == 0 then
+        local main_cpp = [[
+#include &amp;lt;iostream&amp;gt;
+
+int main() {
+    std::cout &amp;lt;&amp;lt; &quot;Hello, NewProject!&quot; &amp;lt;&amp;lt; std::endl;
+    return 0;
+}
+]]
+        -- 使用直接路径
+        local file = io.open(projname .. &quot;/src/main.cpp&quot;, &quot;w&quot;)
+        file:write(main_cpp)
+        file:close()
+    end
+
+    filter &quot;system:windows&quot;
+        cppdialect &quot;C++17&quot;
+        staticruntime &quot;On&quot;
+        systemversion &quot;10.0&quot;
+        defines { &quot;WINDOWS_PLATFORM&quot; }
+
+    filter &quot;configurations:Debug&quot;
+        defines { &quot;DEBUG&quot; }
+        symbols &quot;On&quot;
+
+    filter &quot;configurations:Release&quot;
+        defines { &quot;RELEASE&quot; }
+        optimize &quot;On&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;call premake5.exe vs2022
+PAUSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/004.webp&quot; alt=&quot;004&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;放在同一级目录即可，保持简洁，点击bat文件就创建了新项目，可以在lua文件先修改项目名称&lt;/p&gt;
+&lt;h3&gt;C++知识：Function&lt;/h3&gt;
+&lt;p&gt;1.Bind用法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;functional&amp;gt;
+using namespace std;
+using namespace std::placeholders;// 占位符空间
+void f(int a, int b, int c, int d, int e)
+{
+	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; c &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; d &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; e &amp;lt;&amp;lt; endl;
+}
+// _1 是在命名空间里的，bind可以翻转参数位置
+int main(){
+	int a = 1, b = 2, c = 3;
+	auto g = bind(f, a, b, c, _2, _1);
+	g(4, 5);	// 1 2 3 5 4
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;说明
+&lt;ul&gt;
+&lt;li&gt;bind可以用_1,_2&lt;strong&gt;预占位&lt;/strong&gt;，g可以理解是function&amp;lt;void(int a, int b, int c, int d, int e);function对象&lt;/li&gt;
+&lt;li&gt;auto g = bind(f, a, b, c, _2, _1);将f函数绑定到function对象g上，并定好第一、二、三个参数&lt;/li&gt;
+&lt;li&gt;g(4, 5)，将调用执行f函数，4将绑定到_1上，5将绑定到_2上，本来_1实参会赋给f函数的d形参，_2实参给e形参，但由于bind时&lt;strong&gt;改变&lt;/strong&gt;了对应位置&lt;/li&gt;
+&lt;li&gt;于是_1给e，_2给d，输出 1 2 3 5 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item></channel></rss>
