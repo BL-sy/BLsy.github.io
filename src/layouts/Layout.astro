@@ -27,6 +27,10 @@ import "../styles/mobile-navbar.css";
 import "../styles/wallpaper-navbar-transparent.css";
 import "../styles/fancybox-custom.css";
 
+import { ViewTransitions } from 'astro:transitions';
+
+
+
 interface Props {
 	title?: string;
 	banner?: string;
@@ -188,6 +192,7 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 					isDark = true;
 					break
 			}
+
 			
 			// Set the theme for Expressive Code based on current mode
 			const expressiveTheme = isDark ? "github-dark" : "github-light";
@@ -228,16 +233,19 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 		<!-- Umami Analytics -->
 		{umamiEnabled && umamiScripts && <Fragment set:html={umamiScripts} />}
 
+
 </head>
 	<body class=" min-h-screen " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner, "zen-maru-gothic-enabled": siteConfig.font.zenMaruGothic.enable, "hanalei-enabled": siteConfig.font.hanalei.enable}]}
 		  data-overlayscrollbars-initialize
 	>
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRX3XGVH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		
+
 		<!-- 页面顶部渐变高光效果 - 只在full和semifull模式下显示 -->
 		{shouldShowTopHighlight && <div class="top-gradient-highlight"></div>}
 		<ConfigCarrier></ConfigCarrier>
 		<slot />
+
+
 		
 		<!-- Music Player -->
 		<MusicPlayer client:load />
@@ -739,9 +747,11 @@ function initCustomScrollbar() {
 		element.parentNode.insertBefore(container, element);
 		container.appendChild(element);
 
+
 		// 使用简单的CSS滚动条而不是OverlayScrollbars
 		container.style.cssText = `
 			overflow-x: auto;
+			overflow-y: auto;
 			scrollbar-width: thin;
 			scrollbar-color: rgba(0,0,0,0.3) transparent;
 		`;

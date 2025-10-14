@@ -43,11 +43,11 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 属性设置，将引擎设为动态库，新建一个游戏项目
 
-![001](../assets/001.png)
+![001](../assets/001.webp)
 
 将引擎链接到游戏
 
-![002](../assets/002.png)
+![002](../assets/002.webp)
 
 - 说明
 
@@ -62,7 +62,7 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 打开项目属性-链接器可以看到链接命令
 
-![003](../assets/003.png)
+![003](../assets/003.webp)
 
 # 三.入口点
 

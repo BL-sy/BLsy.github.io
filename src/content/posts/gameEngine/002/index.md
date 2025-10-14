@@ -264,7 +264,7 @@ namespace Hazel {
 
 **注**：这里直接使用会报错，需要在属性的命令行界面添加/utf-8
 
-![005](../assets/005.png)
+![005](../assets/005.webp)
 
 日志信息的宏定义，方便记录和观察
 
@@ -306,7 +306,7 @@ int main(int argc,char** argv)
 ```
 运行结果：
 
-![006](../assets/006.png)
+![006](../assets/006.webp)
 
 不同级别的报告有不同的颜色.Done!(for now)
 
@@ -315,7 +315,7 @@ int main(int argc,char** argv)
 
 ## （一）规划事件系统
 
-![007](../assets/007.png)
+![007](../assets/007.webp)
 
 ## （二）自定义事件类与使用
 
@@ -328,16 +328,17 @@ int main(int argc,char** argv)
     	为了简便，自定义事件是立即处理事件，没有缓冲事件。
     	缓冲事件：键盘a一直按下第一个立刻输出，顿了一下才一直输出。
     */
-    // 事件类别-一个类一个标识
+    // 所有事件-一个类一个标识
     enum class EventType
   	{
-  		None = 0,
-  		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
-  		AppTick, AppUpdate, AppRender,
-  		KeyPressed, KeyReleased,
-  		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
+        None = 0,
+        WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
+        AppTick, AppUpdate, AppRender,
+        KeyPressed, KeyReleased,
+        MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
   	};
   
+    // 事件种类
   	enum EventCategory
   	{
   		None = 0,
@@ -348,9 +349,13 @@ int main(int argc,char** argv)
   		EventCategoryMouseButton	= BIT(4)
   	};
   
+
+    // 用宏定义更简洁的定义事件种类
+    // 父类虚函数
     #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
-  								virtual EventType GetEventType() const override { return GetStaticType(); }\
-  								virtual const char* GetName() const override { return #type; }
+  								   virtual EventType GetEventType() const override { return GetStaticType(); }\
+  								   virtual const char* GetName() const override { return #type; }
+    // ##type，是保持为变量，#type是转换为字符串
   
     #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
   
@@ -386,21 +391,22 @@ int main(int argc,char** argv)
 		inline unsigned int GetWidth() const { return m_Width; }
 		inline unsigned int GetHeight() const { return m_Height; };
 
+        // 重写ToString输出窗口宽高
 		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "WindowResizeEvent: " << m_Width << ", " << m_Height;
 			return ss.str();
 		}
-		// 关键：用宏定义来重写虚函数
+		// 用宏定义来重写虚函数
 		EVENT_CLASS_TYPE(WindowResize)
-			EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	private:
 		unsigned int m_Width, m_Height;
 	};
   ```
 
-- 关键地方：用宏定义来重写虚函数
+- 用宏定义重写虚函数
 
   ```cpp
   // 宏定义：每个子类都需要重写父类虚函数代码，可以用宏定义简洁代码
@@ -410,16 +416,16 @@ int main(int argc,char** argv)
 
   #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
   
-  //EVENT_CLASS_TYPE(WindowResize)
-  //EVENT_CLASS_CATEGORY(EventCategoryApplication)
+  EVENT_CLASS_TYPE(WindowResize)
+  EVENT_CLASS_CATEGORY(EventCategoryApplication)
   // 会编译成
-  //static EventType GetStaticType() { return EventType::WindowResize; } 
-  //virtual EventType GetEventType() const override { return GetStaticType(); } 
-  //virtual const char* GetName() const override { return "WindowResize"; }
-  //virtual int GetCategoryFlags() const override { return EventCategoryApplication; }
+  static EventType GetStaticType() { return EventType::WindowResize; } 
+  virtual EventType GetEventType() const override { return GetStaticType(); } 
+  virtual const char* GetName() const override { return "WindowResize"; }
+  virtual int GetCategoryFlags() const override { return EventCategoryApplication; }
   ```
 
-  可见，**##type**，是保持为变量，**#type**是转换为字符串
+  **##type**，是保持为变量，**#type**是转换为字符串
 
 ### 包含头文件
 
@@ -480,12 +486,12 @@ int main(int argc,char** argv)
 
 - 效果
 
-  ![008](../assets/008.png)
+  ![008](../assets/008.webp)
 
 ### 事件调度器代码
 
 ```cpp
-$
+$Event.h
 // 事件调度器类
 class EventDispatcher
 {
@@ -498,7 +504,9 @@ class EventDispatcher
     template<typename T>
     bool Dispatch(EventFn<T> func)// function参数接收函数指针
     {
-        if (m_Event.GetEventType() == T::GetStaticType())// 拦截的事件和想处理的事件类型是否匹配
+        // 拦截的事件和想处理的事件类型是否匹配
+        // GetEventType()是被重写的函数
+        if (m_Event.GetEventType() == T::GetStaticType())
         {
             m_Event.m_Handled = func(*(T*)&m_Event);// 处理拦截的事件
             return true;
@@ -568,9 +576,9 @@ class EventDispatcher
 
 - 重新生成后，premake预编译头设置的对应效果
 
-  ![009](../assets/009.png)
+  ![009](../assets/009.webp)
 
-  ![010](../assets/010.png)
+  ![010](../assets/010.webp)
 
 
 # Tips
@@ -640,7 +648,7 @@ call premake5.exe vs2022
 PAUSE
 ```
 
-![004](../assets/004.png)
+![004](../assets/004.webp)
 
 放在同一级目录即可，保持简洁，点击bat文件就创建了新项目，可以在lua文件先修改项目名称
 

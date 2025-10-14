@@ -47,10 +47,9 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/asuka.png",
-				"/assets/desktop-banner/baizi.png",
-				"/assets/desktop-banner/saber.png",
-				"/assets/desktop-banner/liang.png"
+				"/assets/desktop-banner/asuka.webp",
+				"/assets/desktop-banner/baizi.webp",
+				"/assets/desktop-banner/saber.webp",
 			], // 桌面横幅图片
 			mobile: [
 				"/assets/mobile-banner/m1.webp",
@@ -142,10 +141,9 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true, // 启用全屏壁纸功能,非Banner模式下生效
 	src: {
 		desktop: [
-			"/assets/desktop-banner/asuka.png",
-			"/assets/desktop-banner/baizi.png",
-			"/assets/desktop-banner/saber.png",
-			"/assets/desktop-banner/liang.png"
+			"/assets/desktop-banner/asuka.webp",
+			"/assets/desktop-banner/baizi.webp",
+			"/assets/desktop-banner/saber.webp",
 		], // 桌面横幅图片
 		mobile: [
 			"/assets/mobile-banner/m1.webp",
@@ -245,7 +243,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/asuka.jpg", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	avatar: "assets/images/asuka.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "BLsy",
 	bio: "The world is big, you have to go and see",
 	links: [
