@@ -34,7 +34,7 @@ https://github.com/gabime/spdlog.git
 $log.h
 #include <memory>
 #include "Core.h"
-#include spdlog/spdlog.h"
+#include "spdlog/spdlog.h"
 namespace Hazel {
 	class HAZEL_API Log
 	{
@@ -75,7 +75,7 @@ namespace Hazel {
 }
 ```
 
-**注**：这里直接使用会报错，需要在属性的命令行界面添加/utf-8
+**注**：这里直接使用会报错，需要在属性的命令行界面添加/utf-8(**可以在premake.lua中添加以后不再提**)
 
 ![005](../assets/005.webp)
 
@@ -101,18 +101,20 @@ $log.h
 我们的入口点现在：
 
 ```cpp
+#include "log.h"
+
 #ifdef HZ_PLATFORM_WINDOWS
 extern Hazel::Application* Hazel::CreateApplication();
 
-int main(int argc,char** argv)
+int main(int argc, char** argv)
 {
     Hazel::Log::Init();
-    HZ_CORE_WARN(Initialized Log!);
+    HZ_CORE_WARN("Initialized Log!");
     int a = 5;
-    HZ_INFO(“Hello!Var={0}",a);
+    HZ_INFO("Hello!Var = {0}",a);
 
-    auto app = Hazel:CreateApplication();
-    app->Run()
+    auto app = Hazel::CreateApplication();
+    app->Run();
     delete app;
 }
 #endif
