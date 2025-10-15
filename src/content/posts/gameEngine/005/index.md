@@ -1,5 +1,5 @@
 ---
-title: 日志系统
+title: 事件系统
 published: 2025-10-14
 description: "基于cherno Hazel引擎教学"
 tags: ["学习", "游戏", "引擎"]

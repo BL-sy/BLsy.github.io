@@ -117,6 +117,8 @@ void main() {
 }
 ```
 
+**我们所有的内容都会在Hazel命名空间中**
+
 **这里先把Hazel生成的dll文件放到Sandbox的输出目录下，后面会处理成自动链接**
 
 成功输出，Sandbox成功链接到Hazel
