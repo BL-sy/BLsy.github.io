@@ -1,11 +1,10 @@
 ---
 title: 项目管理
-published: 2025-10-13
+published: 2025-10-14
 description: "基于cherno Hazel引擎教学"
 tags: ["学习", "游戏", "引擎","git","lua"]
 category: 学习
 draft: false
-parentCollection: "game-engine"
 ---
 
 

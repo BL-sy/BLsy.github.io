@@ -1,11 +1,10 @@
 ---
 title: 日志
-published: 2025-10-14
+published: 2025-10-15
 description: "基于cherno Hazel引擎教学"
 tags: ["学习", "游戏", "引擎"]
 category: 学习
 draft: false
-parentCollection: "game-engine"
 ---
 
 

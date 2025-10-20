@@ -40,8 +40,7 @@ category: Front-end
 | `author`          | 作者                                                                                                                                                                      |
 | `sourceLink`      | The source link or reference for the post content.                                                                                                                                                          |
 | `draft`           | If this post is still a draft, which won't be displayed.                                                                                                                                                    |
-| `isCollection`    | 是否是合集                                                                                                                                                    |
-| `parentCollection`| 父合集（有就行，内容无所谓）                                                                                                                                                   |
+                                                                                                                                                 |
 
 ## Where to Place the Post Files
 

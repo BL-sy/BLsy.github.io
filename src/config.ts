@@ -47,19 +47,14 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/asuka.webp",
-				"/assets/desktop-banner/baizi.webp",
-				"/assets/desktop-banner/saber.webp",
+				"/assets/banner/asuka.webp",
+				"/assets/banner/baizi.webp",
+				"/assets/banner/saber.webp",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/mobile-banner/m1.webp",
-				"/assets/mobile-banner/m2.webp",
-				"/assets/mobile-banner/m3.webp",
-				"/assets/mobile-banner/m4.webp",
-				"/assets/mobile-banner/m5.webp",
-				"/assets/mobile-banner/m6.webp",
-				"/assets/mobile-banner/m7.webp",
-				"/assets/mobile-banner/m8.webp",
+				"/assets/banner/asuka.webp",
+				"/assets/banner/baizi.webp",
+				"/assets/banner/saber.webp",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 

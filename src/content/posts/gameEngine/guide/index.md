@@ -1,11 +1,11 @@
 ---
 title: 游戏引擎学习
-published: 2025-10-13
+published: 2025-10-12
 description: "基于cherno Hazel引擎教学"
 tags: ["学习", "游戏", "引擎"]
 category: 学习
 draft: false
-isCollection: true
+pinned: true
 ---
 
 
@@ -33,6 +33,8 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 ## [四.日志](../004/)
 
 ## [五.事件系统](../005/)
+
+## [六.窗口抽象与GLFW窗口](../006/)
 
 
 

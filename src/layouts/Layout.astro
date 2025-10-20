@@ -190,7 +190,6 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 					isDark = true;
 					break
 			}
-
 			
 			// Set the theme for Expressive Code based on current mode
 			const expressiveTheme = isDark ? "github-dark" : "github-light";
@@ -231,27 +230,24 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 		<!-- Umami Analytics -->
 		{umamiEnabled && umamiScripts && <Fragment set:html={umamiScripts} />}
 
-
 </head>
 	<body class=" min-h-screen " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner, "zen-maru-gothic-enabled": siteConfig.font.zenMaruGothic.enable, "hanalei-enabled": siteConfig.font.hanalei.enable}]}
 		  data-overlayscrollbars-initialize
 	>
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRX3XGVH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
+		
 		<!-- 页面顶部渐变高光效果 - 只在full和semifull模式下显示 -->
 		{shouldShowTopHighlight && <div class="top-gradient-highlight"></div>}
 		<ConfigCarrier></ConfigCarrier>
 		<slot />
-
-
 		
 		<!-- Music Player -->
-		<MusicPlayer client:idle />
+		<MusicPlayer client:load />
 		
 		<!-- Pio 看板娘组件 -->
 		<!-- 注意：Pio 组件需要放在 body 标签内，但要在其他内容之前 -->
 		<!-- 如果启用了侧边栏，可能需要调整 z-index -->
-		<Pio client:media="(min-width: 1024px)" />
+		<Pio client:load />
 		
 		<!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
 		<div id="page-height-extend" class="hidden h-[300vh]"></div>
@@ -261,11 +257,12 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 			<script define:vars={{ sakuraConfig: widgetConfigs.sakura }}>
 				// 樱花对象类
 				class Sakura {
-					constructor(x, y, s, r, fn, idx, img, limitArray, config) {
+					constructor(x, y, s, r, a, fn, idx, img, limitArray, config) {
 						this.x = x;
 						this.y = y;
 						this.s = s;
 						this.r = r;
+        				this.a = a;
 						this.fn = fn;
 						this.idx = idx;
 						this.img = img;
@@ -277,6 +274,7 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 						cxt.save();
 						cxt.translate(this.x, this.y);
 						cxt.rotate(this.r);
+						cxt.globalAlpha = this.a;
 						cxt.drawImage(this.img, 0, 0, 40 * this.s, 40 * this.s);
 						cxt.restore();
 					}
@@ -285,13 +283,15 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 						this.x = this.fn.x(this.x, this.y);
 						this.y = this.fn.y(this.y, this.y);
 						this.r = this.fn.r(this.r);
-
-						// 如果樱花越界，重新调整位置
+						this.a = this.fn.a(this.a);
+						
+						// 如果樱花越界或完全透明，重新调整位置
 						if (
 							this.x > window.innerWidth ||
 							this.x < 0 ||
 							this.y > window.innerHeight ||
-							this.y < 0
+							this.y < 0 ||
+							this.a <= 0
 						) {
 							// 如果樱花不做限制
 							if (this.limitArray[this.idx] === -1) {
@@ -314,11 +314,13 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 							this.y = 0;
 							this.s = getRandom('s', this.config);
 							this.r = getRandom('r', this.config);
+							this.a = getRandom('a', this.config);
 						} else {
 							this.x = window.innerWidth;
 							this.y = getRandom('y', this.config);
 							this.s = getRandom('s', this.config);
 							this.r = getRandom('r', this.config);
+							this.a = getRandom('a', this.config);
 						}
 					}
 				}
@@ -372,6 +374,9 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 						case 'r':
 							ret = Math.random() * 6;
 							break;
+						case 'a':
+							ret = config.opacity.min + Math.random() * (config.opacity.max - config.opacity.min);
+							break;
 						case 'fnx':
 							random = config.speed.horizontal.min + Math.random() * (config.speed.horizontal.max - config.speed.horizontal.min);
 							ret = function (x, y) {
@@ -387,6 +392,11 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 						case 'fnr':
 							ret = function (r) {
 								return r + config.speed.rotation;
+							};
+							break;
+						case 'fna':
+							ret = function (alpha) {
+								return alpha - config.speed.fadeSpeed * 0.01;
 							};
 							break;
 					}
@@ -453,21 +463,25 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 						for (let i = 0; i < this.config.sakuraNum; i++) {
 							const randomX = getRandom('x', this.config);
 							const randomY = getRandom('y', this.config);
-							const randomR = getRandom('r', this.config);
 							const randomS = getRandom('s', this.config);
+							const randomR = getRandom('r', this.config);
+							const randomA = getRandom('a', this.config);
 							const randomFnx = getRandom('fnx', this.config);
 							const randomFny = getRandom('fny', this.config);
 							const randomFnR = getRandom('fnr', this.config);
+							const randomFnA = getRandom('fna', this.config);
 
 							const sakura = new Sakura(
 								randomX,
 								randomY,
 								randomS,
 								randomR,
+								randomA,
 								{
 									x: randomFnx,
 									y: randomFny,
 									r: randomFnR,
+									a: randomFnA,
 								},
 								i,
 								this.img,
@@ -640,7 +654,7 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 }
 </style>
 
-<script type="module" data-swup-ignore-script>
+<script>
 import { animationManager } from '../utils/animation-utils';
 import 'overlayscrollbars/overlayscrollbars.css';
 import {
@@ -745,11 +759,9 @@ function initCustomScrollbar() {
 		element.parentNode.insertBefore(container, element);
 		container.appendChild(element);
 
-
 		// 使用简单的CSS滚动条而不是OverlayScrollbars
 		container.style.cssText = `
 			overflow-x: auto;
-			overflow-y: auto;
 			scrollbar-width: thin;
 			scrollbar-color: rgba(0,0,0,0.3) transparent;
 		`;
@@ -1247,7 +1259,7 @@ if (document.readyState === 'loading') {
 
 </script>
 
-<script type="module" data-swup-ignore-script>
+<script>
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
@@ -1452,4 +1464,3 @@ if (window.swup) {
   }
 }
 </script>
-
