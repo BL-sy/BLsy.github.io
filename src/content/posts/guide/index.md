@@ -1,6 +1,6 @@
 ---
 title: Simple Guides for Mizuki
-published: 2005-7-26
+published: 2025-07-26
 description: "How to use this blog template."
 image: "./cover.jpeg"
 tags: ["Mizuki", "Blogging"]
