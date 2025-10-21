@@ -15,7 +15,9 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 [b站教程地址](https://www.bilibili.com/video/BV1wtLazEEmC?spm_id_from=333.788.videopod.sections&vd_source=eb85f257702408f4a9f49c4f9d9696c0)
 
-[参考](https://blog.csdn.net/qq_34060370/category_12203331.html)
+[参考1](https://zhuanlan.zhihu.com/c_1276966394941403136)
+
+[参考2](https://blog.csdn.net/qq_34060370/category_12203331.html)
 
 [我的项目](https://github.com/BL-sy/myGameEngine)
 
@@ -32,9 +34,11 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 ## [四.日志](../004/)
 
-## [五.事件系统](../005/)
+## [五.事件框架](../005/)
 
 ## [六.窗口抽象与GLFW窗口](../006/)
+
+## [七.窗口事件](../007/)
 
 
 

@@ -11,15 +11,17 @@ draft: false
 This blog template is built with [Astro](https://astro.build/). For the things that are not mentioned in this guide, you may find the answers in the [Astro Docs](https://docs.astro.build/).
 
 
-# GLFW
+# 一. GLFW窗口
 
-我们的游戏引擎需要一个窗口，这里我们使用GLFW库
+我们的游戏引擎需要一个窗口，这里我们使用GLFW库构建实际的窗口
+
+将GLFW作为子模块添加到项目中
 
 ```cmd
 git submodule add https://github.com/TheCherno/glfw.git Hazel/vendor/GLFW
 ```
 
-# 项目设置(Premake5)
+## 项目设置(Premake5)
 
 游戏引擎需要链接到GLFW库，这里直接在Hazel项目的premake5.lua中添加GLFW库的引用
 
@@ -43,10 +45,14 @@ project Hazel
 
 --------------------------------
 
-# 窗口类
+# 二. 窗口类
 
-我们的游戏引擎有一个窗口，
-Application类可以调用创建窗口函数，而窗口类使用glfw库创建窗口。窗口类检测glfw窗口的事件，并**回调**给Application的处理事件函数。
+我们的游戏引擎有一个窗口，我们希望一个**抽象窗口类**来管理窗口的创建和事件处理，
+Application类可以调用创建窗口函数，而窗口类使用glfw库创建窗口。
+
+**提问**：为什么要一个抽象窗口类？而不是直接使用GLFW创建窗口？
+
+**回答**：因为我们希望引擎具有跨平台能力，未来可能会支持不同的平台，比如Windows、Linux、MacOS等，使用抽象窗口类封装窗口的创建和管理，可以让我们更容易地为不同的平台实现不同的窗口类。
 
 我们希望为**不同的平台**做独立的窗口适配，因此我们需要一个**窗口基类**，不同平台的窗口类继承自这个基类
 
@@ -89,7 +95,6 @@ namespace Hazel {
 		virtual unsigned int GetHeight() const = 0;
 
 		// 设置事件回调函数
-		// 窗口属性
 		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const = 0;
@@ -102,49 +107,50 @@ namespace Hazel {
 我们为Windows平台实现一个窗口类，继承自Window基类
 
 ```cpp
-$Platform/WindowsWindow
+$Platform/WindowsWindow.h
 
-#include "hzpch.h"
+#include "./Hazel/Window.h"
+#include "./Hazel/log.h"
 
-#include "Hazel/Core.h"
-#include "Hazel/Event/Event.h"
+#include <GLFW/glfw3.h>
 
 namespace Hazel {
-	// 窗口属性结构体
-	struct WindowProps
-	{
-		std::string Title;
-		unsigned int Width;
-		unsigned int Height;
+    class HAZEL_API WindowsWindow : public Window
+    {
+    public:
+        WindowsWindow(const WindowProps& props);
+        virtual ~WindowsWindow();
 
-		WindowProps(const std::string& title = "Hazel Engine",
-					unsigned int width = 1280,
-					unsigned int height = 720)
-			: Title(title), Width(width), Height(height)
-		{}
-	};
-	// 基于平台的窗口抽象类
-	class HAZEL_API Window
-	{
-	public:
-		// 事件回调函数类型定义
-		// 使用std::function封装一个接受Event引用的函数
-		using EventCallbackFn = std::function<void(Event&)>;
+        void OnUpdate() override;
 
-		virtual ~Window() {}
-		virtual void OnUpdate() = 0;
+        inline unsigned int GetWidth() const override { return m_Data.Width; };
+        inline unsigned int GetHeight() const override { return m_Data.Height; };
 
-		virtual unsigned int GetWidth() const = 0;
-		virtual unsigned int GetHeight() const = 0;
+        // 设置事件回调函数 
+        inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; };
+        void SetVSync(bool enabled) override;
+        bool IsVSync() const override;
+    private:
+        void Init(const WindowProps& props);
+        void SetCallbacks();
+        virtual void Shutdown();
+    private:
+        GLFWwindow* m_Window;
 
-		// 设置事件回调函数
-		// 窗口属性
-		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
-		virtual void SetVSync(bool enabled) = 0;
-		virtual bool IsVSync() const = 0;
+        // 窗口数据结构体
+        struct WindowData
+        {
+            std::string Title;
+            unsigned int Width, Height;
+            // 是否启用垂直同步
+            bool VSync;
 
-		static Window* Create(const WindowProps& props = WindowProps());
-	};
+            // 事件回调函数
+            EventCallbackFn EventCallback;
+        };
+
+        WindowData m_Data;
+    };
 }
 ```
 
@@ -248,7 +254,7 @@ $Core.h
 
 ----------------------------------------
 
-# 构建一个GLFW窗口
+# 三. 构建一个GLFW窗口
 
 ```cpp
 $Application.h
@@ -275,3 +281,4 @@ void Application::Run()
 	}
 }
 ```
+

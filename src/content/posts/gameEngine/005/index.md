@@ -1,5 +1,5 @@
 ---
-title: 事件系统
+title: 事件框架
 published: 2025-10-17
 description: "基于cherno Hazel引擎教学"
 tags: ["学习", "游戏", "引擎"]
@@ -13,21 +13,17 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 # 事件系统
 
-我们的游戏引擎需要一个窗口，用户在窗口上的操作应该被传递到应用程序，我们使用事件系统完成这个任务
+我们的游戏引擎需要一个窗口，用户在窗口上的操作应该被传递到应用程序，我们使用事件系统完成这个任务，我们先来设计一下可能的事件。
 
-显然，我们的窗口由application创建，**窗口一定不知道应用程序**，所以我们需要**回调函数**，当窗口监测到事件时2，就会调用相应的回调函数通过事件系统传递给应用程序
-
-# 一. 规划事件系统
+# 一. 规划
 
 以 glfwSetCursorPosCallback 为例，鼠标移动时会调用先前注册好的回调函数，并传入xpos和ypos。而作为接收事件的Application类，最需要的就是xpos和ypos，以进行之后更多的逻辑处理。因此对于鼠标移动这个事件来说，事件系统的任务就是把xpos和ypos从Window类传递到Application类。
 
-我们的事件系统初步规划：
-
-![022](../assets/022.webp)
+我们的事件：
 
 ![023](../assets/023.webp)
 
-# 二. 创建事件系统
+# 二. 事件框架
 
 ## 基事件
 
@@ -35,8 +31,6 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 ```cpp
 $Event.h
-
-#pragma once
 
 #include "hzpch.h"
 #include "Hazel/Core.h"
@@ -181,8 +175,6 @@ namespace Hazel {
 ```cpp
 $MouseEvent.h
 
-#pragma once
-
 #include "Hazel/Core.h"
 
 #include "Event.h"
@@ -280,8 +272,6 @@ namespace Hazel {
 
 ```cpp
 $ApplicationEvent.h
-
-#pragma once
 
 #include "Hazel/Core.h"
 #include "Event.h"
@@ -404,3 +394,4 @@ void Application::Run()
 运行结果
 
 ![024](../assets/024.webp)
+
